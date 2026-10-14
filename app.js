@@ -1,9 +1,39 @@
 (function () {
-  var T = window.TERMS, S = window.Schedule, $ = function (s) { return document.querySelector(s); };
-  var KEY = 'tdd_progress_v1';
-  var P = load();
-  function load() { try { return Object.assign({ seen: {}, correct: {}, answered: {}, days: [] }, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { return { seen: {}, correct: {}, answered: {}, days: [] }; } }
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} }
+  var T = window.TERMS, S = window.Schedule, A = window.Api, $ = function (s) { return document.querySelector(s); };
+  var SKEY = 'tdd_session_v2';
+  var SESSION = loadSession();            // { token, username, is_admin }
+  var P = empty();
+  function empty() { return { seen: {}, correct: {}, answered: {}, days: [], streak: null }; }
+  function loadSession() { try { return JSON.parse(localStorage.getItem(SKEY) || 'null'); } catch (e) { return null; } }
+  function saveSession() { try { SESSION ? localStorage.setItem(SKEY, JSON.stringify(SESSION)) : localStorage.removeItem(SKEY); } catch (e) {} }
+  function cacheKey() { return 'tdd_cache_v2_' + (SESSION ? SESSION.username.toLowerCase() : ''); }
+  // localStorage solo como caché/respaldo: la fuente de verdad es Supabase.
+  function load() { try { return Object.assign(empty(), JSON.parse(localStorage.getItem(cacheKey()) || '{}')); } catch (e) { return empty(); } }
+  function save() { try { localStorage.setItem(cacheKey(), JSON.stringify(P)); } catch (e) {} }
+  function fromServer(d) {
+    var toSet = function (arr) { var o = {}; (arr || []).forEach(function (id) { o[id] = 1; }); return o; };
+    P = { seen: toSet(d.seen), correct: toSet(d.correct), answered: d.answered || {}, days: d.days || [], streak: d.streak };
+    if (SESSION) { SESSION.is_admin = !!d.is_admin; SESSION.username = d.username || SESSION.username; saveSession(); }
+    save(); stats();
+  }
+  // Cola de eventos pendientes si no hay conexión
+  function queueKey() { return 'tdd_queue_v2_' + (SESSION ? SESSION.username.toLowerCase() : ''); }
+  function getQueue() { try { return JSON.parse(localStorage.getItem(queueKey()) || '[]'); } catch (e) { return []; } }
+  function setQueue(q) { try { localStorage.setItem(queueKey(), JSON.stringify(q)); } catch (e) {} }
+  function send(termId, ev, ok) {
+    if (!SESSION) return;
+    var q = getQueue(); q.push([termId, ev, ok]); setQueue(q); flush();
+  }
+  var flushing = false;
+  function flush() {
+    if (flushing || !SESSION) return; var q = getQueue(); if (!q.length) return;
+    flushing = true;
+    A.record(SESSION.token, q[0][0], q[0][1], q[0][2]).then(function (d) {
+      var rest = getQueue().slice(1); setQueue(rest); flushing = false;
+      if (!rest.length) fromServer(d); flush();
+    }).catch(function (e) { flushing = false; if (e.code === '28000') return expired(); if (e.status && e.status < 500) { setQueue(getQueue().slice(1)); flush(); } });
+  }
+  function expired() { SESSION = null; saveSession(); showAuth('Tu sesión venció. Vuelve a ingresar.'); }
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   var LV = { 1: 'Básico', 2: 'Intermedio', 3: 'Avanzado' };
   var CAT_CLASS = { 'Marketing': 'c-mkt', 'Publicidad digital': 'c-ads', 'Estrategia de negocio': 'c-est', 'Finanzas': 'c-fin' };
@@ -13,13 +43,14 @@
   var viewIdx = today;
 
   function streak() {
+    if (P.streak !== null && P.streak !== undefined && !getQueue().length) return P.streak;
     var set = {}; P.days.forEach(function (d) { set[d] = 1; });
     var n = 0, i = today; if (!set[S.dateKeyForDay(i)]) i--; // la racha sigue viva si ayer cumpliste
     while (set[S.dateKeyForDay(i)]) { n++; i--; }
     return n;
   }
-  function markSeen(t) { if (!P.seen[t.id]) P.seen[t.id] = Date.now(); save(); }
-  function markPracticed() { var k = S.dateKeyForDay(today); if (P.days.indexOf(k) < 0) P.days.push(k); save(); }
+  function markSeen(t) { if (!P.seen[t.id]) { P.seen[t.id] = Date.now(); save(); send(t.id, 'seen'); } }
+  function markPracticed() { var k = S.dateKeyForDay(today); if (P.days.indexOf(k) < 0) { P.days.push(k); P.streak = null; } save(); }
 
   function stats() {
     $('#st-seen').textContent = Object.keys(P.seen).length + '/' + T.length;
@@ -68,12 +99,12 @@
         $('#fb1').className = 'fb ' + (ok ? 'ok' : 'bad');
         P.answered[t.id] = (P.answered[t.id] || 0) + 1;
         if (ok) P.correct[t.id] = Date.now();
-        markSeen(t); markPracticed(); stats();
+        markSeen(t); markPracticed(); send(t.id, 'mc', ok); stats();
       };
     });
-    $('#reveal').onclick = function () { $('#model').hidden = false; this.hidden = true; markSeen(t); markPracticed(); stats(); };
+    $('#reveal').onclick = function () { $('#model').hidden = false; this.hidden = true; markSeen(t); markPracticed(); send(t.id, 'reveal'); stats(); };
     $('#card').querySelectorAll('[data-self]').forEach(function (b) {
-      b.onclick = function () { if (b.dataset.self === '1') P.correct[t.id] = P.correct[t.id] || Date.now(); save(); stats(); b.parentNode.textContent = b.dataset.self === '1' ? '¡Bien! Registrado.' : 'Sin problema, repásalo mañana.'; };
+      b.onclick = function () { if (b.dataset.self === '1') { P.correct[t.id] = P.correct[t.id] || Date.now(); send(t.id, 'self', true); } save(); stats(); b.parentNode.textContent = b.dataset.self === '1' ? '¡Bien! Registrado.' : 'Sin problema, repásalo mañana.'; };
     });
     $('#prev').onclick = function () { render(idx - 1); };
     if ($('#next')) $('#next').onclick = function () { render(idx + 1); };
@@ -108,12 +139,13 @@
 
   function show(tab) {
     document.querySelectorAll('.view').forEach(function (v) { v.hidden = v.id !== 'v-' + tab; });
-    document.querySelectorAll('.tabs button').forEach(function (b) { b.classList.toggle('active', b.dataset.tab === tab); });
+    document.querySelectorAll('header .tabs button').forEach(function (b) { b.classList.toggle('active', b.dataset.tab === tab); });
     if (tab === 'hist') renderHistory();
+    if (tab === 'equipo') renderBoard();
+    if (tab === 'info') renderSettings();
   }
-  document.querySelectorAll('.tabs button').forEach(function (b) { b.onclick = function () { b.dataset.tab === 'hoy' ? render(today) : show(b.dataset.tab); }; });
+  document.querySelectorAll('header .tabs button').forEach(function (b) { b.onclick = function () { b.dataset.tab === 'hoy' ? render(today) : show(b.dataset.tab); }; });
   ['#search', '#fcat', '#fall'].forEach(function (s) { $(s).addEventListener('input', renderHistory); $(s).addEventListener('change', renderHistory); });
-  $('#reset').onclick = function () { if (confirm('¿Borrar todo tu progreso?')) { P = { seen: {}, correct: {}, answered: {}, days: [] }; save(); render(today); } };
 
   // Cuenta regresiva + cambio automático a las 7:55
   function tick() {
@@ -136,6 +168,83 @@
   nb.onclick = function () { if ('Notification' in window) Notification.requestPermission().then(function () { nbState(); if (Notification.permission === 'granted') new Notification('¡Listo! Te avisaré a las 7:55 a.m. mientras la app esté abierta.'); }); };
   nbState();
 
+  // ===== Equipo (ranking) =====
+  function renderBoard() {
+    var box = $('#board'); box.innerHTML = '<p class="empty">Cargando ranking…</p>';
+    A.leaderboard(SESSION.token).then(function (rows) {
+      var medal = { 1: '🥇', 2: '🥈', 3: '🥉' };
+      box.innerHTML = '<table class="board"><thead><tr><th>#</th><th>Usuario</th><th>Racha 🔥</th><th>Aprendidos</th><th>Correctas</th></tr></thead><tbody>' +
+        rows.map(function (r) {
+          return '<tr' + (r.is_me ? ' class="me"' : '') + '><td>' + (medal[r.rank] || r.rank) + '</td><td>' + esc(r.username) + (r.is_me ? ' <small>(tú)</small>' : '') +
+            '</td><td>' + r.current_streak + '</td><td>' + r.terms_learned + '</td><td>' + r.correct_answers + '</td></tr>';
+        }).join('') + '</tbody></table><p class="hint">Orden: racha actual, luego términos aprendidos y respuestas correctas.</p>';
+    }).catch(function (e) { if (e.code === '28000') return expired(); box.innerHTML = '<p class="empty">No se pudo cargar el ranking: ' + esc(e.message) + '</p>'; });
+  }
+
+  // ===== Ajustes: cuenta =====
+  function msg(sel, text, ok) { var el = $(sel); el.textContent = text; el.className = 'fb ' + (ok ? 'ok' : 'bad'); }
+  function renderSettings() {
+    $('#me-name').textContent = SESSION ? SESSION.username : '';
+    $('#admin').hidden = !(SESSION && SESSION.is_admin);
+  }
+  $('#pw-form').onsubmit = function (ev) {
+    ev.preventDefault();
+    if ($('#pw-new').value !== $('#pw-new2').value) return msg('#pw-msg', 'Las contraseñas nuevas no coinciden.');
+    A.changePassword(SESSION.token, $('#pw-old').value, $('#pw-new').value).then(function () { msg('#pw-msg', 'Contraseña actualizada.', true); $('#pw-form').reset(); })
+      .catch(function (e) { msg('#pw-msg', e.message); });
+  };
+  $('#adm-form').onsubmit = function (ev) {
+    ev.preventDefault();
+    var u = $('#adm-user').value.trim(), p = $('#adm-pass').value;
+    if (!confirm('¿Restablecer la contraseña de “' + u + '”?')) return;
+    A.adminReset(SESSION.token, u, p).then(function () { msg('#adm-msg', 'Listo: “' + u + '” ya puede ingresar con la nueva contraseña.', true); $('#adm-form').reset(); })
+      .catch(function (e) { msg('#adm-msg', e.message); });
+  };
+  $('#logout').onclick = function () {
+    var t = SESSION && SESSION.token; SESSION = null; saveSession(); P = empty();
+    if (t) A.logout(t).catch(function () {});
+    showAuth();
+  };
+
+  // ===== Acceso (usuario + contraseña, sin correo) =====
+  var authMode = 'login';
+  function setMode(m) {
+    authMode = m;
+    document.querySelectorAll('[data-auth]').forEach(function (b) { b.classList.toggle('active', b.dataset.auth === m); });
+    $('#au-pass2-row').hidden = m !== 'register';
+    $('#au-pass2').required = m === 'register';
+    $('#au-submit').textContent = m === 'register' ? 'Crear cuenta' : 'Ingresar';
+    $('#au-pass').autocomplete = m === 'register' ? 'new-password' : 'current-password';
+    msg('#au-msg', '', true);
+  }
+  document.querySelectorAll('[data-auth]').forEach(function (b) { b.onclick = function () { setMode(b.dataset.auth); }; });
+  $('#auth-form').onsubmit = function (ev) {
+    ev.preventDefault();
+    var u = $('#au-user').value.trim(), p = $('#au-pass').value;
+    if (authMode === 'register' && p !== $('#au-pass2').value) return msg('#au-msg', 'Las contraseñas no coinciden.');
+    $('#au-submit').disabled = true; msg('#au-msg', 'Un momento…', true);
+    (authMode === 'register' ? A.register(u, p) : A.login(u, p)).then(function (d) {
+      SESSION = { token: d.token, username: d.username, is_admin: !!d.is_admin }; saveSession();
+      fromServer(d); start();
+    }).catch(function (e) { msg('#au-msg', e.message); }).then(function () { $('#au-submit').disabled = false; });
+  };
+  function showAuth(text) {
+    $('#app').hidden = true; $('#auth').hidden = false; setMode('login');
+    if (text) msg('#au-msg', text);
+  }
+
+  var started = false;
+  function start() {
+    $('#auth').hidden = true; $('#app').hidden = false;
+    $('#who').textContent = '👤 ' + SESSION.username;
+    if (!started) { started = true; tick(); setInterval(function () { tick(); flush(); }, 30000); }
+    render(today);
+  }
+
   $('#count').textContent = T.length;
-  render(today); tick(); setInterval(tick, 30000);
+  if (SESSION && SESSION.token) {
+    P = load(); start(); flush();
+    A.progress(SESSION.token).then(function (d) { if (!getQueue().length) fromServer(d); })
+      .catch(function (e) { if (e.code === '28000') expired(); /* sin conexión: seguimos con la caché */ });
+  } else showAuth();
 })();

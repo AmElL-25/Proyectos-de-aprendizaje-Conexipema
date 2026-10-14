@@ -8,16 +8,32 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<section id="auth" class="auth" hidden>
+  <div class="card authcard">
+    <h1>📚 Término del Día</h1>
+    <p class="sub"><span id="who"></span> · Aprende un concepto cada día con tu equipo.</p>
+    <nav class="tabs"><button type="button" data-auth="login" class="active">Ingresar</button><button type="button" data-auth="register">Crear cuenta</button></nav>
+    <form id="auth-form">
+      <label>Usuario<input id="au-user" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="p. ej. maria.lopez"></label>
+      <label>Contraseña<input id="au-pass" type="password" required minlength="6" autocomplete="current-password"></label>
+      <label id="au-pass2-row" hidden>Repite la contraseña<input id="au-pass2" type="password" minlength="6" autocomplete="new-password"></label>
+      <button class="btn" id="au-submit">Ingresar</button>
+      <p id="au-msg" class="fb"></p>
+      <p class="hint">No necesitas correo: solo un usuario y una contraseña. Si la olvidas, pídele a Luis que la restablezca.</p>
+    </form>
+  </div>
+</section>
+<div id="app" hidden>
 <header>
   <div class="wrap top">
     <h1>📚 Término del Día</h1>
-    <p class="sub">Un concepto nuevo cada día · <span id="count"></span> términos</p>
+    <p class="sub"><span id="who"></span> · Un concepto nuevo cada día · <span id="count"></span> términos</p>
     <div class="stats">
       <div><b id="st-seen">0</b><span>vistos</span></div>
       <div><b id="st-ok">0</b><span>correctos</span></div>
       <div><b id="st-streak">0</b><span>días de racha 🔥</span></div>
     </div>
-    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="info">Ajustes</button></nav>
+    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="equipo">Equipo</button><button data-tab="info">Ajustes</button></nav>
   </div>
 </header>
 <main class="wrap">
@@ -34,12 +50,31 @@
     <h3>Recordatorio</h3>
     <p>El término cambia cada día a las <b>7:55 a.m. (hora de Lima)</b>. Si activas las notificaciones, te avisaré a esa hora <i>mientras esta pestaña esté abierta</i>.</p>
     <button class="btn" id="notif">🔔 Activar recordatorio</button>
-    <h3>Progreso</h3>
-    <p>Tu progreso se guarda solo en este navegador (localStorage).</p>
-    <button class="btn ghost" id="reset">Reiniciar progreso</button>
+    <h3>Mi cuenta</h3>
+    <p>Sesión iniciada como <b id="me-name"></b>. Tu progreso y tu racha se guardan en la nube, así que puedes usar cualquier dispositivo.</p>
+    <form id="pw-form" class="stack">
+      <input id="pw-old" type="password" required placeholder="Contraseña actual" autocomplete="current-password">
+      <input id="pw-new" type="password" required minlength="6" placeholder="Nueva contraseña" autocomplete="new-password">
+      <input id="pw-new2" type="password" required minlength="6" placeholder="Repite la nueva contraseña" autocomplete="new-password">
+      <button class="btn">Cambiar contraseña</button><p id="pw-msg" class="fb"></p>
+    </form>
+    <button class="btn ghost" id="logout">Cerrar sesión</button>
+    <div id="admin" hidden>
+      <h3>Administración</h3>
+      <p>Restablece la contraseña de un compañero (cierra sus sesiones abiertas).</p>
+      <form id="adm-form" class="stack">
+        <input id="adm-user" required placeholder="Usuario" autocapitalize="none">
+        <input id="adm-pass" required minlength="6" placeholder="Nueva contraseña temporal">
+        <button class="btn">Restablecer contraseña</button><p id="adm-msg" class="fb"></p>
+      </form>
+    </div>
   </section>
+  <section id="v-equipo" class="view card" hidden><h3>Ranking del equipo</h3><div id="board"></div></section>
 </main>
+</div>
 <dialog id="dlg"><div id="detail"></div></dialog>
+<script src="config.js"></script>
+<script src="api.js"></script>
 <script src="terms.js"></script>
 <script src="schedule.js"></script>
 <script src="app.js"></script>
