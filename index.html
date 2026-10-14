@@ -3,24 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#eceef3">
-<title>Término del Día · Conexigo</title>
+<meta name="theme-color" content="#0a0a0a">
+<title>Término del Día · Team Conexipema</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <section id="auth" class="auth" hidden>
   <div class="card authcard">
-    <a class="logo" href="https://conexigo.com/" target="_blank" rel="noopener noreferrer">
-      <span class="logo-frame"><img src="https://conexigo.com/logo-wordmark-light.png" alt="Conexigo" width="1081" height="463" onerror="this.closest('.logo').classList.add('fallback')"></span>
-      <span class="wordmark">conexi<span>go</span></span>
-    </a>
+    <div class="brandrow">
+      <a class="logo" href="https://www.conexipema.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.conexipema.com/Logo-blanco-sin-fondo.png" alt="Conexipema" width="960" height="148" onerror="this.closest('.logo').classList.add('fallback')">
+        <span class="wordmark">Conexi<span>pema</span></span>
+      </a>
+      <span class="teamtag">Team Conexipema</span>
+    </div>
     <h1>Término del Día</h1>
     <p class="sub">Aprende un concepto cada día con tu equipo.</p>
     <nav class="tabs"><button type="button" data-auth="login" class="active">Ingresar</button><button type="button" data-auth="register">Crear cuenta</button></nav>
     <form id="auth-form">
+      <div id="au-avatar-row" hidden>
+        <span class="lbl">Elige tu avatar</span>
+        <div id="au-avatars" class="avatar-pick"></div>
+      </div>
       <label>Usuario<input id="au-user" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="p. ej. maria.lopez"></label>
       <label>Contraseña<input id="au-pass" type="password" required minlength="6" autocomplete="current-password"></label>
       <label id="au-pass2-row" hidden>Repite la contraseña<input id="au-pass2" type="password" minlength="6" autocomplete="new-password"></label>
@@ -33,12 +40,15 @@
 <div id="app" hidden>
 <header>
   <div class="wrap top">
-    <a class="logo" href="https://conexigo.com/" target="_blank" rel="noopener noreferrer">
-      <span class="logo-frame"><img src="https://conexigo.com/logo-wordmark-light.png" alt="Conexigo" width="1081" height="463" onerror="this.closest('.logo').classList.add('fallback')"></span>
-      <span class="wordmark">conexi<span>go</span></span>
-    </a>
+    <div class="brandrow">
+      <a class="logo" href="https://www.conexipema.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.conexipema.com/Logo-blanco-sin-fondo.png" alt="Conexipema" width="960" height="148" onerror="this.closest('.logo').classList.add('fallback')">
+        <span class="wordmark">Conexi<span>pema</span></span>
+      </a>
+      <span class="teamtag">Team Conexipema</span>
+    </div>
     <h1>Término del Día</h1>
-    <p class="sub"><span id="who"></span> · Un concepto nuevo cada día · <span id="count"></span> términos</p>
+    <p class="sub who-line"><span id="who-av"></span><span id="who"></span> · Un concepto nuevo cada día · <span id="count"></span> términos</p>
     <div class="stats">
       <div><b id="st-seen">0</b><span>vistos</span></div>
       <div><b id="st-ok">0</b><span>correctos</span></div>
@@ -95,6 +105,7 @@
 </div>
 <dialog id="dlg"><div id="detail"></div></dialog>
 <script src="config.js"></script>
+<script src="avatars.js"></script>
 <script src="api.js"></script>
 <script src="terms.js"></script>
 <script src="schedule.js"></script>

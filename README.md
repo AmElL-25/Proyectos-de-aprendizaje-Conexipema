@@ -6,6 +6,7 @@ App estática (sin build) para el equipo: un concepto nuevo cada día (cambia a 
 - `config.js`: URL y clave publicable de Supabase (es pública por diseño; los datos están protegidos por las funciones RPC).
 - `api.js`: cliente mínimo de las funciones RPC.
 - `app.js`: interfaz. `localStorage` solo se usa como caché y cola offline; la fuente de verdad es Supabase.
+- `avatars.js`: ocho compañeros originales en SVG. Al crear la cuenta (y luego en Perfil) se elige uno; cambia de forma con el nivel.
 - `supabase/migrations/`: esquema y funciones de la base de datos.
 - Pruebas: `node tools/test.js` y `tools/headless.sh` (Chrome headless).
 
@@ -24,6 +25,7 @@ Cada compañero entra a la app → **Crear cuenta** → elige un **usuario** (3�
 - **+5** bono madrugador si aciertas entre 7:55 y 10:00 a.m. · **+3** si eres el primero del equipo en acertar hoy.
 - Bonos de racha al llegar a 3/7/14/30/60/100 días: +10/+25/+50/+100/+200/+300.
 - Niveles: Novato 0 · Aprendiz 50 · Intermedio 150 · Avanzado 400 · Experto 800 · Maestro 1500.
+- **Avatar:** al registrarse se elige entre Chispa, Byte, Luna, Nimbus, Pico, Oro, Kiwi y Nova. En Perfil se puede cambiar. El dibujo evoluciona en cada nivel (Novato → Maestro) y, al subir de nivel, hay una celebración. Aparece en la cabecera, el podio y el ranking. Si el servidor aún no tiene la columna `avatar`, la app guarda la elección en este dispositivo.
 - Insignias: Primer acierto, Racha 3/7/30/100, 10/50/100 términos, Madrugador (5 aciertos antes de las 10), Campeón del día/semana/mes, Semana perfecta (7/7). Al ganar una aparece una celebración.
 
 ## Rankings y campeones
@@ -44,16 +46,19 @@ Solo se accede mediante funciones `SECURITY DEFINER` en `public` (RPC `POST /res
 
 | Función | Parámetros | Devuelve |
 |---|---|---|
-| `tdd_register` | `p_username, p_password` | progreso + `token` |
+| `tdd_register` | `p_username, p_password, p_avatar` (opcional, default `spark`) | progreso + `token` |
 | `tdd_login` | `p_username, p_password` | progreso + `token` |
 | `tdd_logout` | `p_token` | — |
 | `tdd_get_progress` | `p_token` | progreso |
 | `tdd_record` | `p_token, p_term_id, p_event` (`seen`/`mc`/`reveal`/`self`), `p_correct` | progreso |
 | `tdd_leaderboard` | `p_token` | filas `rank, username, current_streak, terms_learned, correct_answers, terms_seen, is_me` |
 | `tdd_change_password` | `p_token, p_old, p_new` | — |
-| `tdd_team` | `p_token, p_scope` (`hoy`/`semana`/`mes`/`racha`) | `{ranking[], prizes{day,week,month}, champions[]}` |
+| `tdd_team` | `p_token, p_scope` (`hoy`/`semana`/`mes`/`racha`) | `{ranking[] (incluye `avatar`), prizes{day,week,month}, champions[]}` |
+| `tdd_set_avatar` | `p_token, p_avatar` | progreso |
 | `tdd_ack_badges` | `p_token` | — (marca insignias como vistas) |
 | `tdd_admin_set_prize` | `p_token, p_period` (`day`/`week`/`month`), `p_title` (vacío = quitar) | — (solo admin) |
 | `tdd_admin_reset_password` | `p_token, p_username, p_new_password` | — (solo admin) |
 
-“Progreso” = `{username, is_admin, seen[], correct[], answered{}, days[], streak, today, points, points_today, level, scored_today, badges[]}`; `tdd_record` añade `award {points, reasons[], scored}`. Errores: `28000` sesión inválida, `28P01` credenciales, `23505` usuario existe, `22023` dato inválido, `42501` no admin.
+“Progreso” = `{username, is_admin, avatar, seen[], correct[], answered{}, days[], streak, today, points, points_today, level, scored_today, badges[]}`; `tdd_record` añade `award {points, reasons[], scored}`. Errores: `28000` sesión inválida, `28P01` credenciales, `23505` usuario existe, `22023` dato inválido, `42501` no admin.
+
+La migración `20261014124500_tdd_avatars.sql` agrega `tdd.users.avatar`, acepta `p_avatar` en el registro y publica `tdd_set_avatar`. Ya está aplicada en el proyecto `qnbvsgujbdzqufpzlhxc`.

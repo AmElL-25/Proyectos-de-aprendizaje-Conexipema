@@ -3,7 +3,18 @@
   var SKEY = 'tdd_session_v2';
   var SESSION = loadSession();            // { token, username, is_admin }
   var P = empty();
-  function empty() { return { seen: {}, correct: {}, answered: {}, days: [], streak: null, points: 0, points_today: 0, level: null, badges: [], scored_today: null }; }
+  function empty() { return { seen: {}, correct: {}, answered: {}, days: [], streak: null, points: 0, points_today: 0, level: null, badges: [], scored_today: null, avatar: null }; }
+  var loadedOnce = false;
+  function avatarKey() { return 'tdd_avatar_v2_' + (SESSION ? SESSION.username.toLowerCase() : ''); }
+  function localAvatar() { try { var v = localStorage.getItem(avatarKey()); return Avatars.valid(v) ? v : null; } catch (e) { return null; } }
+  function rememberAvatar(id) { try { if (Avatars.valid(id)) localStorage.setItem(avatarKey(), id); } catch (e) {} }
+  function currentAvatar() { return Avatars.valid(P.avatar) ? P.avatar : (localAvatar() || 'spark'); }
+  function paintWho() {
+    var el = $('#who-av');
+    if (!el || !SESSION) return;
+    el.innerHTML = Avatars.svg(currentAvatar(), Avatars.stageOf(P.level, P.points), 36);
+    $('#who').textContent = SESSION.username;
+  }
   function loadSession() { try { return JSON.parse(localStorage.getItem(SKEY) || 'null'); } catch (e) { return null; } }
   function saveSession() { try { SESSION ? localStorage.setItem(SKEY, JSON.stringify(SESSION)) : localStorage.removeItem(SKEY); } catch (e) {} }
   function cacheKey() { return 'tdd_cache_v2_' + (SESSION ? SESSION.username.toLowerCase() : ''); }
@@ -11,11 +22,17 @@
   function load() { try { return Object.assign(empty(), JSON.parse(localStorage.getItem(cacheKey()) || '{}')); } catch (e) { return empty(); } }
   function save() { try { localStorage.setItem(cacheKey(), JSON.stringify(P)); } catch (e) {} }
   function fromServer(d) {
+    var prevN = (P.level && P.level.n) || 0;
+    var had = loadedOnce;
     var toSet = function (arr) { var o = {}; (arr || []).forEach(function (id) { o[id] = 1; }); return o; };
+    var avatar = (d.avatar && Avatars.valid(d.avatar)) ? d.avatar : (localAvatar() || currentAvatar());
     P = { seen: toSet(d.seen), correct: toSet(d.correct), answered: d.answered || {}, days: d.days || [], streak: d.streak,
-      points: d.points || 0, points_today: d.points_today || 0, level: d.level || null, badges: d.badges || [], scored_today: d.scored_today || null };
+      points: d.points || 0, points_today: d.points_today || 0, level: d.level || null, badges: d.badges || [], scored_today: d.scored_today || null, avatar: avatar };
+    rememberAvatar(avatar);
     var fresh = P.badges.filter(function (b) { return b.new; });
     if (fresh.length) { celebrateBadges(fresh); A.ackBadges(SESSION.token).catch(function () {}); P.badges.forEach(function (b) { b.new = false; }); }
+    if (had && d.level && d.level.n > prevN) celebrateEvo(d.level);
+    loadedOnce = true;
     if (SESSION) { SESSION.is_admin = !!d.is_admin; SESSION.username = d.username || SESSION.username; saveSession(); }
     save(); stats();
   }
@@ -62,6 +79,7 @@
     $('#st-streak').textContent = streak();
     $('#st-pts').textContent = P.points || 0;
     $('#st-lvl').textContent = P.level ? P.level.name : 'Novato';
+    paintWho();
   }
 
   function mcOptions(t) {
@@ -203,11 +221,11 @@
       var order = [1, 0, 2], cls = ['p1', 'p2', 'p3'], medal = ['🥇', '🥈', '🥉'];
       var podium = top.length ? '<div class="podium">' + order.filter(function (i) { return top[i]; }).map(function (i) {
         var r = top[i];
-        return '<div class="pod ' + cls[i] + (r.is_me ? ' me' : '') + '"><div class="medal">' + medal[i] + '</div><div class="pname">' + esc(r.username) + '</div><div class="pmet">' + metric(r) + '</div><div class="block">' + (i + 1) + '</div></div>';
+        return '<div class="pod ' + cls[i] + (r.is_me ? ' me' : '') + '"><div class="medal">' + medal[i] + '</div>' + avHtml(r, 44) + '<div class="pname">' + esc(r.username) + '</div><div class="pmet">' + metric(r) + '</div><div class="block">' + (i + 1) + '</div></div>';
       }).join('') + '</div>' : '<p class="empty">Aún nadie suma puntos en este período. ¡Sé el primero! 🚀</p>';
       var table = '<table class="board"><thead><tr><th>#</th><th>Usuario</th><th>Nivel</th><th>' + (scope === 'racha' ? 'Racha 🔥' : 'Puntos') + '</th><th>Aciertos</th>' + (scope === 'hoy' ? '<th>Hora</th>' : '') + '</tr></thead><tbody>' +
         rows.map(function (r) {
-          return '<tr' + (r.is_me ? ' class="me"' : '') + '><td>' + r.rank + '</td><td>' + esc(r.username) + (r.is_me ? ' <small>(tú)</small>' : '') + '</td><td><small>' + esc(r.level) + '</small></td><td>' +
+          return '<tr' + (r.is_me ? ' class="me"' : '') + '><td>' + r.rank + '</td><td class="who-cell">' + avHtml(r, 28) + '<span>' + esc(r.username) + (r.is_me ? ' <small>(tú)</small>' : '') + '</span></td><td><small>' + esc(r.level) + '</small></td><td>' +
             (scope === 'racha' ? r.streak : r.points) + '</td><td>' + r.correct + '</td>' + (scope === 'hoy' ? '<td>' + fmtTime(r.first_at) + '</td>' : '') + '</tr>';
         }).join('') + '</tbody></table>';
       var hint = { hoy: 'Hoy: más aciertos, luego más puntos; empate → quien respondió primero.', semana: 'Semana (lun–dom): puntos acumulados.', mes: 'Mes: puntos acumulados.', racha: 'Racha actual de días practicando.' }[scope];
@@ -220,12 +238,24 @@
   }
 
   // ===== Perfil: nivel e insignias =====
+  function avHtml(r, size) {
+    var id = (r && Avatars.valid(r.avatar)) ? r.avatar : (r && r.is_me ? currentAvatar() : 'spark');
+    var stage = Avatars.stageOf(r && r.level, r && (r.total_points || r.points));
+    return Avatars.svg(id, stage, size);
+  }
   function renderProfile() {
     var lv = P.level || { name: 'Novato', min: 0, next: 50 }, pts = P.points || 0;
+    var stage = Avatars.stageOf(P.level, pts);
+    var id = currentAvatar();
     var pct = lv.next ? Math.min(100, Math.round((pts - lv.min) * 100 / (lv.next - lv.min))) : 100;
     var earned = {}; (P.badges || []).forEach(function (b) { (earned[b.code] = earned[b.code] || []).push(b); });
-    $('#profile').innerHTML = '<div class="lvl-card"><div class="lvl-name">' + esc(lv.name) + '</div><div class="lvl-pts">' + pts + ' pts · hoy +' + (P.points_today || 0) + '</div>' +
+    var evo = '<div class="evo">' + Avatars.names.map(function (n, i) {
+      return '<div class="evo-step' + (i === stage ? ' now' : '') + (i > stage ? ' later' : '') + '">' + Avatars.svg(id, i, 56) + '<small>' + n + '</small></div>';
+    }).join('') + '</div>';
+    $('#profile').innerHTML = '<div class="lvl-card"><div class="lvl-top">' + Avatars.svg(id, stage, 72) + '<div><div class="lvl-name">' + esc(lv.name) + '</div><div class="lvl-pts">' + pts + ' pts · hoy +' + (P.points_today || 0) + '</div></div></div>' +
       '<div class="bar"><span style="width:' + pct + '%"></span></div><small>' + (lv.next ? 'Faltan ' + (lv.next - pts) + ' pts para el siguiente nivel' : '¡Nivel máximo!') + '</small></div>' +
+      '<h3>Evolución</h3>' + evo +
+      '<h3>Tu avatar</h3><div id="pf-avatars" class="avatar-pick"></div>' +
       '<h3>Insignias</h3><div class="badges">' + BADGES.map(function (b) {
         var got = earned[b[0]];
         return '<div class="badge' + (got ? '' : ' locked') + '" title="' + esc(b[3]) + '"><div class="bi">' + b[1] + '</div><b>' + esc(b[2]) + '</b><small>' + esc(b[3]) + '</small>' + (got && got.length > 1 ? '<span class="cnt">×' + got.length + '</span>' : '') + '</div>';
@@ -233,6 +263,22 @@
       '<h3>¿Cómo se ganan puntos?</h3><ul class="rules"><li>+5 por practicar el día (responder o ver la respuesta modelo)</li><li>+10 si aciertas tu <b>primer</b> intento del día (uno por día; cada término puntúa una sola vez)</li>' +
       '<li>+5 bono madrugador si aciertas antes de las 10:00 a.m.</li><li>+3 si eres el primero del equipo en acertar hoy</li><li>Bonos de racha: 3 días +10 · 7 +25 · 14 +50 · 30 +100 · 60 +200 · 100 +300</li>' +
       '<li>Niveles: Novato 0 · Aprendiz 50 · Intermedio 150 · Avanzado 400 · Experto 800 · Maestro 1500</li></ul>';
+    mountPicker($('#pf-avatars'), id, function (next) {
+      P.avatar = next; rememberAvatar(next); save(); stats(); renderProfile();
+      if (!SESSION) return;
+      A.setAvatar(SESSION.token, next).then(function (d) { fromServer(d); }).catch(function (e) {
+        if (e.code === '28000') return expired();
+        var soft = e.status === 404 || /avatar|PGRST|Could not find|column|schema cache/i.test(e.message || '');
+        if (!soft) { P.avatar = id; rememberAvatar(id); save(); renderProfile(); }
+      });
+    });
+  }
+  function mountPicker(box, current, onPick) {
+    if (!box) return;
+    box.innerHTML = Avatars.list.map(function (c) {
+      return '<button type="button" class="apick' + (c.id === current ? ' on' : '') + '" data-av="' + c.id + '">' + Avatars.svg(c.id, 2, 52) + '<b>' + esc(c.name) + '</b><small>' + esc(c.blurb) + '</small></button>';
+    }).join('');
+    box.querySelectorAll('button').forEach(function (b) { b.onclick = function () { onPick(b.dataset.av); }; });
   }
 
   // ===== Celebraciones =====
@@ -249,12 +295,19 @@
     document.body.appendChild(el); confetti(null, 160);
     el.querySelector('button').onclick = function () { el.remove(); };
   }
+  function celebrateEvo(level) {
+    var stage = Avatars.stageOf(level, P.points);
+    var el = document.createElement('div'); el.className = 'celebrate';
+    el.innerHTML = '<div class="cbox"><div class="evo-hero">' + Avatars.svg(currentAvatar(), stage, 112) + '</div><h3>¡Tu avatar evolucionó!</h3><p>Ahora eres <b>' + esc(level.name) + '</b>. Tu compañero de equipo cambió de forma.</p><button class="btn">Seguir</button></div>';
+    document.body.appendChild(el); confetti(null, 160);
+    el.querySelector('button').onclick = function () { el.remove(); };
+  }
   function confetti(origin, n) {
     if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var c = document.createElement('canvas'), x = c.getContext('2d'), W = c.width = innerWidth, H = c.height = innerHeight;
     c.className = 'confetti'; document.body.appendChild(c);
     var r = origin ? origin.getBoundingClientRect() : { left: W / 2, top: H / 3, width: 0, height: 0 }, ox = r.left + r.width / 2, oy = r.top + r.height / 2;
-    var cols = ['#ff2000', '#30d5c8', '#7c4dff', '#5b9bff', '#14151c', '#ff6a52'], ps = [];
+    var cols = ['#ff2000', '#ff4040', '#f5f5f7', '#db1900', '#ffffff', '#25d366'], ps = [];
     for (var i = 0; i < (n || 90); i++) { var a = Math.random() * Math.PI * 2, v = 4 + Math.random() * 8; ps.push({ x: ox, y: oy, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 6, s: 4 + Math.random() * 5, c: cols[i % cols.length], r: Math.random() * 6 }); }
     var t0 = performance.now();
     (function f(t) {
@@ -296,23 +349,26 @@
   };
 
   // ===== Acceso (usuario + contraseña, sin correo) =====
-  var authMode = 'login';
+  var authMode = 'login', picked = 'spark';
   function setMode(m) {
     authMode = m;
     document.querySelectorAll('[data-auth]').forEach(function (b) { b.classList.toggle('active', b.dataset.auth === m); });
     $('#au-pass2-row').hidden = m !== 'register';
     $('#au-pass2').required = m === 'register';
+    $('#au-avatar-row').hidden = m !== 'register';
     $('#au-submit').textContent = m === 'register' ? 'Crear cuenta' : 'Ingresar';
     $('#au-pass').autocomplete = m === 'register' ? 'new-password' : 'current-password';
+    if (m === 'register') paintAuthPicker();
     msg('#au-msg', '', true);
   }
+  function paintAuthPicker() { mountPicker($('#au-avatars'), picked, function (id) { picked = id; paintAuthPicker(); }); }
   document.querySelectorAll('[data-auth]').forEach(function (b) { b.onclick = function () { setMode(b.dataset.auth); }; });
   $('#auth-form').onsubmit = function (ev) {
     ev.preventDefault();
     var u = $('#au-user').value.trim(), p = $('#au-pass').value;
     if (authMode === 'register' && p !== $('#au-pass2').value) return msg('#au-msg', 'Las contraseñas no coinciden.');
     $('#au-submit').disabled = true; msg('#au-msg', 'Un momento…', true);
-    (authMode === 'register' ? A.register(u, p) : A.login(u, p)).then(function (d) {
+    (authMode === 'register' ? A.register(u, p, picked) : A.login(u, p)).then(function (d) {
       SESSION = { token: d.token, username: d.username, is_admin: !!d.is_admin }; saveSession();
       fromServer(d); start();
     }).catch(function (e) { msg('#au-msg', e.message); }).then(function () { $('#au-submit').disabled = false; });
@@ -325,7 +381,7 @@
   var started = false;
   function start() {
     $('#auth').hidden = true; $('#app').hidden = false;
-    $('#who').textContent = '👤 ' + SESSION.username;
+    paintWho();
     if (!started) { started = true; tick(); setInterval(function () { tick(); flush(); }, 30000); }
     render(today);
   }
