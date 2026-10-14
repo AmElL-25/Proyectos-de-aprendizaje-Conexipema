@@ -254,7 +254,7 @@
     var c = document.createElement('canvas'), x = c.getContext('2d'), W = c.width = innerWidth, H = c.height = innerHeight;
     c.className = 'confetti'; document.body.appendChild(c);
     var r = origin ? origin.getBoundingClientRect() : { left: W / 2, top: H / 3, width: 0, height: 0 }, ox = r.left + r.width / 2, oy = r.top + r.height / 2;
-    var cols = ['#4f46e5', '#22c55e', '#f59e0b', '#ef4444', '#06b6d4', '#ec4899'], ps = [];
+    var cols = ['#ff2000', '#30d5c8', '#7c4dff', '#5b9bff', '#14151c', '#ff6a52'], ps = [];
     for (var i = 0; i < (n || 90); i++) { var a = Math.random() * Math.PI * 2, v = 4 + Math.random() * 8; ps.push({ x: ox, y: oy, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 6, s: 4 + Math.random() * 5, c: cols[i % cols.length], r: Math.random() * 6 }); }
     var t0 = performance.now();
     (function f(t) {
