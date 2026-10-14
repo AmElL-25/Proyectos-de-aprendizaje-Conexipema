@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4f46e5">
+<title>Término del Día · Marketing, Ads, Estrategia y Finanzas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <h1>📚 Término del Día</h1>
+    <p class="sub">Un concepto nuevo cada día · <span id="count"></span> términos</p>
+    <div class="stats">
+      <div><b id="st-seen">0</b><span>vistos</span></div>
+      <div><b id="st-ok">0</b><span>correctos</span></div>
+      <div><b id="st-streak">0</b><span>días de racha 🔥</span></div>
+    </div>
+    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="info">Ajustes</button></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="v-hoy" class="view"><article id="card" class="card"></article><p id="countdown" class="countdown"></p></section>
+  <section id="v-hist" class="view" hidden>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Buscar término…">
+      <select id="fcat"><option value="">Todas las categorías</option><option>Marketing</option><option>Publicidad digital</option><option>Estrategia de negocio</option><option>Finanzas</option></select>
+      <label><input type="checkbox" id="fall"> Ver banco completo</label>
+    </div>
+    <ul id="hist" class="hist"></ul>
+  </section>
+  <section id="v-info" class="view card" hidden>
+    <h3>Recordatorio</h3>
+    <p>El término cambia cada día a las <b>7:55 a.m. (hora de Lima)</b>. Si activas las notificaciones, te avisaré a esa hora <i>mientras esta pestaña esté abierta</i>.</p>
+    <button class="btn" id="notif">🔔 Activar recordatorio</button>
+    <h3>Progreso</h3>
+    <p>Tu progreso se guarda solo en este navegador (localStorage).</p>
+    <button class="btn ghost" id="reset">Reiniciar progreso</button>
+  </section>
+</main>
+<dialog id="dlg"><div id="detail"></div></dialog>
+<script src="terms.js"></script>
+<script src="schedule.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
