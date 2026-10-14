@@ -11,7 +11,7 @@
 <section id="auth" class="auth" hidden>
   <div class="card authcard">
     <h1>📚 Término del Día</h1>
-    <p class="sub"><span id="who"></span> · Aprende un concepto cada día con tu equipo.</p>
+    <p class="sub">Aprende un concepto cada día con tu equipo.</p>
     <nav class="tabs"><button type="button" data-auth="login" class="active">Ingresar</button><button type="button" data-auth="register">Crear cuenta</button></nav>
     <form id="auth-form">
       <label>Usuario<input id="au-user" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="p. ej. maria.lopez"></label>
@@ -32,8 +32,10 @@
       <div><b id="st-seen">0</b><span>vistos</span></div>
       <div><b id="st-ok">0</b><span>correctos</span></div>
       <div><b id="st-streak">0</b><span>días de racha 🔥</span></div>
+      <div><b id="st-pts">0</b><span>puntos ⚡</span></div>
+      <div><b id="st-lvl">Novato</b><span>nivel</span></div>
     </div>
-    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="equipo">Equipo</button><button data-tab="info">Ajustes</button></nav>
+    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="equipo">Equipo</button><button data-tab="perfil">Perfil</button><button data-tab="info">Ajustes</button></nav>
   </div>
 </header>
 <main class="wrap">
@@ -67,9 +69,17 @@
         <input id="adm-pass" required minlength="6" placeholder="Nueva contraseña temporal">
         <button class="btn">Restablecer contraseña</button><p id="adm-msg" class="fb"></p>
       </form>
+      <h3>Premios del equipo</h3>
+      <p>Define un premio real por período (se muestra en Equipo). Deja el texto vacío para quitarlo.</p>
+      <form id="prize-form" class="stack">
+        <select id="prize-period"><option value="day">Ganador del día</option><option value="week">Ganador de la semana</option><option value="month">Ganador del mes</option></select>
+        <input id="prize-title" maxlength="120" placeholder="p. ej. Almuerzo pagado">
+        <button class="btn">Guardar premio</button><p id="prize-msg" class="fb"></p>
+      </form>
     </div>
   </section>
-  <section id="v-equipo" class="view card" hidden><h3>Ranking del equipo</h3><div id="board"></div></section>
+  <section id="v-equipo" class="view card" hidden><h3>Ranking del equipo</h3><nav class="scopes" id="scopes"></nav><div id="board"></div></section>
+  <section id="v-perfil" class="view card" hidden><div id="profile"></div></section>
 </main>
 </div>
 <dialog id="dlg"><div id="detail"></div></dialog>

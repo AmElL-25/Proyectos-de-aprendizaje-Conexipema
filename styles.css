@@ -50,3 +50,34 @@ dialog{border:0;border-radius:16px;max-width:600px;width:92%}dialog::backdrop{ba
 .board tr.me { background: #eef2ff; font-weight: 600; }
 .authcard .tabs button { color: #4f46e5; border-bottom-color: #e2e8f0; }
 .authcard .tabs button.active { border-color: #4f46e5; }
+/* Puntos, rankings e insignias */
+.stats{flex-wrap:wrap}
+.scopes{display:flex;gap:6px;margin:8px 0 14px}
+.scopes button{flex:1;padding:8px;border:1px solid #c7d2fe;background:#fff;border-radius:999px;font:inherit;cursor:pointer;color:#4f46e5}
+.scopes button.active{background:#4f46e5;color:#fff}
+.podium{display:flex;justify-content:center;align-items:flex-end;gap:8px;margin:10px 0 16px}
+.pod{text-align:center;width:31%;max-width:150px;animation:rise .6s ease-out both}
+.pod .medal{font-size:2rem}.pod .pname{font-weight:700;word-break:break-word}.pod .pmet{font-size:.8rem;color:#475569;margin-bottom:4px}
+.pod .block{border-radius:10px 10px 0 0;color:#fff;font-weight:800;font-size:1.4rem;display:flex;align-items:center;justify-content:center}
+.pod.p1 .block{height:110px;background:linear-gradient(#fbbf24,#d97706)}.pod.p2 .block{height:80px;background:linear-gradient(#cbd5e1,#64748b)}.pod.p3 .block{height:60px;background:linear-gradient(#fdba74,#c2410c)}
+.pod.p1{animation-delay:.2s}.pod.me .pname{color:#4f46e5}
+@keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.prizes{display:grid;gap:6px;margin-bottom:10px}.prize{background:#fef3c7;border-radius:10px;padding:8px 10px;font-size:.9rem}.prize.cur{outline:2px solid #f59e0b}
+.champs{list-style:none;padding:0;margin:0}.champs li{padding:6px 0;border-bottom:1px solid #f1f5f9}.champs small{color:#64748b}
+.lvl-card{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:14px;padding:16px}
+.lvl-name{font-size:1.6rem;font-weight:800}.lvl-pts{opacity:.9;margin-bottom:8px}
+.bar{height:10px;background:rgba(255,255,255,.3);border-radius:99px;overflow:hidden;margin-bottom:4px}.bar span{display:block;height:100%;background:#fde047;transition:width .8s}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.badge{position:relative;text-align:center;border:1px solid #e2e8f0;border-radius:12px;padding:10px;background:#fff}
+.badge .bi{font-size:2rem}.badge small{display:block;color:#64748b;font-size:.75rem}.badge.locked{filter:grayscale(1);opacity:.45}
+.badge .cnt{position:absolute;top:6px;right:8px;font-size:.75rem;font-weight:700;color:#4f46e5}
+.rules{font-size:.9rem;color:#334155}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#111827;color:#fff;padding:10px 16px;border-radius:12px;z-index:50;display:grid;gap:2px;text-align:center;animation:pop .35s ease-out;transition:opacity .5s}
+.toast b{font-size:1.3rem;color:#fde047}.toast.out{opacity:0}
+@keyframes pop{from{transform:translate(-50%,30px) scale(.8);opacity:0}}
+.celebrate{position:fixed;inset:0;background:rgba(15,23,42,.6);display:flex;align-items:center;justify-content:center;z-index:60}
+.cbox{background:#fff;border-radius:16px;padding:20px;max-width:340px;width:90%;text-align:center;animation:pop2 .5s cubic-bezier(.2,1.6,.4,1)}
+.cbig{font-size:3rem}.cb{display:flex;gap:10px;align-items:center;text-align:left;margin:8px 0}.cb span{font-size:2rem}.cb small{display:block;color:#64748b}
+@keyframes pop2{from{transform:scale(.5);opacity:0}}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:70}
+[hidden]{display:none!important}

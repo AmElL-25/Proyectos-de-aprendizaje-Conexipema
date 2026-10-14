@@ -22,6 +22,9 @@
     record: function (t, termId, ev, ok) { return rpc('tdd_record', { p_token: t, p_term_id: termId, p_event: ev, p_correct: ok === undefined ? null : ok }); },
     leaderboard: function (t) { return rpc('tdd_leaderboard', { p_token: t }); },
     changePassword: function (t, o, n) { return rpc('tdd_change_password', { p_token: t, p_old: o, p_new: n }); },
+    team: function (t, scope) { return rpc('tdd_team', { p_token: t, p_scope: scope }); },
+    ackBadges: function (t) { return rpc('tdd_ack_badges', { p_token: t }); },
+    setPrize: function (t, period, title) { return rpc('tdd_admin_set_prize', { p_token: t, p_period: period, p_title: title }); },
     adminReset: function (t, u, n) { return rpc('tdd_admin_reset_password', { p_token: t, p_username: u, p_new_password: n }); }
   };
 })(window);
