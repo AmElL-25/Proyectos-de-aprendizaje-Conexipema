@@ -1,7 +1,7 @@
 # Término del Día
 App estática (sin build) para el equipo: un concepto nuevo cada día (cambia a las **7:55 a.m. hora Lima**), con cuentas de usuario, progreso en la nube y ranking del equipo.
 
-- `terms.js`: banco de términos (generado desde `tools/gen.py` + `tools/d_*.py`).
+- `terms.js`: banco de términos (generado desde `tools/gen.py` + `tools/d_*.py`). Cada término trae un ejemplo aplicado y un caso distinto (`scenario`) para la pregunta de opción múltiple; esa pregunta no repite la definición.
 - `schedule.js`: término diario determinista; sin repeticiones dentro de cada ciclo.
 - `config.js`: URL y clave publicable de Supabase (es pública por diseño; los datos están protegidos por las funciones RPC).
 - `api.js`: cliente mínimo de las funciones RPC.

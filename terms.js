@@ -7,9 +7,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Grupo concreto al que una empresa dirige su oferta. En una tech se define con datos de uso, cargo, industria y problema, no con 'todo el mundo'.",
-  "example": "Una startup de facturación electrónica en Perú apunta a estudios contables de 5 a 40 personas que aún emiten en el portal de SUNAT a mano.",
-  "question": "¿Por qué un SaaS no debería definir su público como 'todas las empresas'?",
-  "answer": "Porque diluye el mensaje, el producto y el presupuesto; un público estrecho permite hablar de un problema real."
+  "example": "Una startup de facturación en Perú dejó de decir 'pymes de Latinoamérica'. Miró a quién se le activaba el producto: estudios contables de 5 a 40 personas en Lima que todavía emiten en el portal de SUNAT a mano. Al acotar el mensaje y el onboarding a ese grupo, la prueba pasó de 6% a 19% de activación. El resto del mercado no desapareció; simplemente dejó de ser a quién le hablan esta versión.",
+  "scenario": "Una SaaS de turnos médicos está pautando a 'cualquier negocio con personal'. De 400 pruebas, las que llegan a la segunda semana son casi todas clínicas de 3 a 15 profesionales. El resto se registra y no carga la agenda. Tienen que decidir a quién le escriben la home y a quién dejan fuera del anuncio.",
+  "question": "Si el anuncio sigue diciendo 'todas las pymes' pero el producto solo se activa en estudios de hasta 40 personas, ¿qué se rompe primero?",
+  "answer": "El mensaje promete un caso que el producto no resuelve, y el presupuesto se va en cuentas que no llegan al primer valor."
  },
  {
   "id": "mkt02",
@@ -18,9 +19,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Retrato semi-ficticio del cliente ideal, armado con entrevistas y datos del producto. Incluye trabajo, dolores, objeciones y cómo decide.",
-  "example": "'Lucía, 34, head de growth en una fintech de Lima: necesita bajar el CAC y desconfía de los dashboards que no cuadran con el CRM.'",
-  "question": "¿En qué se diferencia de un público objetivo?",
-  "answer": "El buyer persona detalla motivaciones y objeciones de una persona tipo; el público objetivo es el segmento más amplio."
+  "example": "Tras 11 entrevistas, el equipo escribió: 'Lucía, 34, head de growth en una fintech de Lima. La miden por CAC, desconfía de los dashboards que no cuadran con el CRM y necesita el visto bueno de finanzas para un contrato de más de US$ 6.000'. Esa ficha cambió el caso de la landing: dejaron de hablar de 'visibilidad' y mostraron la conciliación con el CRM.",
+  "scenario": "El equipo de una herramienta de soporte armó una ficha con nombre, cargo, qué le duele el lunes y quién le frena la compra. No es el segmento entero de 'empresas de 50 personas': es una persona tipo, con la objeción de que el precio lo aprueba otro.",
+  "question": "¿Qué le falta a un cartel que solo dice 'gerentes de marketing, 30 a 45 años'?",
+  "answer": "El trabajo, el dolor y cómo decide. La edad y el cargo no dicen por qué compraría ni quién le dice que no."
  },
  {
   "id": "mkt03",
@@ -29,9 +31,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Promesa clara de qué resultado entregas, a quién y por qué eres distinto. En producto digital debe leerse en una frase.",
-  "example": "Notion: un espacio de trabajo que reemplaza docs, wikis y tareas sueltas.",
-  "question": "¿Qué tres piezas tiene una buena propuesta de valor?",
-  "answer": "Resultado concreto, cliente al que sirve y diferencia frente a alternativas."
+  "example": "La home de una SaaS de cobranza decía 'plataforma integral e innovadora'. La cambiaron por: 'los estudios contables de Lima cobran facturas vencidas sin perseguir por WhatsApp, porque el recordatorio sale solo y queda en el expediente'. En dos semanas el inicio de prueba subió de 2,1% a 4,4%, sin cambiar el precio.",
+  "scenario": "Una herramienta de onboarding para RR. HH. tiene que decir en una frase qué resultado entrega, a qué equipo y por qué no es 'otro formulario'. Hoy la home lista doce módulos y nadie repite la promesa igual en ventas y en el anuncio.",
+  "question": "¿Qué tres piezas tiene que poder leerse en esa frase?",
+  "answer": "El resultado concreto, a quién le sirve y en qué se diferencia de la alternativa, incluido seguir haciéndolo a mano."
  },
  {
   "id": "mkt04",
@@ -40,9 +43,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Lugar que la marca ocupa en la mente frente a alternativas. Se sostiene con producto, precio, mensaje y experiencia, no solo con un eslogan.",
-  "example": "Linear se posicionó como el issue tracker rápido para equipos de producto, frente a herramientas más pesadas.",
-  "question": "¿Quién termina decidiendo el posicionamiento?",
-  "answer": "El cliente; la empresa solo puede influirlo con consistencia."
+  "example": "Linear no ganó diciendo 'software de tareas'. Ocupó el lugar de 'el tablero rápido para equipos de producto que ya sufren herramientas pesadas'. El precio, la velocidad de la interfaz y el mensaje apuntan al mismo lugar. Si el producto fuera lento, el eslogan no sostendría ese lugar en la cabeza del comprador.",
+  "scenario": "Una app de gastos quiere que las pymes de Lima la recuerden como la que cuadra con SUNAT, no como 'otra app de finanzas personales'. El producto, el precio y lo que dice el ejecutivo tienen que empujar ese mismo lugar frente a la hoja de cálculo.",
+  "question": "¿Quién confirma si ese lugar se logró?",
+  "answer": "El cliente, cuando te compara con la alternativa. La empresa solo puede empujarlo con producto y mensaje consistentes."
  },
  {
   "id": "mkt05",
@@ -51,9 +55,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Sistema de nombre, voz, promesa y experiencia que hace reconocible a una empresa. En tech incluye el producto, no solo el logo.",
-  "example": "Stripe construyó marca de confianza para desarrolladores con documentación clara y un tono preciso.",
-  "question": "¿Por qué el branding no es solo el logo?",
-  "answer": "Porque la marca es la percepción total: producto, soporte, tono y promesa cumplida."
+  "example": "Stripe no se volvió reconocible por el logo: la documentación, el tono preciso y un checkout que no falla le dijeron a los desarrolladores 'esto es serio'. Una fintech local cambió el isotipo y dejó el soporte respondiendo en 4 días con otro tono. El recuerdo de marca no se movió.",
+  "scenario": "Una SaaS cambió el logotipo y la paleta. El producto sigue con errores en el alta, y soporte contesta con otro tono que el de la web. El director cree que con el manual de marca ya está resuelto el reconocimiento.",
+  "question": "¿Por qué cambiar solo el logo no mueve cómo te perciben?",
+  "answer": "Porque la percepción incluye el producto, el soporte y si la promesa se cumple, no solo la marca gráfica."
  },
  {
   "id": "mkt06",
@@ -62,9 +67,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Recorrido desde que alguien descubre la marca hasta que convierte: conciencia, consideración y decisión. Sirve para asignar mensajes y métricas por etapa.",
-  "example": "Un post de LinkedIn atrae, un webinar educa y una prueba gratis cierra.",
-  "question": "¿Qué métrica corresponde a la etapa de conciencia?",
-  "answer": "Alcance, impresiones o visitas nuevas, no ingresos."
+  "example": "En una SaaS de nómina, el video de YouTube se mide por alcance (conciencia), el webinar de 'cómo calcular beneficios' por registros calificados (consideración) y la prueba de 14 días por altas de pago (decisión). El mes pasado celebraron 200.000 impresiones y cero pruebas. El dinero de la etapa de arriba no estaba conectado con una oferta para bajar.",
+  "scenario": "Arriba hay un video que la gente ve y no clic. En el medio, una guía que se descargan. Abajo, una prueba que casi nadie termina. Cada pieza tiene una métrica distinta y el equipo está optimizando todo contra ingresos de esta semana.",
+  "question": "¿Qué métrica le corresponde a quien recién se entera de que existes, y cuál no?",
+  "answer": "Alcance o visitas nuevas. El ingreso es de la etapa en la que ya deciden, no de la primera vez que te ven."
  },
  {
   "id": "mkt07",
@@ -73,9 +79,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Persona o cuenta que mostró interés y dejó un dato de contacto. Todavía no es cliente.",
-  "example": "Alguien pide una demo del CRM y deja su correo de trabajo.",
-  "question": "¿Un lead ya compró?",
-  "answer": "No. Es un prospecto que hay que calificar y acompañar."
+  "example": "En el CRM entraron 120 personas que pidieron la guía y dejaron el correo del trabajo. Ventas las contó como 'clientes del mes'. Solo 9 agendaron y 2 pagaron. Esas 120 son interés con un dato de contacto, no ingreso. Tratarlas como venta infla el forecast y quema al equipo llamando a quien todavía lee.",
+  "scenario": "Alguien dejó el correo para ver una demo del software de inventario y todavía no tiene fecha ni tarjeta. En el tablero de la semana aparece al lado de las cuentas que ya pagan.",
+  "question": "¿Ya compró?",
+  "answer": "No. Dejó un dato y hay que calificarlo. Contarlo como cliente adelanta un ingreso que no existe."
  },
  {
   "id": "mkt08",
@@ -84,9 +91,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Instrucción concreta que pide un siguiente paso: probar, agendar, descargar. Un CTA específico convierte más que un 'enviar'.",
-  "example": "Botón 'Empieza tu prueba de 14 días' en vez de 'Enviar'.",
-  "question": "¿Por qué 'Crear mi espacio gratis' suele ganar a 'Registrarme'?",
-  "answer": "Porque nombra el beneficio y reduce la fricción percibida."
+  "example": "En la misma landing, 'Enviar' convertía 1,8% y 'Crear mi espacio y ver el primer reporte' convirtió 3,6%, con el mismo formulario de 4 campos. El botón dice el beneficio y el paso. 'Registrarme' describe el trámite, no lo que la persona obtiene en los siguientes diez minutos.",
+  "scenario": "El botón de una página de prueba dice 'Enviar'. El equipo propone cambiarlo por 'Empezar la conciliación de prueba'. El formulario no cambia. Quieren saber qué están cambiando en realidad.",
+  "question": "¿Por qué el texto que nombra el resultado suele ganar al que nombra el trámite?",
+  "answer": "Porque la persona entiende qué obtiene y el paso se siente más chico que 'registrarme'."
  },
  {
   "id": "mkt09",
@@ -95,9 +103,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Página con un solo objetivo de conversión, casi siempre destino de una campaña. Quita menús y ofertas que distraen.",
-  "example": "Una página de una fintech solo para abrir una cuenta de prueba, con un formulario y tres beneficios.",
-  "question": "¿Por qué suele no tener menú?",
-  "answer": "Para que la atención se quede en la única acción que importa."
+  "example": "La campaña de 'abre tu cuenta de prueba' llevaba a la home, que tiene menú, blog, precios de tres productos y un chat de empleos. El 40% de los clics se iba a otra sección. Armaron una página con un formulario, tres beneficios y ningún menú: la prueba iniciada pasó de 3% a 8% del tráfico de esa campaña.",
+  "scenario": "El anuncio promete una auditoría de 20 minutos. Quien hace clic llega a una página que solo tiene ese formulario y tres pruebas, sin el menú del sitio ni otra oferta.",
+  "question": "¿Por qué se le quita el menú?",
+  "answer": "Para que la atención no se escape a otra sección. Esa visita tiene una sola acción que importa."
  },
  {
   "id": "mkt10",
@@ -106,8 +115,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Porcentaje de personas que completan la acción deseada sobre el total que tuvo la oportunidad. Fórmula: conversiones / visitas × 100.",
-  "example": "2.000 visitas a la landing y 80 pruebas iniciadas = 4%.",
-  "question": "Si hay 1.000 visitas y 25 altas de pago, ¿cuál es la tasa?",
+  "example": "La landing recibió 2.000 visitas desde la campaña y 80 personas crearon la prueba: 4%. Finanzas preguntó por las altas de pago: fueron 25, o sea 1,25% de las visitas y 31% de las pruebas. Sin decir cuál es la acción, 'convertimos al 4%' no se puede comparar con el mes pasado.",
+  "scenario": "1.000 personas vieron la página de precios y 25 dejaron una tarjeta. Otro informe habla de 80 registros en la misma página. Antes de celebrar hay que fijar qué acción es la que cuenta.",
+  "question": "Si hay 1.000 visitas y 25 altas de pago, ¿cuál es el porcentaje de esa acción?",
   "answer": "2,5%."
  },
  {
@@ -117,9 +127,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Crear y distribuir contenido útil para atraer a quien ya tiene el problema, en lugar de interrumpir. En B2B tech suele ser guías, comparativas y casos.",
-  "example": "Una empresa de ciberseguridad publica una guía de cómo responder a un incidente de ransomware.",
-  "question": "¿Cuál es el objetivo principal?",
-  "answer": "Atraer y educar a la audiencia correcta para que, cuando compre, ya confíe."
+  "example": "Una empresa de ciberseguridad publicó una guía de respuesta a ransomware, con la lista que usa su propio SOC. En el trimestre la guía trajo 600 correos de trabajo y 40 evaluaciones. No interrumpió a nadie: la encontró quien ya tenía el incidente en la cabeza. El anuncio del mismo presupuesto trajo más clics y menos evaluaciones.",
+  "scenario": "Un equipo publica una guía de cómo cuadrar el IGV con el libro de ventas, y al final ofrece la prueba del software. No están empujando un banner a quien no buscaba el tema.",
+  "question": "¿Para qué sirve ese material si muchos lo leen y no compran esa semana?",
+  "answer": "Para que, cuando el problema apriete, ya te conozcan y confíen. La compra llega después de la utilidad."
  },
  {
   "id": "mkt12",
@@ -128,9 +139,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Prácticas para aparecer en resultados orgánicos de buscadores: contenido, técnica del sitio y autoridad. No se paga por el clic.",
-  "example": "Un blog de una HR tech optimiza 'cómo calcular beneficios sociales en Perú' y captura demanda existente.",
-  "question": "¿SEO es lo mismo que pagar anuncios en Google?",
-  "answer": "No. Pagar por aparecer es SEM. SEO es orgánico."
+  "example": "Una HR tech lleva cuatro meses rankeando 'cómo calcular beneficios sociales en Perú'. Esa página trae 3.000 visitas al mes y el equipo no paga por cada una. La campaña de búsqueda de la misma frase sí se paga por clic y se apaga si se acaba el presupuesto. Confundir las dos hace que apaguen la página 'porque el CPC salió caro', cuando esa página no tiene CPC.",
+  "scenario": "Una guía del blog aparece en la primera página cuando alguien busca el problema, y el clic no se le paga a nadie. Otra campaña muestra un anuncio arriba de ese resultado y sí cobra por el clic.",
+  "question": "¿Es lo mismo que pagar para aparecer?",
+  "answer": "No. Pagar por el clic es otra disciplina. Aquí el clic orgánico no se compra uno por uno."
  },
  {
   "id": "mkt13",
@@ -139,9 +151,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Dividir el mercado en grupos con necesidades parecidas para hablarles distinto. Puede ser por industria, tamaño, comportamiento de uso o madurez.",
-  "example": "Un SaaS de soporte ofrece un plan a startups y otro, con SSO y auditoría, a empresas de 200+ personas.",
-  "question": "Da un ejemplo de segmentación por comportamiento.",
-  "answer": "Usuarios que invitaron a 3 compañeros en la primera semana frente a quienes no invitaron a nadie."
+  "example": "La misma SaaS de soporte le ofrece a equipos de menos de 20 personas un plan simple, y a empresas de más de 200 un plan con SSO, auditoría y un ejecutivo. Dentro del plan chico, además, separan a quienes invitaron a 3 compañeros en la primera semana de quienes no invitaron a nadie: el mensaje de expansión solo le sale al primer grupo.",
+  "scenario": "A las cuentas que invitaron a tres personas en la primera semana se les muestra un caso de expansión. A las que nadie invitó, un correo para terminar la configuración. No es el mismo mensaje para toda la base.",
+  "question": "Da un corte por comportamiento, no por industria.",
+  "answer": "Quienes invitaron a compañeros en la primera semana frente a quienes no invitaron a nadie."
  },
  {
   "id": "mkt14",
@@ -150,9 +163,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Manera consistente de escribir y hablar: formal o cercana, técnica o simple. En un equipo tech evita que cada canal suene a una empresa distinta.",
-  "example": "Intercom escribe como un colega claro, no como un manual legal.",
-  "question": "¿Para qué sirve documentar la voz?",
-  "answer": "Para que marketing, producto y soporte comuniquen la misma personalidad."
+  "example": "Documentaron que hablan como un colega claro, sin adjetivos vacíos y tuteando. Marketing lo cumple. El macro de soporte seguía en 'estimado usuario, su ticket ha sido recepcionado'. En las reseñas apareció 'parecen dos empresas'. Alinear el macro no fue un tema de logo: fue de cómo se escribe.",
+  "scenario": "La web tutea y va al grano. El correo de soporte trata de usted y usa fórmulas legales. Un cliente lo mencionó en una reseña. Quieren una manera única de escribir en todos los canales.",
+  "question": "¿Para qué se escribe eso en un documento que lean producto, marketing y soporte?",
+  "answer": "Para que no suene a empresas distintas según quién conteste."
  },
  {
   "id": "mkt15",
@@ -161,9 +175,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Señales de que otras personas o empresas ya confiaron: logos, cifras, reseñas, casos. Reduce el riesgo percibido de probar un software nuevo.",
-  "example": "Una landing muestra 'usado por 1.200 equipos en LatAm' y tres logos reconocibles.",
-  "question": "¿Por qué funciona mejor un caso con números que un adjetivo?",
-  "answer": "Porque un resultado verificable ('bajó el churn 18%') es más creíble que 'somos líderes'."
+  "example": "La landing decía 'líderes en innovación'. La cambiaron por '1.200 equipos en LatAm' y un caso: una clínica bajó 18% el no-show en 60 días. La prueba iniciada subió. El adjetivo no daba nada que verificar; el número y el caso sí reducen el miedo de meter un software nuevo en la operación.",
+  "scenario": "En la página de precios hay tres logos conocidos y una frase: una fintech bajó el tiempo de cierre de 11 a 6 días. Antes decía 'la solución más completa'. Quieren la señal de que otros ya confiaron.",
+  "question": "¿Por qué un caso con un número le gana a 'somos líderes'?",
+  "answer": "Porque se puede verificar. El adjetivo no reduce el riesgo de probar algo nuevo."
  },
  {
   "id": "mkt16",
@@ -172,9 +187,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Sistema que premia a un cliente por traer a otro. Funciona cuando el producto ya se recomienda solo y el incentivo no canibaliza el margen.",
-  "example": "Dropbox regalaba espacio extra por cada amigo que se registraba.",
-  "question": "¿Cuándo un referido es más barato que un anuncio?",
-  "answer": "Cuando el incentivo cuesta menos que el CAC de paid y además llega gente parecida a tus mejores clientes."
+  "example": "Dropbox regalaba espacio por cada amigo que se activaba. Una SaaS de nómina local probó US$ 50 de crédito por referido. Cada alta referida costó esos US$ 50 más nada de pauta, frente a un costo de pauta de US$ 220, y las cuentas referidas se parecían a las que ya retenían. Si el crédito hubiera sido de US$ 300, el margen del primer año no cerraba.",
+  "scenario": "Un cliente recibe un mes de crédito si un colega crea una cuenta de pago. Traer a esa persona sale más barato que el anuncio, siempre que el crédito no se coma el margen del año.",
+  "question": "¿Cuándo el referido deja de convenir frente al anuncio?",
+  "answer": "Cuando el premio cuesta más que conseguir esa cuenta por pauta, o cuando atrae gente que no se parece a tus mejores clientes."
  },
  {
   "id": "mkt17",
@@ -183,9 +199,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 1,
   "explanation": "Piezas que crean los propios clientes: reseñas, capturas, videos, hilos. En producto digital es prueba real de uso.",
-  "example": "Usuarios de Figma publican archivos de la comunidad que otros duplican.",
-  "question": "¿Por qué una marca tech lo impulsa?",
-  "answer": "Porque es más creíble que un anuncio y además alimenta SEO y redes."
+  "example": "Usuarios de Figma publican archivos que otros duplican. Una SaaS de tableros hizo lo mismo: 80 plantillas de clientes traen el 15% de los registros, con una captura del tablero real y no un render del equipo de marca. Es más creíble que el anuncio y además rankea.",
+  "scenario": "Clientes publican capturas de sus tableros y reseñas en un foro. Esos posts traen registros sin que el equipo de marca los redacte. No es una campaña pagada.",
+  "question": "¿Por qué una marca tech lo empuja en vez de producir todo en casa?",
+  "answer": "Porque se ve como uso real, convence más que un anuncio y además alimenta búsqueda y redes."
  },
  {
   "id": "mkt18",
@@ -194,9 +211,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Momento en que un usuario nuevo alcanza el primer valor del producto, no solo cuando crea la cuenta. Es la métrica que predice retención.",
-  "example": "En un tablero de analítica, activación puede ser 'conectó una fuente y vio su primer gráfico'.",
-  "question": "¿Por qué 'se registró' no basta como activación?",
-  "answer": "Porque registrarse no demuestra que el producto le sirvió."
+  "example": "En un tablero de analítica definieron el hito como 'conectó una fuente y vio el primer gráfico', no como 'creó la cuenta'. De quienes lo logran en 48 horas, el 45% sigue al mes. De quienes solo se registran, el 8%. Celebrar 1.000 registros escondía que 700 nunca vieron un número propio.",
+  "scenario": "De cada 100 cuentas nuevas, 60 crean el usuario y 15 conectan el banco y ven el primer movimiento categorizado. A los 30 días siguen casi solo esas 15. El equipo todavía reporta las 60 como éxito del alta.",
+  "question": "¿Por qué el registro no sirve como ese hito?",
+  "answer": "Porque crear la cuenta no demuestra que el producto le haya servido. Quien no llega al primer resultado se va."
  },
  {
   "id": "mkt19",
@@ -205,9 +223,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Instante en que el usuario entiende por sí mismo el valor. El onboarding debería acortar el camino hasta ese momento.",
-  "example": "En Slack, el momento ajá suele ser cuando el equipo envía 2.000 mensajes: ya no vuelve al correo.",
-  "question": "¿Qué haces si el momento ajá llega al día 14?",
-  "answer": "Rediseñas el onboarding para que ocurra en la primera sesión."
+  "example": "En Slack, el quiebre suele llegar cuando el equipo acumula unos 2.000 mensajes y ya no vuelve al correo. Una SaaS de cobranza medía ese quiebre al día 14, cuando caía el primer pago conciliado. Movieron un cobro de prueba al minuto 10 del alta. La retención a 14 días subió porque la gente entendía el valor en la primera sesión, no dos semanas después.",
+  "scenario": "Quien usa el producto solo entiende para qué sirve cuando ve su propio reporte conciliado, y eso hoy ocurre el día 14. Casi nadie espera tanto. Quieren adelantar ese instante a la primera sesión.",
+  "question": "Si ese instante llega el día 14, ¿qué se rediseña?",
+  "answer": "El camino de los primeros minutos, para que la persona vea el valor antes de irse."
  },
  {
   "id": "mkt20",
@@ -216,9 +235,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Secuencia guiada que lleva a un usuario nuevo desde el registro hasta la activación. Incluye vacíos, checklists y mensajes, no solo un tour.",
-  "example": "Una app de gastos pide conectar el banco y categoriza el primer movimiento antes de mostrar el resto.",
-  "question": "¿Qué se mide para saber si el onboarding funciona?",
-  "answer": "La tasa de activación y el tiempo hasta el primer valor."
+  "example": "La app de gastos abre vacía y pide conectar el banco antes de mostrar el resto. En cuanto entra el primer movimiento, lo categoriza y marca el checklist. Un tour de 8 pantallas que se saltaban el 90% no movía la activación. Esta secuencia sí: el tiempo al primer movimiento categorizado bajó de 3 días a 20 minutos.",
+  "scenario": "Después del registro, una lista de tres pasos obliga a importar una factura, verla conciliada y recién entonces abre el resto del menú. No es un video que se puede saltar.",
+  "question": "¿Qué dos números dicen si esa secuencia funciona?",
+  "answer": "Cuántos llegan al primer valor y cuánto tardan en llegar."
  },
  {
   "id": "mkt21",
@@ -227,9 +247,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "El producto es el canal principal de adquisición, activación y expansión: la gente lo prueba sola y luego paga o invita a su equipo.",
-  "example": "Figma se adopta en un equipo de diseño y después el resto de la empresa pide licencias.",
-  "question": "¿En qué se diferencia de un movimiento liderado por ventas?",
-  "answer": "En PLG el usuario llega al valor antes de hablar con un vendedor; en ventas, un ejecutivo califica y cierra."
+  "example": "Figma entra por una diseñadora que comparte un archivo. A las dos semanas el jefe pide 15 licencias. No hubo un ejecutivo al principio. Una SaaS de wikis copió eso: el enlace público trae al segundo usuario, y el plan de pago aparece cuando el espacio supera 10 personas. El vendedor entra solo si piden SSO.",
+  "scenario": "Alguien se crea la cuenta sin hablar con ventas, invita a tres compañeros y, cuando el espacio pasa de 10 personas, aparece el plan de pago. Un ejecutivo solo entra si piden contrato.",
+  "question": "¿En qué se diferencia de un movimiento donde un ejecutivo califica y cierra antes de que exista uso?",
+  "answer": "Aquí la persona llega al valor sola. En el otro, nadie usa el producto hasta que ventas cierra."
  },
  {
   "id": "mkt22",
@@ -238,9 +259,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "La comunidad de usuarios atrae, educa y retiene: foros, eventos, plantillas y defensores. El equipo facilita, no monopoliza la conversación.",
-  "example": "Supabase crece con builders que responden dudas y publican ejemplos en Discord y GitHub.",
-  "question": "¿Por qué no es lo mismo que 'tener un grupo de WhatsApp'?",
-  "answer": "Porque la comunidad genera contenido, soporte entre pares y distribución, con métricas, no solo un chat."
+  "example": "Supabase crece con builders que responden en Discord y publican ejemplos. Una API local abrió un foro: el 60% de los hilos los cierran otros usuarios, hay un encuentro mensual y las plantillas del foro traen el 12% de los registros. Un grupo de WhatsApp sin métricas ni contenido no es lo mismo: no distribuye ni soporta.",
+  "scenario": "En el foro, otros clientes responden las dudas y publican recetas. Esos hilos traen registros y bajan tickets. El equipo modera y no escribe cada respuesta. Un chat suelto, sin eso, no mueve la adquisición.",
+  "question": "¿Por qué un grupo de chat sin métricas no cuenta como este modelo?",
+  "answer": "Porque aquí la gente produce soporte, contenido y distribución que se pueden medir. Un chat abandonado no hace nada de eso."
  },
  {
   "id": "mkt23",
@@ -249,9 +271,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Modelo en el que personas con audiencia producen contenido y monetizan directo o como canal de marcas. Para una tech puede ser el canal de adquisición.",
-  "example": "Una devrel con audiencia enseña tu API y convierte mejor que un anuncio genérico.",
-  "question": "¿Qué riesgo tiene depender de un solo creador?",
-  "answer": "Si se va o cambia de tema, se lleva la distribución."
+  "example": "Una devrel con 40.000 desarrolladores publicó un tutorial de la API. El enlace trajo 500 registros y 70 cuentas de pago, a un costo menor que la pauta, porque la audiencia ya le cree. El riesgo: el 40% de esos registros llegó por ella. Si cambia de tema, se va la distribución. Por eso hay tres voces, no una.",
+  "scenario": "Una persona con audiencia propia enseña el producto en su canal y cobra por eso. Trae más altas que el anuncio genérico. Si esa persona se va, se lleva una parte grande de cómo te descubren.",
+  "question": "¿Qué riesgo tiene apoyar todo el canal en una sola de esas voces?",
+  "answer": "Si deja el tema o el contrato, se va la distribución y no queda audiencia propia."
  },
  {
   "id": "mkt24",
@@ -260,9 +283,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Una métrica que resume el valor entregado al cliente y que el equipo entero puede empujar. No es el ingreso; es lo que precede al ingreso.",
-  "example": "En un marketplace, noches reservadas; en una app de mensajería, mensajes enviados por equipo activo.",
-  "question": "¿Por qué el ingreso solo es mala North Star?",
-  "answer": "Porque llega tarde y no dice si el cliente obtuvo valor esta semana."
+  "example": "En un marketplace de aulas, la métrica que el equipo entero mira es 'clases completadas por profesor activo a la semana', no el GMV. Cuando las clases completadas suben, el ingreso llega después. Un mes el GMV subió por un prepago y las clases cayeron: el ingreso mentía sobre el valor de esa semana.",
+  "scenario": "Todo el equipo empuja 'flujos corridos por equipo activo a la semana'. El ingreso del mes puede subir por un anual cobrado por adelantado aunque esa métrica baje. Quieren un número que diga si el cliente obtuvo valor, no si entró caja.",
+  "question": "¿Por qué el ingreso solo es mala brújula semanal?",
+  "answer": "Porque llega tarde y un cobro por adelantado puede subir aunque el cliente no haya obtenido valor esa semana."
  },
  {
   "id": "mkt25",
@@ -271,9 +295,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Lead que marketing considera listo para pasar a ventas según señales de interés: cargo, empresa, páginas vistas o prueba usada.",
-  "example": "Alguien de una empresa de 50+ que vio precios y pidió la guía de seguridad pasa a MQL.",
-  "question": "¿Quién decide el criterio?",
-  "answer": "Marketing y ventas juntos; si no, el MQL se vuelve una pelea de 'leads malos'."
+  "example": "El criterio, escrito con ventas, es: empresa de 50+ personas, vio precios y pidió la guía de seguridad. Esas pasan a la cola comercial. Las demás se quedan en nutrición. Antes, marketing entregaba todo correo y ventas decía 'leads malos'. El criterio compartido bajó el volumen y subió las reuniones tenidas.",
+  "scenario": "Pasa a la cola de ventas solo si la empresa tiene más de 50 personas, vio la página de precios y pidió la guía de seguridad. El resto se queda recibiendo correos. Marketing y ventas firmaron ese corte juntos.",
+  "question": "¿Quién tiene que acordar el corte, y qué pasa si lo impone un solo lado?",
+  "answer": "Los dos. Si no, la cola se vuelve una pelea de 'me pasaste gente que no compra'."
  },
  {
   "id": "mkt26",
@@ -282,9 +307,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Recurso útil que se entrega a cambio del contacto. Debe resolver un problema chico y cercano al problema que vende el producto.",
-  "example": "Plantilla de OKRs para un equipo de producto, a cambio del correo de trabajo.",
-  "question": "¿Qué lo hace efectivo?",
-  "answer": "Que el público lo quiera ya y que califique a quien lo descarga."
+  "example": "Ofrecen una plantilla de OKRs para un equipo de producto a cambio del correo de trabajo. Quien la descarga ya arma metas y es cercano a quien después podría pagar el software de seguimiento. Una 'guía de productividad' genérica trajo correos personales y cero pruebas. El recurso tiene que doler un poco no tenerlo y calificar a quien lo pide.",
+  "scenario": "A cambio del correo de trabajo entregan una hoja para armar el pronóstico del trimestre. Quien la baja ya está en el problema que el producto cobra por resolver. Una checklist genérica de 'productividad' trajo correos que ventas no podía llamar.",
+  "question": "¿Qué lo hace efectivo además de que se vea bonito?",
+  "answer": "Que el público lo quiera ya y que quien lo descarga se parezca a quien puede comprar."
  },
  {
   "id": "mkt27",
@@ -293,9 +319,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Secuencia de mensajes que educa a quien aún no está listo para comprar. Se dispara por comportamiento, no por un correo masivo semanal.",
-  "example": "Tras pedir una demo que no agendó, recibe tres correos con un caso del mismo rubro.",
-  "question": "¿Por qué no llamar a todos el mismo día?",
-  "answer": "Porque muchos todavía están investigando; insistir quema el lead."
+  "example": "Quien pidió demo y no agendó recibe tres correos en doce días, con un caso de su mismo rubro, solo si no reservó. No es el boletín del viernes a toda la base. Llamar a todos el día uno quemó a gente que todavía comparaba: la tasa de 'no me escriban' se duplicó. La secuencia espera a que el comportamiento diga que siguen tibios.",
+  "scenario": "Alguien bajó la guía y no volvió. Durante dos semanas recibe tres correos según lo que abrió, no el mismo boletín que le llega a toda la base el viernes. Ventas todavía no lo llama.",
+  "question": "¿Por qué no llamar a todos el mismo día en que dejaron el correo?",
+  "answer": "Porque muchos todavía están investigando. Insistir antes de tiempo quema el contacto."
  },
  {
   "id": "mkt28",
@@ -304,9 +331,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Atraer a quien ya busca resolver el problema, con contenido, SEO y producto, en lugar de interrumpir. El marco clásico es atraer, convertir y retener.",
-  "example": "Un blog técnico rankea 'cómo evaluar un modelo RAG' y lleva a la prueba del producto.",
-  "question": "¿Cuál es la diferencia con outbound?",
-  "answer": "Inbound espera al que busca; outbound sale a buscarlo."
+  "example": "El blog rankea 'cómo evaluar un modelo RAG' y el lector llega a la prueba. Esa persona ya buscaba el problema. El outbound del mismo equipo escribe en frío a CTOs que no pidieron nada. Mezclar los dos costos en un solo 'CAC de marketing' esconde que uno espera al que busca y el otro sale a interrumpir.",
+  "scenario": "Alguien busca cómo evaluar un modelo, encuentra la guía y deja el correo. Nadie le escribió antes. Otra persona recibió un mensaje en frío sin haber buscado nada. El primer camino es el que están armando con contenido y producto.",
+  "question": "¿Cuál es la diferencia con salir a buscar a quien no levantó la mano?",
+  "answer": "Este camino espera a quien ya busca. El otro interrumpe a quien todavía no pidió nada."
  },
  {
   "id": "mkt29",
@@ -315,9 +343,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Mapa de etapas y puntos de contacto antes, durante y después de la compra. En SaaS incluye prueba, onboarding, expansión y renovación.",
-  "example": "Ver anuncio, leer docs, crear workspace, invitar al equipo, pagar, abrir un ticket.",
-  "question": "¿Para qué se mapea?",
-  "answer": "Para encontrar fricción y decidir qué mensaje o qué parte del producto arreglar."
+  "example": "Mapearon: anuncio, docs, crear workspace, invitar, pagar, ticket de soporte, renovación. El 50% se caía entre 'crear workspace' e 'invitar'. No hacía falta otro anuncio: hacía falta un vacío en el producto en ese paso. El mapa sirvió para poner el esfuerzo en la fricción, no en la parte de arriba que ya funcionaba.",
+  "scenario": "Dibujaron desde el anuncio hasta la renovación, pasando por la prueba, la invitación y el primer ticket. El abandono fuerte está entre crear el espacio e invitar a alguien. El presupuesto nuevo iba a ir a más anuncios.",
+  "question": "¿Para qué se dibuja si ya conoces los canales?",
+  "answer": "Para ver en qué paso se cae la gente y decidir si se arregla el producto o el mensaje."
  },
  {
   "id": "mkt30",
@@ -326,8 +355,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Comunicación distinta según la etapa: nuevo, activo, en riesgo o perdido. Usa eventos del producto, no solo el calendario.",
-  "example": "Si un equipo no entra en 14 días, recibe un correo de reactivación con su último proyecto.",
-  "question": "¿Qué dato lo hace posible?",
+  "example": "Si un equipo no entra en 14 días, sale un correo con su último proyecto, no la novedad del mes. Quien se activó ayer recibe el paso que le falta, no ese mismo correo. El calendario único ('newsletter del martes para todos') le hablaba de funciones avanzadas a quien no había vuelto. Los eventos de uso deciden la pieza.",
+  "scenario": "Quien no entra en 14 días recibe un correo con su último proyecto. Quien se activó ayer recibe el paso que le falta. No es el mismo envío del martes para toda la base.",
+  "question": "¿Qué dato del producto hace posible tratarlos distinto?",
   "answer": "Eventos de uso: se activó, invitó, pagó o se quedó en silencio."
  },
  {
@@ -337,9 +367,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Experimento que muestra dos variantes al azar y compara una métrica. Solo se cambia una cosa y se espera muestra suficiente.",
-  "example": "Probar el titular 'Menos tickets repetidos' contra 'Tu equipo cierra 30% más rápido'.",
-  "question": "¿Por qué no se cambian el título y el botón a la vez?",
-  "answer": "Porque no sabrías cuál de los dos movió el resultado."
+  "example": "Probaron el titular 'Menos tickets repetidos' contra 'Tu equipo cierra 30% más rápido', con el mismo botón y la misma audiencia, 50/50, hasta tener muestras parejas. Ganó el segundo por 1,4 puntos de prueba iniciada. La semana siguiente cambiaron título y botón juntos y ya no pudieron decir cuál de los dos movió el resultado.",
+  "scenario": "La mitad de la audiencia ve un titular y la otra mitad ve otro. El botón, el precio y la audiencia quedan iguales hasta juntar muestra. Quieren saber cuál de las dos frases mueve el alta.",
+  "question": "¿Por qué no se cambian el título y el botón en el mismo experimento?",
+  "answer": "Porque si el resultado se mueve no sabes cuál de los dos fue."
  },
  {
   "id": "mkt32",
@@ -348,9 +379,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Adaptar mensaje o experiencia según segmento o comportamiento. En producto puede ser el empty state; en marketing, el caso que se muestra.",
-  "example": "A una fintech se le muestra un caso de pagos; a una clínica, uno de citas.",
-  "question": "¿Cuál es el límite ético?",
-  "answer": "Usar datos que la persona espera que uses, con permiso, y no inferir de más."
+  "example": "Si el correo es de una fintech, la landing muestra el caso de pagos. Si es de una clínica, el de citas. En el producto, el vacío de un equipo nuevo de soporte no es el mismo que el de un equipo de ventas. El límite: usan el dato que la persona dio (rubro, rol), no infieren salud o ingresos por detrás.",
+  "scenario": "Quien se registró como clínica ve un caso de citas. Quien se registró como fintech ve uno de pagos. El producto también cambia el vacío según el rol que eligió. No están adivinando datos que la persona no dio.",
+  "question": "¿Cuál es el límite de usar lo que sabes de esa persona?",
+  "answer": "Usar lo que dio y espera que uses. No inferir de más ni armar un perfil que no te contó."
  },
  {
   "id": "mkt33",
@@ -359,9 +391,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Datos que la propia empresa recoge con consentimiento: producto, web, CRM y correos. Son la base cuando las cookies de terceros se debilitan.",
-  "example": "Eventos de la app más el correo que el usuario dio al crear la cuenta.",
-  "question": "¿En qué se diferencian de los de tercera parte?",
-  "answer": "Los de tercera los vende otro; los de primera son tuyos y suelen ser más precisos."
+  "example": "Los eventos de la app más el correo que la persona dio al crear la cuenta son de la empresa. Una lista comprada de 'CTOs del Perú' es de un tercero: vino vieja y tres campañas la marcaron como spam. Cuando el navegador limita el rastreo entre sitios, la lista comprada se apaga y lo que el producto registra sigue siendo usable.",
+  "scenario": "La empresa guarda los eventos del producto y el correo que la persona escribió al registrarse, con aviso. Una lista comprada a un bróker es otra cosa y ya no rinde. Quieren apoyarse en lo que ellos mismos recogen.",
+  "question": "¿En qué se diferencian de los que vende otra empresa?",
+  "answer": "Esos los consiguió un tercero. Los propios suelen ser más precisos y dependen del permiso de tu usuario."
  },
  {
   "id": "mkt34",
@@ -370,9 +403,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Formas de atribuir y medir cuando el navegador bloquea cookies de terceros: consentimiento, eventos del servidor, modelos y datos propios.",
-  "example": "La conversión se confirma con la API de conversiones del servidor, no solo con el píxel del navegador.",
-  "question": "¿Por qué importa en 2026?",
-  "answer": "Porque los navegadores y las regulaciones limitan el rastreo entre sitios."
+  "example": "El píxel del navegador perdió una parte de los pagos en Safari. Pasaron a confirmar la conversión desde el servidor, con el id del clic y el consentimiento, y a mirar tendencias modeladas donde falta el dato. El ROAS no volvió a ser exacto al céntimo; dejó de estar ciego. Seguir optimizando solo con el píxel de 2019 es tomar decisiones con un embudo agujereado.",
+  "scenario": "Safari deja de mandar una parte de las conversiones del navegador. El equipo confirma el pago desde su servidor y completa el resto con tendencias, en vez de creer que esas ventas no existieron.",
+  "question": "¿Por qué en 2026 ya no alcanza el píxel del navegador?",
+  "answer": "Porque los navegadores y las reglas limitan el rastreo entre sitios, y una parte de los eventos no llega."
  },
  {
   "id": "mkt35",
@@ -381,9 +415,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "El usuario resuelve su duda en la página de resultados o en un resumen de IA y no entra a ningún sitio. El SEO clásico de 'traer el clic' ya no basta.",
-  "example": "Preguntan 'qué es NRR' y la respuesta aparece arriba; el blog no recibe la visita.",
-  "question": "¿Qué cambia en la estrategia?",
-  "answer": "Hay que ser la fuente que el motor cita y capturar demanda con marca, no solo con clics."
+  "example": "'Qué es el NRR' se responde arriba del buscador y en el resumen del asistente. El post que rankeaba perdió el 40% de clics en un año y sigue siendo la fuente que el resumen cita. La métrica dejó de ser solo la visita: ahora miden si la marca aparece en la respuesta y si quien ya conoce el nombre busca el producto.",
+  "scenario": "La persona pregunta en el buscador y lee la respuesta ahí mismo, sin abrir el blog. La visita cae y aun así el nombre de la empresa aparece como fuente. Medir solo el clic ya no cuenta la historia.",
+  "question": "¿Qué cambia en la estrategia si la visita ya no llega?",
+  "answer": "Hay que ser la fuente que el motor cita y capturar demanda con la marca, no solo con el clic al sitio."
  },
  {
   "id": "mkt36",
@@ -392,9 +427,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Uso de modelos para investigar, redactar y estructurar contenido, más la optimización para que los buscadores y los asistentes citen tu sitio. No es publicar texto genérico a escala.",
-  "example": "El equipo genera un borrador con un modelo y un experto lo corrige con datos propios del producto.",
-  "question": "¿Cuál es el error más común?",
-  "answer": "Publicar páginas masivas sin experiencia real: no rankean y dañan la marca."
+  "example": "El equipo usa un modelo para el borrador de una comparativa y un experto lo reescribe con cifras del propio producto y un caso de un cliente. Publicaron 6 páginas así. Un experimento paralelo de 40 páginas generadas sin revisión no rankeó y trajo quejas de 'texto vacío'. La herramienta acelera; la experiencia real es lo que se puede citar.",
+  "scenario": "Un modelo propone el esquema y un borrador. Alguien del equipo lo corrige con datos del producto antes de publicar, y la página queda fácil de citar por un asistente. Otra prueba publicó decenas de textos sin esa revisión.",
+  "question": "¿Cuál es el error de publicar a escala sin quien haya hecho el trabajo?",
+  "answer": "No rankea, no te citan y la marca queda asociada a texto genérico."
  },
  {
   "id": "mkt37",
@@ -403,9 +439,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Crear interés y pipeline en cuentas que todavía no buscan tu categoría. Combina contenido, comunidad, producto y, a veces, anuncios.",
-  "example": "Una serie de talleres para CTOs que aún no evalúan tu categoría.",
-  "question": "¿En qué se diferencia de capturar demanda?",
-  "answer": "Capturar es aparecer cuando ya buscan; generar es crear la conversación antes."
+  "example": "Hicieron una serie de talleres para CTOs que todavía no evalúan 'observabilidad'. Al terminar, 30 cuentas entraron a un programa. No estaban buscando la categoría: el taller se las nombró. La captura, en cambio, es aparecer cuando ya buscan 'herramienta de logs'. El pipeline del taller no se ve en el informe de palabras clave.",
+  "scenario": "Una serie de talleres llega a equipos que todavía no buscan la categoría. Varios meses después piden una evaluación. No es el anuncio de quien ya escribió el nombre del producto en el buscador.",
+  "question": "¿En qué se diferencia de aparecer cuando ya te están buscando?",
+  "answer": "Aparecer cuando buscan es capturar una demanda que existe. Esto crea la conversación antes de esa búsqueda."
  },
  {
   "id": "mkt38",
@@ -414,9 +451,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Orden de las ideas: promesa principal, tres pilares y pruebas. Evita que cada página invente un pitch distinto.",
-  "example": "Promesa: 'cierres previsibles'. Pilares: pipeline, coaching y pronóstico. Prueba: un caso con números.",
-  "question": "¿Quién debería usarla?",
-  "answer": "Producto, marketing y ventas, para decir lo mismo."
+  "example": "Promesa: 'cierres previsibles'. Pilares: pipeline limpio, coaching y pronóstico. Prueba: un caso que bajó el error del forecast de 30% a 12%. Producto, el anuncio y el ejecutivo usan ese orden. Antes cada uno inventaba un pitch y el cliente escuchaba tres productos distintos.",
+  "scenario": "Hay una promesa, tres ideas que la sostienen y un caso con números. La home, el anuncio y la demo siguen ese orden. Antes cada canal abría con un beneficio distinto.",
+  "question": "¿Quién tiene que usarla además de marketing?",
+  "answer": "Producto y ventas. Si no, cada uno describe una empresa distinta."
  },
  {
   "id": "mkt39",
@@ -425,8 +463,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Espacio donde los usuarios se ayudan, piden funciones y enseñan trucos. Es canal de retención y de ideas, no un grupo abandonado.",
-  "example": "Un foro donde los admins comparten automatizaciones y votan el roadmap público.",
-  "question": "¿Qué señal dice que está viva?",
+  "example": "En el foro, los admins publican automatizaciones y votan el roadmap. El 70% de las preguntas las responde otro cliente en menos de un día. Las ideas con más votos entraron al trimestre. Un grupo que solo habla el community manager no es eso: no retiene ni informa qué construir.",
+  "scenario": "Los propios admins se responden y votan qué debería construirse. El equipo mira esas votaciones para el trimestre. Si solo hablara el empleado de la empresa, el espacio no estaría haciendo ese trabajo.",
+  "question": "¿Qué señal dice que el espacio está vivo?",
   "answer": "Que los usuarios se responden entre ellos sin esperar al equipo."
  },
  {
@@ -436,9 +475,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Historia breve de por qué existe la empresa, contra qué lucha y qué cambia para el cliente. Ordena campañas y lanzamientos.",
-  "example": "'Los equipos de ventas en Latinoamérica merecen un CRM en su idioma y con sus reglas fiscales.'",
+  "example": "La historia que cuentan: los equipos de ventas en Latinoamérica merecen un CRM en su idioma y con sus reglas fiscales, frente a herramientas traducidas a medias. De ahí salen el caso, el anuncio y la charla. El eslogan 'vende mejor' no dice contra qué luchan ni qué cambia para el cliente.",
+  "scenario": "Cuentan por qué existen: los equipos comerciales de la región no deberían adaptar su proceso a un software pensado en otro país. Esa historia ordena el caso, el anuncio y la charla. El eslogan de tres palabras no alcanza para eso.",
   "question": "¿Para qué sirve si ya hay un eslogan?",
-  "answer": "El eslogan es una frase; la narrativa dice qué contar en un caso, un anuncio o una keynote."
+  "answer": "El eslogan es una frase. La historia dice qué contar en un caso, un anuncio o una keynote."
  },
  {
   "id": "mkt41",
@@ -447,9 +487,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Lienzo de qué ve, oye, piensa, dice y hace el cliente, más dolores y ganancias. Se llena con entrevistas, no con suposiciones del equipo.",
-  "example": "Tras 8 entrevistas a founders, el mapa muestra que temen más al runway que a 'no tener marca'.",
+  "example": "Después de 8 entrevistas a founders, el lienzo mostró que temen más al runway que a 'no tener marca', aunque en la sala el equipo había apostado por el branding. Cambiaron la campaña. Un lienzo llenado en un workshop sin haber hablado con nadie repitió los prejuicios del equipo y la campaña salió a un dolor que el cliente no tenía.",
+  "scenario": "Después de varias entrevistas, el lienzo muestra qué ve el founder, qué dice en la llamada y qué le quita el sueño. Una versión anterior se llenó en una sala, sin llamadas, y apuntó a un dolor que nadie mencionó.",
   "question": "¿Qué lo invalida?",
-  "answer": "Llenarlo en una sala sin haber hablado con clientes."
+  "answer": "Llenarlo sin haber hablado con clientes. Ahí solo se copian las suposiciones del equipo."
  },
  {
   "id": "mkt42",
@@ -458,9 +499,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Circuito en el que el uso del producto genera el siguiente usuario o el siguiente ingreso, sin depender solo de comprar tráfico.",
-  "example": "Cada documento compartido de Notion invita a alguien que todavía no tiene cuenta.",
-  "question": "¿En qué se diferencia de un embudo?",
-  "answer": "El embudo se vacía si dejas de meter gente arriba; el bucle se realimenta con el propio uso."
+  "example": "Cada documento compartido de Notion invita a alguien que no tiene cuenta. Si se apaga la pauta, el circuito sigue mientras la gente comparta. Una SaaS de facturas armó lo mismo: el PDF que le llega al cliente final trae un enlace 'arma la tuya'. El 18% de las altas nuevas entra por ahí. Un embudo de anuncios, si se apaga, se vacía.",
+  "scenario": "Cada reporte que un usuario le manda a su contador incluye un enlace para abrir el mismo formato. Una parte de las altas entra por ese envío, aunque la pauta esté apagada. Si nadie usara el producto, ese canal se secaría.",
+  "question": "¿En qué se diferencia de un embudo que hay que llenar por arriba con anuncios?",
+  "answer": "El embudo se vacía si dejas de meter gente. Este circuito se realimenta con el propio uso."
  },
  {
   "id": "mkt43",
@@ -469,9 +511,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Variante del bucle en la que un usuario trae a otros como condición para obtener valor. Se mide con el coeficiente viral: invitados que se activan por usuario.",
-  "example": "Un tablero colaborativo pierde sentido si no invitas al equipo, así que la invitación es parte del producto.",
-  "question": "¿Qué es un coeficiente viral mayor que 1?",
-  "answer": "Que cada usuario trae, en promedio, más de un usuario nuevo activado."
+  "example": "Un tablero colaborativo no sirve si no invitas al equipo, así que la invitación es parte de llegar al valor. Miden invitados que se activan por cada usuario: 0,4. Está por debajo de 1, así que el circuito no se sostiene solo y todavía necesitan otra fuente de altas. Si pasa de 1, cada usuario trae más de uno y el crecimiento se acelera sin comprar toda la audiencia.",
+  "scenario": "Para que el tablero sirva hay que invitar al equipo. Miden cuántos invitados se activan por cada persona que ya usa el producto. Hoy ese número es 0,4. Quieren saber qué pasaría si pasara de 1.",
+  "question": "¿Qué significa que ese coeficiente sea mayor que 1?",
+  "answer": "Que cada usuario trae, en promedio, más de un usuario nuevo que se activa."
  },
  {
   "id": "mkt44",
@@ -480,9 +523,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Preparar contenido para que asistentes y buscadores con respuestas directas citen tu marca: definiciones claras, datos propios, autoría y estructura.",
-  "example": "Una página define NRR con la fórmula, un ejemplo numérico y la fuente, y un asistente la cita.",
-  "question": "¿En qué se diferencia del SEO clásico de 10 enlaces azules?",
-  "answer": "El premio ya no es solo el clic: es ser la fuente de la respuesta."
+  "example": "Publicaron una página que define el NRR con la fórmula, un ejemplo numérico, la fuente y el nombre del autor. Un asistente la cita cuando le preguntan. El post viejo, de 2.000 palabras sin fórmula ni fuente, perdió la cita aunque seguía en la segunda página azul. El premio ya no es solo el clic.",
+  "scenario": "La página tiene la fórmula, un ejemplo con números, la fuente y quién la escribió. Un asistente la usa cuando alguien pregunta. Un artículo largo, sin eso, ya no aparece en la respuesta directa.",
+  "question": "¿En qué se diferencia de pelear solo por los diez enlaces azules?",
+  "answer": "El premio ya no es solo el clic al sitio: es ser la fuente de la respuesta."
  },
  {
   "id": "mkt45",
@@ -491,9 +535,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Variante enfocada en modelos generativos: que al responder 'cuál herramienta usar' mencionen tu producto con atributos correctos. Exige presencia en fuentes que el modelo consulta.",
-  "example": "Apareces en comparativas, docs y casos que los modelos rastrean, no solo en tu home.",
-  "question": "¿Por qué repetir el mismo adjetivo en todos lados no alcanza?",
-  "answer": "Porque el modelo resume lo que encuentra en terceros; si nadie más lo dice, no lo sostiene."
+  "example": "Les importa que, cuando alguien pregunte qué herramienta usar para conciliar pagos, el modelo nombre el producto y el atributo correcto (cuadra con Yape, no 'es un banco'). Para eso están en comparativas, docs y casos que los modelos rastrean. Repetir 'somos líderes' solo en la home no alcanza: el modelo resume lo que dicen otros.",
+  "scenario": "Quieren que, al preguntar qué herramienta usar, el modelo nombre el producto con el atributo correcto. Están consiguiendo que comparativas y documentos de terceros lo digan, no solo la home.",
+  "question": "¿Por qué repetir el mismo adjetivo en tu sitio no alcanza?",
+  "answer": "Porque el modelo resume lo que encuentra en terceros. Si nadie más lo dice, no lo sostiene."
  },
  {
   "id": "mkt46",
@@ -502,9 +547,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Nombrar y educar un problema nuevo para que el mercado te asocie con esa categoría, en lugar de pelear en una categoría ajena.",
-  "example": "Algunas empresas no dijeron 'otro CRM', dijeron 'revenue platform' y educaron el término.",
-  "question": "¿Cuál es el riesgo?",
-  "answer": "Educar una categoría que el comprador no siente como urgente."
+  "example": "En vez de decir 'otro CRM', un equipo nombró 'plataforma de ingresos' y pasó un año explicando qué problema cubre que un CRM no cubre. Quedaron asociados a ese nombre. El riesgo se vio en un intento parecido: educaron una categoría que el comprador no sentía urgente y el ciclo de venta se alargó sin que el presupuesto existiera.",
+  "scenario": "Dejaron de competir como 'otro tablero' y le pusieron nombre a un problema que el comprador todavía no buscaba. Pasan meses enseñando ese nombre para que, cuando el presupuesto exista, los asocien a ellos.",
+  "question": "¿Cuál es el riesgo de inventar el nombre del problema?",
+  "answer": "Que el comprador no lo sienta urgente y el esfuerzo de educar no tenga presupuesto del otro lado."
  },
  {
   "id": "mkt47",
@@ -513,9 +559,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Marco que describe el progreso que el cliente intenta lograr en una circunstancia, no el cargo ni el producto. La gente 'contrata' una solución para un trabajo.",
-  "example": "Un founder no quiere 'un dashboard'; quiere saber el lunes si el runway alcanza.",
-  "question": "¿Por qué importa más que el perfil demográfico?",
-  "answer": "Porque dos personas distintas pueden contratar el mismo producto para el mismo trabajo."
+  "example": "El founder no quiere 'un dashboard'. El lunes a las 8 quiere saber si el runway alcanza, antes de la reunión. Ese es el trabajo. Dos personas de cargos distintos lo contratan igual. Segmentar solo por 'CEOs de 35 años' les hizo diseñar pantallas que el lunes a las 8 nadie abre.",
+  "scenario": "El lunes a las 8 la persona quiere saber si el efectivo alcanza, antes de una reunión. No pidió 'un módulo de reportes'. Dos cargos distintos hacen lo mismo en esa hora. El equipo estaba diseñando para un perfil demográfico y no para ese avance.",
+  "question": "¿Por qué ese encuadre importa más que la edad o el cargo?",
+  "answer": "Porque gente distinta contrata el mismo producto para el mismo avance, y el cargo no dice cuál es."
  },
  {
   "id": "mkt48",
@@ -524,9 +571,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 3,
   "explanation": "Porcentaje de búsquedas de tu marca frente al total de la categoría. Se usa como proxy adelantado de cuota de mercado y de demanda de marca.",
-  "example": "Si las búsquedas de tu nombre crecen más que las de dos competidores, la demanda de marca se está moviendo.",
-  "question": "¿Qué no mide?",
-  "answer": "No mide satisfacción ni ingresos; solo interés relativo en buscadores."
+  "example": "Las búsquedas de tu nombre eran el 12% de las de la categoría y pasaron al 18% en dos trimestres, mientras dos competidores bajaron. Todavía no se ve en la cuota de ingresos, que llega después. No mide si están contentos ni cuánto pagan: solo el interés relativo en el buscador. Sirve para ver si la demanda de marca se mueve antes del cierre.",
+  "scenario": "Las búsquedas de tu nombre, divididas por las de toda la categoría, subieron de 12% a 18%. La cuota de ingresos todavía no se mueve. Quieren un indicador adelantado de si la demanda de marca crece.",
+  "question": "¿Qué no mide ese porcentaje?",
+  "answer": "Ni satisfacción ni ingresos. Solo interés relativo en el buscador."
  },
  {
   "id": "mkt49",
@@ -535,9 +583,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "La única razón concreta por la que alguien te elegiría hoy frente a la alternativa más obvia, incluido 'no hacer nada'.",
-  "example": "'El único CRM que concilia el pago de Yape con el pedido sin una hoja de cálculo.'",
+  "example": "La razón que pueden decir en una frase: es el único CRM del equipo que concilia el pago de Yape con el pedido sin una hoja de cálculo. 'Somos fáciles de usar' lo puede poner cualquier competidor en el titular mañana. Cuando probaron esa frase genérica, el competidor la copió en una semana y el anuncio dejó de diferenciar.",
+  "scenario": "La frase que ventas repite es la única razón para elegirlos hoy frente a la hoja de cálculo: concilia un medio de pago local con el pedido. 'Fácil de usar' duró una semana antes de que un competidor la copiara.",
   "question": "¿Qué la debilita?",
-  "answer": "Un beneficio que cualquier competidor puede copiar en el titular mañana."
+  "answer": "Un beneficio que cualquiera puede copiar en el titular, o que no se nota frente a seguir como están."
  },
  {
   "id": "mkt50",
@@ -546,9 +595,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Marketing",
   "level": 2,
   "explanation": "Sistema para recoger, en sus palabras, por qué compran, se quedan o se van: entrevistas, tickets, llamadas y encuestas. Alimenta mensaje y roadmap.",
-  "example": "Etiquetar 50 llamadas de ventas y descubrir que la objeción real es la migración, no el precio.",
-  "question": "¿Por qué no basta con el NPS?",
-  "answer": "El NPS da un número; la voz de cliente da el lenguaje y la causa."
+  "example": "Etiquetaron 50 llamadas. El equipo creía que la objeción era el precio. En las llamadas, 30 de 50 decían que no se iban a mudar los datos. El mensaje y el roadmap de importación cambiaron. El NPS del trimestre era 42 y no decía esa frase: daba un número, no el lenguaje ni la causa.",
+  "scenario": "Revisaron llamadas y tickets y anotaron las frases textuales de por qué no compran. La que más se repite no era la que el equipo suponía. Una encuesta de 0 a 10 no traía esas frases.",
+  "question": "¿Por qué un número de recomendación no reemplaza esas frases?",
+  "answer": "El número no dice la causa ni las palabras que la persona usa. Sin eso, el mensaje y el producto adivinan."
  },
  {
   "id": "ads01",
@@ -557,9 +607,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Lo que pagas cada vez que alguien hace clic en un anuncio. Fórmula: gasto / clics. Sirve para comparar canales, no para declarar que una campaña 'funcione'.",
-  "example": "Una campaña de búsqueda gasta S/ 600 y recibe 200 clics: CPC de S/ 3.",
-  "question": "¿Un CPC bajo garantiza ventas?",
-  "answer": "No. Un clic barato a la audiencia equivocada no se convierte."
+  "example": "La campaña de búsqueda gastó S/ 600 y recibió 200 clics: S/ 3 cada uno. Otra campaña gastó S/ 200 y trajo 20 clics a S/ 10, pero de ahí salieron 6 pruebas y de la barata, ninguna. El de S/ 3 sirve para comparar el precio del clic, no para declarar ganadora a la campaña.",
+  "scenario": "Una campaña se quedó en S/ 1,50 por visita y otra en S/ 8. La barata no produjo ninguna cuenta de pago. Alguien quiere pausar la cara solo porque la visita sale más cara.",
+  "question": "¿Un clic barato garantiza ventas?",
+  "answer": "No. Un clic barato a la audiencia equivocada no se convierte, y uno caro puede ser el que sí compra."
  },
  {
   "id": "ads02",
@@ -568,9 +619,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Precio de mil impresiones. Se usa en campañas de alcance y video, donde el objetivo no es el clic inmediato.",
-  "example": "Un video en YouTube a CPM de US$ 6 muestra el anuncio mil veces por ese monto.",
-  "question": "¿Cuándo miras CPM y no CPC?",
-  "answer": "Cuando buscas alcance o recuerdo, no una visita."
+  "example": "El video en YouTube salió a US$ 6 por mil impresiones. En el mes compraron 500.000 impresiones por US$ 3.000. Casi nadie hizo clic, y no era el objetivo: querían que el nombre apareciera antes del lanzamiento. Compararlo contra el costo por clic de búsqueda mezcla dos trabajos distintos.",
+  "scenario": "Están pautando un video de lanzamiento y les cotizan US$ 8 por cada mil veces que se muestra. No esperan que la gente haga clic hoy. Quieren el precio de mil impactos, no el de la visita.",
+  "question": "¿Cuándo miras ese precio y no el del clic?",
+  "answer": "Cuando el trabajo es alcance o recuerdo, no una visita inmediata."
  },
  {
   "id": "ads03",
@@ -579,9 +631,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Lo que cuesta, en media, conseguir una conversión definida: alta, demo o compra. Fórmula: gasto / conversiones.",
-  "example": "S/ 2.000 de anuncios y 20 pruebas iniciadas: CPA de S/ 100.",
-  "question": "¿Por qué hay que fijar qué cuenta como adquisición?",
-  "answer": "Porque un 'registro' y un 'pago' no cuestan ni valen lo mismo."
+  "example": "Se gastaron S/ 2.000 y hubo 20 pruebas iniciadas: S/ 100 por prueba. Las cuentas que dejaron tarjeta fueron 4, así que el costo por pago es S/ 500. El informe decía 'adquisición a S/ 100' sin decir cuál era la acción. Finanzas comparó ese S/ 100 con el margen de un cliente de pago y la cuenta no cerraba.",
+  "scenario": "S/ 3.000 de anuncios y 10 demos agendadas. Si la acción que importa es el pago y solo hubo 2, el costo de esa acción es otro. Hay que fijar cuál de las dos es la adquisición de esta campaña.",
+  "question": "¿Por qué hay que fijar qué cuenta como adquisición antes de celebrar el número?",
+  "answer": "Porque un registro y un pago no cuestan ni valen lo mismo. Sin esa definición el promedio miente."
  },
  {
   "id": "ads04",
@@ -590,9 +643,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Ingreso atribuido dividido por el gasto en anuncios. Un ROAS de 3 significa S/ 3 de ingreso por cada sol gastado. No es utilidad.",
-  "example": "S/ 9.000 atribuidos a una campaña que costó S/ 3.000: ROAS 3.",
-  "question": "¿Un ROAS alto puede igual perder dinero?",
-  "answer": "Sí, si el margen del producto no cubre el costo del anuncio y el resto de la operación."
+  "example": "La campaña costó S/ 3.000 y la plataforma atribuyó S/ 9.000 de ingreso: 3 a 1. El margen de ese ingreso es 40%, o sea S/ 3.600, y todavía faltan sueldos y herramienta. Después de eso la campaña no deja utilidad, aunque el 3 a 1 se vea sano en el tablero de anuncios.",
+  "scenario": "Atribuyen S/ 12.000 de ventas a una pauta de S/ 3.000. El margen de esas ventas es 30%. Alguien quiere escalar porque 'devuelve 4'. Finanzas resta el costo de la mercadería antes de opinar.",
+  "question": "¿Un retorno alto sobre el gasto en anuncios puede igual perder dinero?",
+  "answer": "Sí, si el margen de lo vendido no cubre el anuncio y el resto de la operación."
  },
  {
   "id": "ads05",
@@ -601,9 +655,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Clics divididos por impresiones. Mide si el anuncio invita a hacer clic; no mide si después compran.",
-  "example": "5.000 impresiones y 150 clics: CTR de 3%.",
-  "question": "¿Un CTR alto con conversión baja qué sugiere?",
-  "answer": "El anuncio promete algo que la página o la audiencia no sostienen."
+  "example": "5.000 impresiones y 150 clics: 3%. La página convirtió 0,4%, peor que la campaña con 1% de clics. El anuncio prometía 'listo en 5 minutos' y el alta pide 12 campos. El porcentaje de clics dijo que el anuncio invita; no dijo que la promesa se sostuviera.",
+  "scenario": "De cada 100 veces que se muestra el anuncio, 4 personas hacen clic. En la página casi nadie termina. El anuncio habla de un resultado que el formulario no entrega.",
+  "question": "¿Un porcentaje alto de clics con una página que no convierte qué sugiere?",
+  "answer": "Que el anuncio promete algo que la página o la audiencia no sostienen."
  },
  {
   "id": "ads06",
@@ -612,9 +667,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Anuncio de texto que aparece cuando alguien busca una palabra en Google u otro buscador. Captura demanda que ya existe.",
-  "example": "Alguien busca 'software de planillas Perú' y ve tu anuncio sobre el resultado orgánico.",
-  "question": "¿Qué intención tiene quien busca, frente a quien ve un video?",
-  "answer": "Quien busca ya tiene una necesidad activa."
+  "example": "Alguien escribe 'software de planillas Perú' y el anuncio aparece sobre el resultado orgánico. Esa persona ya tiene la necesidad en la cabeza. El video que se le cruza a alguien que no buscó nada es otro trabajo: hay que crear la necesidad, no capturarla. El texto de búsqueda se juzga por si esa intención era la correcta.",
+  "scenario": "La persona ya escribió en el buscador el problema que el producto resuelve, y el texto pago aparece arriba. No le interrumpieron un video: ella salió a buscar.",
+  "question": "¿Qué intención trae quien busca, frente a quien solo ve un video?",
+  "answer": "Quien busca ya tiene una necesidad activa. Quien ve el video puede no estar en ese momento."
  },
  {
   "id": "ads07",
@@ -623,9 +679,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Anuncio con imagen, precio y tienda, típico de fichas de producto. En comercio y en algunos SaaS con planes públicos muestra la oferta antes del clic.",
-  "example": "Una ficha de audífonos aparece con precio en la pestaña de compras.",
-  "question": "¿Qué dato necesita el feed?",
-  "answer": "Título, imagen, precio, disponibilidad y enlace, como mínimo."
+  "example": "La ficha del curso aparece con foto, precio y el nombre de la tienda antes de que la persona entre al sitio. Si el feed manda un precio viejo, el clic llega enojado y la compra se cae. El mínimo que el feed tiene que tener al día es título, imagen, precio, disponibilidad y enlace.",
+  "scenario": "Antes del clic, la persona ve la foto, el precio y quién vende. El archivo que arma esas fichas trae un precio de la semana pasada. La visita llega esperando otro número.",
+  "question": "¿Qué datos no pueden estar viejos en ese archivo?",
+  "answer": "Título, imagen, precio, disponibilidad y enlace."
  },
  {
   "id": "ads08",
@@ -634,9 +691,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Fragmento en el sitio que registra visitas y conversiones y se las cuenta a la plataforma de anuncios. Hoy se complementa con medición en el servidor.",
-  "example": "El píxel de Meta marca 'Lead' cuando alguien envía el formulario de demo.",
-  "question": "¿Por qué ya no basta el píxel del navegador?",
-  "answer": "Porque los bloqueadores y las restricciones de cookies se pierden parte de los eventos."
+  "example": "El fragmento de Meta marca 'Lead' cuando se envía el formulario. En Safari una parte de esos envíos no llega. El mes se veía con 40 demos en la plataforma y 70 en el CRM. El fragmento del navegador ya no es la fuente única: el servidor tiene que confirmar el mismo evento.",
+  "scenario": "Un fragmento en la web le avisa a la plataforma cuando alguien pide la demo. En algunos navegadores el aviso no sale y la plataforma muestra menos demos que el CRM.",
+  "question": "¿Por qué ya no basta con ese fragmento en el navegador?",
+  "answer": "Porque bloqueadores y límites de cookies se pierden parte de los eventos."
  },
  {
   "id": "ads09",
@@ -645,9 +703,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Etiquetas en la URL (source, medium, campaign) para saber de qué anuncio o correo vino la visita. Sin ellas, el analista adivina.",
-  "example": "utm_source=linkedin&utm_medium=paid&utm_campaign=demo_q4.",
+  "example": "El enlace del anuncio lleva source=linkedin, medium=paid y campaign=demo_q4. En analítica esas visitas no se mezclan con quien escribió la URL a mano. Una campaña se lanzó sin etiquetas y todo cayó como 'directo': no se pudo saber si el anuncio había traído las 30 pruebas.",
+  "scenario": "Cada anuncio lleva en el enlace etiquetas de origen, medio y nombre de campaña. Sin eso, las visitas aparecen como si la persona hubiera escrito la dirección, y no se sabe qué pieza las trajo.",
   "question": "¿Qué problema evitan?",
-  "answer": "Que todo el tráfico de pago se mezcle como 'directo' o 'referral'."
+  "answer": "Que el tráfico de pago se mezcle con el directo o con un referral y no se pueda atribuir la campaña."
  },
  {
   "id": "ads10",
@@ -656,9 +715,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Términos por los que no quieres aparecer. Ahorran dinero de búsquedas que no compran.",
-  "example": "Una herramienta B2B excluye 'gratis', 'crack' y 'trabajo'.",
+  "example": "La herramienta B2B aparecía en 'software gratis', 'crack' y 'trabajo de vendedor'. Esas búsquedas gastaron S/ 400 en el mes sin una sola prueba. Las pasaron a la lista de exclusión. A la semana apareció 'curso gratis': por eso los términos de búsqueda se revisan seguido, no una vez al lanzar.",
+  "scenario": "Siguen pagando clics de gente que busca empleo o una versión pirateada. Esas frases hay que sacarlas de la puja. Cada semana aparecen consultas nuevas del mismo tipo.",
   "question": "¿Por qué se revisan los términos de búsqueda cada semana?",
-  "answer": "Porque la campaña descubre consultas nuevas que hay que negar o sumar."
+  "answer": "Porque la campaña descubre consultas nuevas que hay que negar o, al revés, sumar."
  },
  {
   "id": "ads11",
@@ -667,9 +727,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Volver a mostrar anuncios a quien ya visitó el sitio o usó el producto y no convirtió. Funciona porque ya te conoce; se agota si la oferta no cambia.",
-  "example": "Alguien vio precios y a los dos días ve un anuncio para agendar la demo.",
-  "question": "¿Qué límite conviene poner?",
-  "answer": "Frecuencia y una ventana de días, para no perseguir a quien ya compró."
+  "example": "Alguien vio precios y a los dos días ve el anuncio para agendar. Funciona una ventana de 14 días y un tope de 5 impactos. Sin tope, la misma persona lo vio 20 veces, el clic cayó y dos reseñas dijeron 'me persiguen'. Quien ya pagó tiene que salir de ese conjunto.",
+  "scenario": "Le vuelven a mostrar el anuncio a quien ya vio precios y no agendó, durante unos días y con un tope de veces. Si la oferta no cambia, a la tercera semana deja de hacer clic.",
+  "question": "¿Qué límite conviene poner además de la lista?",
+  "answer": "Un tope de frecuencia y una ventana de días, y sacar a quien ya compró."
  },
  {
   "id": "ads12",
@@ -678,8 +739,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Lo que el anuncio promete a cambio del clic: prueba, diagnóstico, descuento o contenido. Una oferta clara mueve más que un logo bonito.",
-  "example": "'Auditoría gratis de tu cuenta de anuncios en 20 minutos' en vez de 'conoce nuestra agencia'.",
-  "question": "¿Por qué la oferta va antes que el remate visual?",
+  "example": "'Auditoría de tu cuenta de anuncios en 20 minutos' trajo 4 veces más solicitudes que 'conoce nuestra agencia', con la misma pieza visual. La gente hizo clic por lo que obtenía. El degradado del fondo no explicaba el intercambio.",
+  "scenario": "El anuncio deja de mostrar el logo grande y pasa a prometer un diagnóstico de 20 minutos. Las solicitudes suben sin cambiar la foto de fondo. Lo que se intercambia por el clic es lo que cambió.",
+  "question": "¿Por qué eso va antes que el remate visual?",
   "answer": "Porque la gente hace clic por lo que obtiene, no por el degradado."
  },
  {
@@ -689,9 +751,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Tope de gasto por día en una campaña. Las plataformas pueden pasarse un poco un día y compensar en la semana.",
-  "example": "Presupuesto de S/ 80 al día en búsqueda de marca.",
-  "question": "¿Subir el presupuesto al doble duplica los resultados?",
-  "answer": "No siempre: puede entrar en subastas más caras o agotar la audiencia."
+  "example": "La búsqueda de marca tiene un tope de S/ 80 al día. Un martes se gastaron S/ 110 y el jueves S/ 50: la plataforma compensa en la semana. Duplicar el tope a S/ 160 no duplicó las pruebas: entró a subastas más caras y la audiencia de marca no daba para tanto.",
+  "scenario": "El tope del día es S/ 80. Algunos días se pasa un poco y otros gasta menos. Quieren saber si llevarlo al doble duplica las cuentas.",
+  "question": "¿Subir el tope al doble duplica los resultados?",
+  "answer": "No siempre. Puede entrar en subastas más caras o agotar a la gente a la que ya llegabas."
  },
  {
   "id": "ads14",
@@ -700,9 +763,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Cuántas veces, en media, una persona vio el anuncio en un periodo. Frecuencia alta con CTR a la baja suele ser fatiga.",
-  "example": "Frecuencia 8 en siete días y el CTR cayó a la mitad.",
-  "question": "¿Qué haces si la frecuencia sube y el resultado cae?",
-  "answer": "Renovás la creatividad, achicás la audiencia o bajás el tope."
+  "example": "En siete días la misma audiencia vio el video 8 veces en promedio y el porcentaje de clics cayó a la mitad. No hacía falta subir la puja: había que renovar la pieza o achicar el conjunto. Dejarlo así solo encarece el aburrimiento.",
+  "scenario": "En una semana cada persona vio el video unas ocho veces y los clics cayeron a la mitad. El equipo discute si subir la puja. El dato que importa es cuántas veces ya lo vieron.",
+  "question": "Si ese promedio sube y el resultado cae, ¿qué se toca primero?",
+  "answer": "La pieza, el tamaño de la audiencia o el tope de veces. Subir la puja no renueva el mensaje."
  },
  {
   "id": "ads15",
@@ -711,9 +775,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "El mismo anuncio deja de funcionar porque la audiencia ya lo vio. Se nota en más frecuencia, menos clics y peor CPA.",
-  "example": "El video ganador de enero ya no convierte en marzo con la misma audiencia.",
+  "example": "El video que en enero conseguía la prueba a S/ 80, en marzo la consigue a S/ 190 con la misma audiencia. La gente ya lo vio. Subir la puja compra un poco más de lo mismo. El remedio es tener piezas nuevas en un calendario, no una sola ganadora eterna.",
+  "scenario": "La misma pieza lleva diez semanas. Cada persona ya la vio muchas veces, los clics bajan y conseguir la prueba sale más caro. No cambió la oferta ni la audiencia.",
   "question": "¿Cuál es el remedio de fondo?",
-  "answer": "Un sistema de creatividades nuevas, no solo subir la puja."
+  "answer": "Un sistema de piezas nuevas. Subir la puja solo estira una pieza gastada."
  },
  {
   "id": "ads16",
@@ -722,9 +787,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Periodo en el que el algoritmo prueba a quién mostrar el anuncio. Cambiar presupuesto, audiencia o creatividad cada día lo reinicia y encarece.",
-  "example": "Meta pide unas 50 conversiones por semana y anuncio para salir de aprendizaje.",
+  "example": "Meta pide del orden de 50 conversiones por anuncio a la semana para salir de ese periodo. El equipo editaba presupuesto y audiencia cada día 'para optimizar' y nunca salía: el costo se quedó alto. Congelaron los cambios siete días y recién ahí el costo por prueba bajó.",
+  "scenario": "Cada día cambian la audiencia o el presupuesto y el sistema vuelve a probar a quién mostrarle el anuncio. El costo no baja. Les piden del orden de 50 conversiones por semana y anuncio antes de estabilizarse.",
   "question": "¿Por qué no se edita la campaña todos los días?",
-  "answer": "Porque cada cambio grande vuelve a empezar el aprendizaje."
+  "answer": "Porque cada cambio grande vuelve a empezar la prueba y el costo se mantiene alto."
  },
  {
   "id": "ads17",
@@ -733,8 +799,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Regla con la que la plataforma puja: maximizar conversiones, un CPA objetivo, un ROAS objetivo o puja manual. Debe coincidir con el volumen de datos.",
-  "example": "Con pocas conversiones, 'maximizar conversiones' suele aprender mejor que un CPA rígido.",
-  "question": "¿Cuándo un CPA objetivo se queda sin gasto?",
+  "example": "Con 8 conversiones a la semana, un costo objetivo rígido dejó el gasto en cero: la subasta no podía cumplirlo. Pasaron a maximizar conversiones para que el sistema juntara datos. Cuando ya había volumen, volvieron a un objetivo cercano a lo que de verdad salía, no a un deseo.",
+  "scenario": "Con pocas conversiones, le pusieron un costo objetivo muy bajo y la campaña dejó de gastar. Otra regla, que solo busca más conversiones, sí entrega. La regla tiene que coincidir con cuántos datos hay.",
+  "question": "¿Cuándo un costo objetivo se queda sin gasto?",
   "answer": "Cuando el objetivo es más bajo de lo que la subasta puede cumplir."
  },
  {
@@ -744,9 +811,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Grupo nuevo que se parece a tus mejores clientes, armado por la plataforma a partir de una lista semilla. La semilla manda: si es mala, el parecido también.",
-  "example": "Lista de cuentas que pagaron el plan anual, no de todos los que dejaron el correo.",
-  "question": "¿Por qué la semilla importa más que el porcentaje?",
-  "answer": "Porque el algoritmo copia el patrón de esa lista."
+  "example": "Armaron un grupo parecido a partir de todas las personas que dejaron el correo. El parecido copió curiosos. Lo rehicieron solo con cuentas que pagaron el plan anual y el costo por pago bajó. El porcentaje de similitud importó menos que quién estaba en la lista de origen.",
+  "scenario": "La plataforma arma un grupo nuevo parecido a una lista. La primera lista era 'todos los que dejaron el correo'. La segunda, solo quienes pagan el plan anual. El parecido de la segunda compra mejor.",
+  "question": "¿Por qué la lista de origen importa más que el porcentaje de similitud?",
+  "answer": "Porque el sistema copia el patrón de esa lista. Si la lista es mala, el parecido también."
  },
  {
   "id": "ads19",
@@ -755,9 +823,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Envío de eventos desde tu servidor a la plataforma de anuncios, además del píxel. Recupera conversiones que el navegador pierde.",
-  "example": "El backend confirma 'Pago' con el id del clic cuando la pasarela responde ok.",
-  "question": "¿Qué problema de privacidad hay que cuidar?",
-  "answer": "Enviar solo lo consentido y hashear datos personales."
+  "example": "Cuando la pasarela responde ok, el backend manda 'Pago' con el id del clic. Esas ventas ya no dependen de que el navegador deje correr el píxel. El cuidado: solo se envía lo que la persona consintió, y el correo va con hash, no en claro.",
+  "scenario": "El servidor, no el navegador, le confirma a la plataforma que el pago ocurrió, con el identificador del clic. Así se recuperan ventas que el bloqueador se había comido. Hay que hashear los datos personales.",
+  "question": "¿Qué cuidado de privacidad no se puede saltar?",
+  "answer": "Enviar solo lo consentido y no mandar datos personales en claro."
  },
  {
   "id": "ads20",
@@ -766,8 +835,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Campaña de Google que reparte el presupuesto entre búsqueda, YouTube, display y otras redes con creatividades que tú subes. Pide señales de conversión y activos buenos.",
-  "example": "Una tienda carga imágenes, textos y el catálogo, y deja que el sistema busque conversiones.",
-  "question": "¿Por qué se critica a veces?",
+  "example": "Cargaron imágenes, textos y el catálogo, y el sistema reparte el presupuesto entre redes buscando conversiones. El costo por venta bajó y nadie podía decir si había sido YouTube o la búsqueda. Cuando necesitaron aprender qué pieza funcionaba, esa mezcla les quedó corta.",
+  "scenario": "Una sola campaña reparte la plata entre búsqueda, video y display con las piezas que subieron. El resultado global mejora y el informe no dice qué red hizo el trabajo.",
+  "question": "¿Por qué a veces se le critica?",
   "answer": "Porque mezcla canales y da menos control para saber qué pieza funcionó."
  },
  {
@@ -777,9 +847,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Anuncios armados solos a partir del feed de productos, a menudo para quien vio un ítem. Sirven en comercio y en planes con precio público.",
-  "example": "Alguien miró un curso y luego ve ese mismo curso con su precio.",
-  "question": "¿Qué rompe el resultado?",
-  "answer": "Un feed con precios viejos o enlaces rotos."
+  "example": "Alguien miró el curso de nómina y después ve ese mismo curso con su precio. El feed tenía el precio de lanzamiento vencido: el clic llegaba y la página mostraba otro número. Arreglar el archivo movió más la compra que cambiar el texto del anuncio.",
+  "scenario": "Quien miró un plan ve después ese mismo plan, con el precio que manda el archivo. Si el archivo está viejo, el anuncio miente antes del clic.",
+  "question": "¿Qué rompe el resultado aunque el diseño esté bien?",
+  "answer": "Un archivo con precios viejos o enlaces rotos."
  },
  {
   "id": "ads22",
@@ -788,9 +859,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Proceso para comparar ganchos, ángulos y formatos con una hipótesis, no 'subir 10 videos a ver'. El ganador se escala y el perdedor se archiva.",
-  "example": "Misma audiencia, tres ganchos: dolor, demo de 5 segundos y prueba social.",
-  "question": "¿Qué se mantiene fijo en la prueba?",
-  "answer": "Audiencia, presupuesto y oferta, para que la diferencia sea el mensaje."
+  "example": "Misma audiencia, mismo presupuesto, misma oferta de prueba, tres ganchos: el dolor, una demo de 5 segundos y un caso. Ganó la demo. Como solo cambió el gancho, pudieron escalarla. La vez anterior subieron diez videos distintos en audiencias distintas y no supieron qué habían aprendido.",
+  "scenario": "Tres piezas, misma audiencia y misma oferta. Solo cambia el gancho. La que gana se escala y las otras se archivan. No es subir diez videos 'a ver qué pasa'.",
+  "question": "¿Qué se mantiene fijo para que el resultado se pueda leer?",
+  "answer": "Audiencia, presupuesto y oferta. Si eso también cambia, no sabes qué movió el número."
  },
  {
   "id": "ads23",
@@ -799,9 +871,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Porcentaje de personas que se quedan los primeros segundos de un video. Si el gancho falla, el resto del anuncio no existe.",
-  "example": "De 10.000 reproducciones, 4.000 pasan de 3 segundos: gancho del 40%.",
-  "question": "¿Dónde se arregla un gancho bajo?",
-  "answer": "En el primer segundo: imagen, texto en pantalla y promesa."
+  "example": "De 10.000 reproducciones, 4.000 pasan de los 3 segundos: 40%. Otro video está en 15%. El segundo tiene un caso buenísimo al segundo 8 que casi nadie ve. Reescribieron el primer segundo —texto en pantalla y la promesa— y el 15% pasó a 35% sin tocar el resto.",
+  "scenario": "De cada 100 personas que empiezan el video, 20 siguen después de los primeros segundos. El argumento bueno está más adelante y no lo ven. Hay que cambiar el arranque, no el minuto uno.",
+  "question": "¿Dónde se arregla un arranque bajo?",
+  "answer": "En el primer segundo: imagen, texto en pantalla y la promesa."
  },
  {
   "id": "ads24",
@@ -810,9 +883,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Automatización de Meta que amplía audiencia, placements o creatividades a partir de una base. Ahorra gestión y esconde detalle si no mides aparte.",
-  "example": "Dejas que el sistema busque compradores parecidos a quienes ya convirtieron.",
-  "question": "¿Cuándo no conviene soltarlo del todo?",
-  "answer": "Cuando necesitas aprender qué mensaje funciona, no solo bajar el CPA de esta semana."
+  "example": "Dejaron que el sistema buscara compradores parecidos a quienes ya convirtieron. El costo por pago bajó y dejaron de saber qué mensaje había funcionado, porque la ampliación mezcla piezas. Cuando el objetivo de la semana es aprender, no solo bajar el costo, no conviene soltarlo del todo.",
+  "scenario": "La plataforma amplía sola a quién le muestra el anuncio y qué pieza usa. El costo baja y el equipo deja de ver qué mensaje aprendió. Esta semana necesitan aprender, no solo abaratar.",
+  "question": "¿Cuándo no conviene soltar esa ampliación del todo?",
+  "answer": "Cuando necesitas saber qué mensaje funciona, no solo bajar el costo de esta semana."
  },
  {
   "id": "ads25",
@@ -821,9 +895,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Las mismas personas están en dos conjuntos a los que pujas a la vez, así que compites contigo. Se revisa antes de lanzar campañas paralelas.",
-  "example": "Remarketing de 30 días y un lookalike que incluye a esos mismos visitantes.",
-  "question": "¿Qué se hace?",
-  "answer": "Excluir un conjunto del otro o unirlos."
+  "example": "El remarketing de 30 días y un grupo parecido incluían a los mismos visitantes. Las dos campañas pujaban entre sí y el costo subió. Excluyeron a los visitantes recientes del grupo parecido y dejó de haber puja interna.",
+  "scenario": "Dos campañas le muestran anuncios a la misma gente y pujan una contra la otra. El costo sube sin llegar a más personas. Hay que sacar un conjunto del otro o unirlos.",
+  "question": "¿Qué se hace antes de lanzar la segunda campaña?",
+  "answer": "Revisar si la gente se repite y excluir un conjunto del otro, o unirlos."
  },
  {
   "id": "ads26",
@@ -832,9 +907,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Cómo se gasta el dinero a lo largo del día o del mes. Un ritmo agresivo se acaba a las 11 a.m.; uno parejo acompaña la hora en que compra tu cliente.",
-  "example": "Una app de delivery en Lima concentra puja entre 12 y 2 p.m. y 7 y 10 p.m.",
-  "question": "¿Por qué importa la zona horaria?",
-  "answer": "Porque el algoritmo optimiza en la hora de la cuenta, que puede no ser Lima."
+  "example": "Una app de delivery en Lima concentró la puja entre 12 y 2 p.m. y 7 y 10 p.m., que es cuando piden. Antes el gasto se acababa a las 11 a.m. porque la cuenta estaba en otra zona horaria y el sistema optimizaba la mañana de ese huso, no la hora de Lima.",
+  "scenario": "El gasto de una app de pedidos se acababa a media mañana. Los pedidos de verdad son al mediodía y en la noche, hora de Lima. La cuenta de anuncios estaba en otro huso y gastaba cuando aquí nadie pide.",
+  "question": "¿Por qué importa la zona horaria de la cuenta?",
+  "answer": "Porque el sistema optimiza en la hora de la cuenta, que puede no ser la hora en que tu cliente compra."
  },
  {
   "id": "ads27",
@@ -843,9 +919,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Pieza que cambia título, imagen o precio según la persona o el producto, usando un feed o señales.",
-  "example": "El anuncio muestra el plan que la persona estuvo viendo, no un plan genérico.",
-  "question": "¿Qué lo diferencia de hacer 20 anuncios a mano?",
-  "answer": "Las variantes salen del feed y de reglas, no de un diseñador por cada una."
+  "example": "El anuncio muestra el plan que la persona estuvo viendo, no un plan genérico. Las variantes salen del archivo y de reglas. Hacer 20 anuncios a mano para 20 planes no escala y se desactualiza el precio. Si el archivo falla, todas las variantes fallan juntas.",
+  "scenario": "La pieza cambia el precio y el nombre del plan según lo que la persona miró. No diseñaron un anuncio por cada plan: sale de un archivo y de reglas.",
+  "question": "¿Qué lo diferencia de producir 20 anuncios a mano?",
+  "answer": "Las variantes salen del archivo y de reglas, no de un diseño por cada una."
  },
  {
   "id": "ads28",
@@ -854,9 +931,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Formato de TikTok que impulsa una publicación orgánica, propia o de un creador, sin rehacerla como anuncio frío. Conserva comentarios y prueba social.",
-  "example": "Se promociona el video de un creador que ya mostró el producto y tiene comentarios reales.",
-  "question": "¿Qué ventaja tiene frente a subir el mismo video como anuncio?",
-  "answer": "Se ve como contenido y arrastra la prueba social del post original."
+  "example": "Impulsaron el video de un creador que ya tenía comentarios reales. El mismo archivo, subido como anuncio frío, perdió los comentarios y se vio como publicidad. Con el formato que conserva el post, el costo por prueba fue menor porque la prueba social venía en la pieza.",
+  "scenario": "Se impulsa la publicación que ya está en el perfil, con sus comentarios, en vez de volver a subir el archivo como anuncio nuevo. La gente sigue viendo las respuestas de otros usuarios.",
+  "question": "¿Qué ventaja tiene frente a subir el mismo archivo como anuncio frío?",
+  "answer": "Se ve como contenido y arrastra los comentarios del post original."
  },
  {
   "id": "ads29",
@@ -865,9 +943,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Conversión que se acredita a un anuncio que la persona vio y no cliqueó. Infla resultados si la ventana es larga y la marca ya se buscaba sola.",
-  "example": "Alguien ve un video y tres días después entra directo y paga; la plataforma se lo atribuye.",
-  "question": "¿Por qué hay que mirarla con sospecha?",
-  "answer": "Porque mucha de esa gente habría llegado igual."
+  "example": "Alguien ve el video y tres días después entra escribiendo la marca y paga. La plataforma se acredita la venta. Una parte de esa gente habría llegado igual. Con una ventana larga, el retorno del video se ve mejor de lo que el experimento de ciudades dejó ver.",
+  "scenario": "La plataforma se anota una venta de alguien que vio el video, no hizo clic, y días después entró directo. La marca ya se buscaba sola. La ventana es larga.",
+  "question": "¿Por qué hay que mirar esa venta con sospecha?",
+  "answer": "Porque mucha de esa gente habría llegado igual, sin el anuncio."
  },
  {
   "id": "ads30",
@@ -876,9 +955,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Nota de Google Ads sobre la relevancia del anuncio, la página y el CTR esperado. Una nota baja encarece el clic.",
-  "example": "Un anuncio de 'CRM' que aterriza en la home genérica suele puntuar peor que uno que aterriza en la página de CRM.",
+  "example": "El anuncio de 'CRM' aterrizaba en la home genérica y la nota era baja: el clic salía más caro. Lo pasaron a la página de CRM, con el mismo lenguaje de la búsqueda, y la nota subió. El precio del clic bajó sin subir la puja.",
+  "scenario": "La nota que pone el buscador es baja y el clic sale caro. El anuncio habla de CRM y la página de destino es la home, que habla de otra cosa.",
   "question": "¿Qué se arregla primero?",
-  "answer": "La coherencia entre la búsqueda, el anuncio y la página."
+  "answer": "La coherencia entre lo que la persona buscó, el anuncio y la página."
  },
  {
   "id": "ads31",
@@ -887,9 +967,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Qué tan útil y rápida es la página a la que llega el clic, según la plataforma y según el usuario. Una página lenta quema un buen anuncio.",
-  "example": "El anuncio promete una plantilla y la página tarda 6 segundos y pide 12 campos.",
-  "question": "¿Qué se mide además de la nota de Google?",
-  "answer": "Velocidad, claridad de la oferta y tasa de conversión real."
+  "example": "El anuncio promete una plantilla. La página tarda 6 segundos y pide 12 campos. La nota de la plataforma baja y, además, la conversión real es 0,5%. Arreglar la velocidad y dejar 4 campos movió más que cambiar el titular del anuncio.",
+  "scenario": "El clic llega a una página lenta, con muchos campos, que no entrega lo que el anuncio prometió. Aunque el anuncio esté bien, la visita se pierde ahí.",
+  "question": "¿Qué se mide además de la nota que pone la plataforma?",
+  "answer": "Velocidad, si la oferta se entiende y la conversión real."
  },
  {
   "id": "ads32",
@@ -898,9 +979,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Conjunto de personas definido por un comportamiento: vio precios, abandonó el alta, es cliente. Cada segmento merece un mensaje distinto.",
-  "example": "Quienes empezaron el checkout y no pagaron ven un anuncio de ayuda, no el mismo de prospección.",
-  "question": "¿Por qué no se junta todo en un solo segmento 'visitantes'?",
-  "answer": "Porque un curioso y alguien a un clic de pagar no necesitan el mismo mensaje."
+  "example": "Quienes empezaron el alta y no pagaron ven un anuncio de ayuda para terminar. Quienes solo leyeron el blog ven otro. Juntarlos en 'visitantes' hacía que el curioso recibiera 'te falta pagar' y que quien estaba a un paso recibiera un artículo.",
+  "scenario": "Hay un conjunto de quienes abandonaron el alta y otro de quienes solo leyeron el blog. Cada uno ve un mensaje distinto. Juntarlos en 'todos los visitantes' mezcla los dos momentos.",
+  "question": "¿Por qué no se junta todo en 'visitantes'?",
+  "answer": "Porque un curioso y alguien a un paso de pagar no necesitan el mismo mensaje."
  },
  {
   "id": "ads33",
@@ -909,9 +991,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Sacar de la campaña a quien no debe verla: clientes actuales, empleados o gente que ya convirtió. Evita pagar por venderle a quien ya compró.",
-  "example": "La campaña de adquisición excluye a quienes tienen el evento 'Purchase' en 180 días.",
-  "question": "¿Qué pasa si se olvida?",
-  "answer": "El CPA parece bueno porque estás 'convirtiendo' clientes viejos."
+  "example": "La campaña de cuentas nuevas excluye a quien tuvo el evento de pago en 180 días. Cuando se olvidaron, el costo por 'adquisición' se veía buenísimo porque le estaban vendiendo a clientes viejos que igual entraban a renovar.",
+  "scenario": "La campaña que busca cuentas nuevas sigue mostrando anuncios a quien ya pagó. El costo se ve bajo porque esos 'éxitos' ya eran clientes. Hay que sacarlos del conjunto.",
+  "question": "¿Qué pasa si se olvida sacar a quien ya compró?",
+  "answer": "El costo parece bueno porque estás contando como nuevas a cuentas que ya lo eran."
  },
  {
   "id": "ads34",
@@ -920,9 +1003,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Pautar desde la cuenta del creador, con su permiso, para que el anuncio salga con su cara y su audiencia. También se llama whitelisting.",
-  "example": "Una devrel autoriza a la marca a impulsar su reseña desde su propio perfil.",
+  "example": "Una devrel autorizó a impulsar su reseña desde su propio perfil durante 30 días, con un texto acordado. El anuncio sale con su cara y sus comentarios. Sin el permiso por escrito del plazo y de lo que se puede decir, ese formato no se enciende.",
+  "scenario": "El anuncio sale desde el perfil de quien reseñó el producto, con su permiso, no desde la cuenta de la marca. Hace falta dejar por escrito el plazo y qué se puede afirmar.",
   "question": "¿Qué hay que tener por escrito?",
-  "answer": "Permiso de uso de la cuenta, plazo y qué se puede decir del producto."
+  "answer": "El permiso para usar la cuenta, el plazo y qué se puede decir del producto."
  },
  {
   "id": "ads35",
@@ -931,9 +1015,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Pagas una comisión a terceros que traen clientes con su enlace. Escala si controlas el fraude y el mensaje.",
-  "example": "Un newsletter técnico cobra un porcentaje del primer año de cada alta que refiere.",
+  "example": "Un newsletter técnico cobra un porcentaje del primer año de cada alta que su enlace trae. Funciona. Otro afiliado empezó a pautar el nombre de la marca con un cupón y se quedó con ventas que iban a llegar igual. Sin regla de marca y de cupones, la comisión paga demanda que ya era tuya.",
+  "scenario": "Un tercero cobra un porcentaje por cada alta que llega con su enlace. Uno de ellos pauta tu propio nombre y se queda con ventas que igual iban a entrar.",
   "question": "¿Cuál es el riesgo principal?",
-  "answer": "Cupones y marcas que se apropian de búsquedas que ya eran tuyas."
+  "answer": "Que se apropien de búsquedas que ya eran tuyas, o que el mensaje y los cupones se salgan de control."
  },
  {
   "id": "ads36",
@@ -942,9 +1027,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Compra automatizada de espacios digitales mediante subasta, con datos de audiencia. Da alcance fuera de las redes grandes y exige control de fraude y de sitios.",
-  "example": "Una campaña de display compra impresiones en sitios de negocio, excluyendo apps de juegos.",
+  "example": "La compra automática puso el banner en sitios de negocio y, por un rato, también en apps de juegos hasta que cargaron la lista de exclusión. Sin lista de sitios, viewability y exclusiones de contenido, el alcance 'barato' aparece donde la marca no quiere estar.",
+  "scenario": "Una subasta automática compra espacios fuera de las redes grandes. Parte de las impresiones cayó en apps que no tienen nada que ver. Hay que limitar sitios y contenido.",
   "question": "¿Qué se revisa para no aparecer en cualquier lado?",
-  "answer": "Lista de sitios, viewability y exclusiones de contenido."
+  "answer": "La lista de sitios, si el aviso se vio de verdad y las exclusiones de contenido."
  },
  {
   "id": "ads37",
@@ -953,9 +1039,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Anuncios sobre tu propio nombre. Defienden el resultado cuando un competidor puja por ti y capturan a quien ya te busca.",
-  "example": "Alguien busca el nombre del producto y el primer resultado pago también es tuyo.",
-  "question": "¿Siempre conviene pagar por tu marca?",
-  "answer": "No siempre: si nadie más puja y el orgánico ya es el primer resultado, el anuncio puede solo canibalizar."
+  "example": "Alguien busca el nombre del producto y el primer resultado pago también es tuyo, porque un competidor estaba puja por ese nombre. Ahí el anuncio defiende el clic. En otra categoría nadie más puja y el orgánico ya es el primero: el anuncio solo le cobra a la empresa un clic que igual era suyo.",
+  "scenario": "Pagas por aparecer cuando buscan tu nombre. Un competidor también puja por ese nombre. En otro mercado nadie más puja y el resultado orgánico ya sale primero.",
+  "question": "¿Siempre conviene pagar por tu propio nombre?",
+  "answer": "No. Si nadie más puja y el orgánico ya es el primero, el anuncio puede solo cobrarte un clic que ya era tuyo."
  },
  {
   "id": "ads38",
@@ -964,9 +1051,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Pujar por el nombre o la categoría de un rival para ofrecer la alternativa. Es caro y el mensaje tiene que ser comparativo y cierto.",
-  "example": "Un anuncio sobre la marca de otro CRM dice en qué caso concreto cambian los equipos.",
-  "question": "¿Qué límite legal y de plataforma hay?",
-  "answer": "No puedes usar la marca ajena de forma engañosa ni prometer lo que no es verificable."
+  "example": "Pujan por la marca de otro CRM. El anuncio dice en qué caso concreto se cambian los equipos, con un dato que pueden sostener. No dice 'somos ellos' ni usa el logo ajeno. Es caro porque quien busca ese nombre ya tiene preferencia, y el mensaje engañoso además se lo bajan.",
+  "scenario": "Apareces cuando buscan el nombre de otro producto y ofreces la alternativa con una comparación que puedes probar. Es más caro que tu propio nombre y no puedes hacerte pasar por el otro.",
+  "question": "¿Qué límite no se puede cruzar?",
+  "answer": "Usar la marca ajena de forma engañosa o prometer algo que no se puede verificar."
  },
  {
   "id": "ads39",
@@ -975,8 +1063,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Tope de veces que una persona ve el anuncio en un periodo. Protege la marca y el presupuesto en formatos de alcance.",
-  "example": "Máximo 3 impactos por persona a la semana en YouTube.",
-  "question": "¿En prospección fría para qué sirve?",
+  "example": "En YouTube el tope es 3 impactos por persona a la semana. Sin tope, una audiencia chica de prospección vio el bumper 15 veces antes de tener otra pieza y el recuerdo se volvió fastidio. El tope guarda impresiones para cuando haya un mensaje nuevo.",
+  "scenario": "Nadie ve el video más de tres veces en la semana. Sin ese tope, una audiencia chica lo ve quince veces y se quema antes de que exista otra pieza.",
+  "question": "¿En prospección fría para qué sirve el tope?",
   "answer": "Para no quemar a una audiencia chica antes de tener un mensaje nuevo."
  },
  {
@@ -986,9 +1075,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 1,
   "explanation": "Video pago en YouTube: saltables, bumper o in-feed. Sirven para explicar un producto que en una imagen no se entiende.",
-  "example": "Un bumper de 6 segundos muestra el antes y después de cerrar el mes en el software.",
+  "example": "Un bumper de 6 segundos muestra el antes y después de cerrar el mes en el software. No alcanza con contar vistas: miran vistas completas, clics y ventas en las que el video asistió aunque no fuera el último clic. Una imagen estática no alcanzaba a explicar el cierre.",
+  "scenario": "El video pago en la plataforma de video explica un flujo que en una imagen no se entiende. Miden más que la cantidad de veces que empezó: cuántos lo terminan, cuántos hacen clic y qué ventas ayudó.",
   "question": "¿Qué se mira además de las vistas?",
-  "answer": "Vistas completas, clics y conversiones asistidas, no solo el view rate."
+  "answer": "Vistas completas, clics y conversiones en las que el video asistió."
  },
  {
   "id": "ads41",
@@ -997,8 +1087,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Modo de Google en el que las etiquetas se comportan según si la persona aceptó cookies. Sin consentimiento, la medición se modela y se pierde detalle.",
-  "example": "En la web europea las etiquetas esperan el aviso; en una landing de Perú igual conviene declararlo si hay tráfico de allá.",
-  "question": "¿Qué se rompe si se ignora?",
+  "example": "En el tráfico que llega de la Unión Europea las etiquetas esperan el aviso. Si se ignoran, la medición se rompe y además hay un problema de cumplimiento. En una landing que también recibe ese tráfico, aunque la empresa esté en Perú, el aviso tiene que poder decir que no.",
+  "scenario": "Las etiquetas de medición se comportan distinto si la persona aceptó o no. Sin el aviso, una parte del tráfico europeo queda mal medida y el cumplimiento se cae.",
+  "question": "¿Qué se rompe si se ignora el aviso?",
   "answer": "La medición y, en varias jurisdicciones, el cumplimiento."
  },
  {
@@ -1008,9 +1099,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Los eventos pasan por un servidor tuyo antes de llegar a la plataforma de anuncios. Da control, mejor match y menos dependencia del navegador.",
-  "example": "El contenedor de servidor reenvía la compra a Google y a Meta con el mismo id de evento para no duplicar.",
-  "question": "¿Por qué no se manda el evento dos veces sin deduplicar?",
-  "answer": "Porque la misma compra contaría dos veces y el ROAS mentiría."
+  "example": "El contenedor del servidor reenvía la compra a Google y a Meta con el mismo id de evento. Sin esa deduplicación, la misma venta contaba dos veces y el retorno se veía el doble. El control está en tu servidor, no en que el navegador deje correr cada etiqueta.",
+  "scenario": "La compra pasa primero por un servidor de la empresa y desde ahí se reenvía a las plataformas, con un id para no contarla dos veces. Depende menos de que el navegador deje correr la etiqueta.",
+  "question": "¿Por qué no se manda el mismo evento dos veces sin un id compartido?",
+  "answer": "Porque la misma compra contaría dos veces y el retorno mentiría."
  },
  {
   "id": "ads43",
@@ -1019,9 +1111,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Modelo estadístico que reparte el crédito de las ventas entre canales usando historia de gasto y de resultados, sin depender de cookies. Sirve cuando el rastreo por persona falla.",
-  "example": "Con dos años de gasto semanal se estima cuánto de los ingresos movió YouTube frente a búsqueda.",
+  "example": "Con dos años de gasto semanal estimaron cuánto de los ingresos movió el video frente a la búsqueda. No dice qué anuncio concreto funcionó el martes: dice hacia dónde mover el presupuesto cuando el rastreo por persona ya no alcanza.",
+  "scenario": "Con la historia de gasto y de ventas, un modelo reparte el crédito entre canales sin seguir a cada persona. Sirve para decidir presupuesto. No dice qué pieza ganó ayer.",
   "question": "¿Qué no reemplaza?",
-  "answer": "No dice qué anuncio concreto funcionó ayer; da dirección de presupuesto."
+  "answer": "El detalle de qué anuncio concreto funcionó ayer. Da dirección de presupuesto."
  },
  {
   "id": "ads44",
@@ -1030,9 +1123,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Reparte el mérito de una conversión entre varios anuncios que la persona vio o cliqueó, en vez de dárselo todo al último clic.",
-  "example": "La demo se acredita 40% a un video, 40% a un webinar y 20% al último anuncio de búsqueda.",
-  "question": "¿Cuál es el límite?",
-  "answer": "Sigue siendo un modelo: cambia las reglas y cambia el 'ganador'."
+  "example": "La demo se reparte 40% a un video, 40% a un webinar y 20% al último anuncio de búsqueda. Con último clic, la búsqueda se llevaba el 100% y iban a apagar el video. Sigue siendo un modelo: si cambian las reglas, cambia el ganador.",
+  "scenario": "El mérito de una demo se reparte entre el video, un webinar y el último anuncio, en vez de dárselo entero al último clic. Si cambian los porcentajes de la regla, cambia quién 'ganó'.",
+  "question": "¿Cuál es el límite de ese reparto?",
+  "answer": "Sigue siendo un modelo. Cambias las reglas y cambia el ganador."
  },
  {
   "id": "ads45",
@@ -1041,9 +1135,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Lo que ocurrió gracias al anuncio y que no habría ocurrido igual. Se mide con un grupo que no ve la campaña. Es la pregunta que el ROAS no responde.",
-  "example": "Se apaga la prospección en la mitad de las ciudades y se compara el alta orgánica.",
-  "question": "¿Por qué un ROAS de 5 puede ser poco incremental?",
-  "answer": "Porque estás pagando por ventas que igual iban a llegar por marca o por uso."
+  "example": "Apagaron la prospección en la mitad de las ciudades y compararon el alta de quienes no veían anuncios. Una parte de las ventas siguió igual. El retorno de 5 a 1 incluía ventas que habrían llegado por la marca. El número que importa es la diferencia entre las dos mitades.",
+  "scenario": "En unas ciudades se apaga la campaña y en otras no. La diferencia de altas es lo que el anuncio realmente sumó. El retorno de la plataforma contaba también ventas que igual iban a ocurrir.",
+  "question": "¿Por qué un retorno de 5 puede ser poco incremental?",
+  "answer": "Porque estás pagando por ventas que igual iban a llegar por la marca o por el uso."
  },
  {
   "id": "ads46",
@@ -1052,9 +1147,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Se deja un conjunto de ciudades o regiones sin anuncios y se compara con las que sí los ven. Es una forma práctica de medir incrementalidad.",
-  "example": "Cinco ciudades de Perú ven la campaña y tres parecidas no, durante cuatro semanas.",
-  "question": "¿Qué hay que igualar?",
-  "answer": "Tamaño, estacionalidad y que no haya otra campaña distinta en el grupo de control."
+  "example": "Cinco ciudades vieron la campaña y tres parecidas no, durante cuatro semanas. Las que no la vieron son el contraste. Tuvieron que parecerse en tamaño y en estacionalidad, y no correr otra campaña distinta en el grupo que se queda fuera. Si no, la diferencia no se le puede atribuir al anuncio.",
+  "scenario": "Unas ciudades ven la campaña y otras parecidas no, durante varias semanas. Se comparan las altas. Las ciudades tienen que parecerse y no puede haber otra campaña distinta en las que se quedan fuera.",
+  "question": "¿Qué hay que igualar entre los dos grupos?",
+  "answer": "Tamaño, estacionalidad y que no haya otra campaña distinta en el grupo que no ve anuncios."
  },
  {
   "id": "ads47",
@@ -1063,7 +1159,8 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Estimación de cuánto subió el resultado en las zonas donde se pautó, frente a lo que el modelo esperaba sin anuncios. Lo usan equipos con gasto alto.",
-  "example": "El modelo dice que las altas en la costa subieron 12% por encima de la línea de base.",
+  "example": "El modelo dice que las altas en la costa subieron 12% por encima de lo que se esperaba sin anuncios. Con muy poco gasto o muy pocas zonas el ruido tapa ese 12% y el número no se puede usar.",
+  "scenario": "Comparan las zonas donde se pautó contra lo que un modelo esperaba que pasara sin anuncios. El resultado estimado es un alza. Con poco gasto el ruido es más grande que el efecto.",
   "question": "¿Cuándo no tiene sentido?",
   "answer": "Con muy poco gasto o muy pocas zonas: el ruido tapa el efecto."
  },
@@ -1074,9 +1171,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Anuncios en televisores con internet: apps de streaming. Llegan a la sala, con medición distinta al video del móvil.",
-  "example": "Un spot de 15 segundos en una app de streaming durante el lanzamiento de una ronda.",
+  "example": "Un spot de 15 segundos en una app de streaming acompañó el anuncio de una ronda. Llega a la sala, no al feed del teléfono. Pedirle el mismo costo por alta que a la búsqueda es pedirle a un canal de alcance el trabajo de la intención inmediata.",
+  "scenario": "El aviso sale en el televisor con internet, en una app de streaming, no en el teléfono. Sirve para que el nombre aparezca en la sala. No trae el mismo costo por alta que la búsqueda.",
   "question": "¿Qué no se le puede pedir?",
-  "answer": "El mismo CPA de búsqueda: es un canal de alcance, no de intención inmediata."
+  "answer": "El mismo costo por alta de la búsqueda. Es alcance, no intención inmediata."
  },
  {
   "id": "ads49",
@@ -1085,9 +1183,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 3,
   "explanation": "Encuesta o medición que estima si el anuncio movió recuerdo, consideración o intención, no solo clics. Útil en campañas de alcance.",
-  "example": "Tras la campaña, el recuerdo de marca sube 4 puntos en quienes vieron el video.",
-  "question": "¿Por qué no se decide una campaña de marca solo con CPC?",
-  "answer": "Porque el objetivo era recuerdo, no el clic más barato."
+  "example": "Después de la campaña, el recuerdo de marca subió 4 puntos entre quienes vieron el video, medido con una encuesta. El costo por clic era peor que el de búsqueda. No servía para decidirla: el objetivo era recuerdo, no el clic más barato.",
+  "scenario": "Una medición pregunta si quienes vieron el video recuerdan la marca más que quienes no lo vieron. El objetivo de la campaña era ese recuerdo, no el clic.",
+  "question": "¿Por qué no se decide una campaña de alcance solo con el costo por clic?",
+  "answer": "Porque el objetivo era recuerdo o consideración, no el clic más barato."
  },
  {
   "id": "ads50",
@@ -1096,9 +1195,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Publicidad digital",
   "level": 2,
   "explanation": "Cuántos días después de un clic o una vista la plataforma todavía se acredita la conversión. Una ventana de 28 días cuenta ventas que el anuncio apenas rozó.",
-  "example": "Clic el día 1 y pago el día 20: entra en una ventana de 28 y no en una de 7.",
-  "question": "¿Qué conviene alinear?",
-  "answer": "La ventana con el ciclo real de compra del producto."
+  "example": "Un clic el día 1 y un pago el día 20 entran en una ventana de 28 días y no en una de 7. El ciclo real de esta venta B2B es de unas tres semanas, así que 7 días se queda corto y 28 puede alcanzar. En un producto que se compra el mismo día, 28 días le regala al anuncio ventas que ya no tienen que ver.",
+  "scenario": "La plataforma se acredita un pago que ocurrió 20 días después del clic. Con un plazo de 7 días esa venta no contaría. El ciclo real de compra de este producto es de unas tres semanas.",
+  "question": "¿Qué conviene alinear con el plazo?",
+  "answer": "El plazo con el ciclo real de compra. Uno muy largo se anota ventas que el anuncio apenas rozó."
  },
  {
   "id": "est01",
@@ -1107,9 +1207,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "Objetivo cualitativo más resultados clave numéricos para un trimestre. Alinea a un equipo tech sin convertir cada tarea en una meta.",
-  "example": "Objetivo: que los equipos nuevos lleguen al valor solos. Resultado clave: 40% de activación en 7 días.",
-  "question": "¿Un resultado clave puede ser 'lanzar la función'?",
-  "answer": "No. Lanzar es una tarea; el resultado es el cambio medible que la función produce."
+  "example": "El objetivo del trimestre es que los equipos nuevos lleguen al valor solos. El resultado que se mide: 40% de activación en 7 días, hoy en 22%. 'Lanzar la función de invitaciones' se quedó como tarea del sprint, no como meta. Si la función sale y la activación no se mueve, el trimestre no se cumplió.",
+  "scenario": "Quieren una meta del trimestre que no sea una lista de tareas. El avance que van a mirar es un porcentaje de cuentas nuevas que llegan al valor en 7 días. Publicar una pantalla no cuenta como ese avance.",
+  "question": "¿Puede el resultado medible ser 'lanzar la función'?",
+  "answer": "No. Lanzar es una tarea. El resultado es el cambio medible que esa función produce."
  },
  {
   "id": "est02",
@@ -1118,9 +1219,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "Descripción de la cuenta que más conviene servir: industria, tamaño, madurez y señales de que puede comprar y retener. No es una persona; es la empresa.",
-  "example": "SaaS B2B de 20 a 200 empleados en LatAm, con un equipo de ventas de al menos 4.",
-  "question": "¿En qué se diferencia del buyer persona?",
-  "answer": "El cliente ideal es la cuenta; el buyer persona es quien dentro de esa cuenta decide."
+  "example": "Les conviene servir a SaaS B2B de 20 a 200 personas en LatAm, con al menos 4 en ventas. Una cuenta de 8 personas cierra rápido y se va a los dos meses. El retrato de la jefa de ventas es otra ficha: esto es la empresa, no la persona.",
+  "scenario": "Describen a qué empresas les conviene vender: rubro, tamaño y señales de que se quedan. No es la ficha de una persona con nombre y objeciones. Una cuenta chica cierra fácil y cancela.",
+  "question": "¿En qué se diferencia de la ficha de la persona que firma?",
+  "answer": "Esto es la cuenta. La ficha con nombre es quien, dentro de esa cuenta, decide."
  },
  {
   "id": "est03",
@@ -1129,9 +1231,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "Producto que se usa por suscripción en la nube, en vez de instalarse y cobrarse una sola vez. El ingreso depende de que el cliente se quede.",
-  "example": "Un equipo paga cada mes por el CRM y deja de tener acceso si cancela.",
-  "question": "¿Por qué la retención es el negocio?",
-  "answer": "Porque el costo de conseguir al cliente se recupera con el tiempo, no el día uno."
+  "example": "El equipo paga cada mes por el CRM y pierde el acceso si cancela. El costo de conseguirlo se recupera en el mes 8, no el día del contrato. Una licencia perpetua de 2014 cobraba todo el día uno y no le importaba si al mes 3 dejaban de entrar. Aquí, si se van, se acaba el ingreso.",
+  "scenario": "El producto se usa en la nube y se paga cada mes. Si la cuenta cancela, deja de entrar. El costo de haberla conseguido todavía no se recuperó. El negocio depende de que siga.",
+  "question": "¿Por qué quedarse es el negocio, y no solo el día de la firma?",
+  "answer": "Porque lo que costó conseguir a la cuenta se recupera con el tiempo, no el día uno."
  },
  {
   "id": "est04",
@@ -1140,9 +1243,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "La versión más chica que permite aprender si alguien paga o usa la solución, no un producto a medias para siempre.",
-  "example": "Una lista de espera con conciliación manual de pagos, antes de construir el banco entero.",
-  "question": "¿Qué pregunta debe responder?",
-  "answer": "Si este problema duele lo bastante como para seguir invirtiendo."
+  "example": "Antes de construir la conciliación bancaria entera, probaron una lista de espera y conciliaron a mano los pagos de 15 estudios. 9 pagaron un anticipo. Eso respondió si el dolor alcanza para seguir invirtiendo. No era 'la versión fea para siempre': era la versión chica para aprender.",
+  "scenario": "Conciliaron a mano durante dos semanas con 15 estudios, antes de escribir el módulo. Nueve pagaron. La pregunta era si el dolor justificaba construir, no si la pantalla estaba terminada.",
+  "question": "¿Qué pregunta tiene que responder esa versión chica?",
+  "answer": "Si el problema duele lo bastante como para seguir invirtiendo."
  },
  {
   "id": "est05",
@@ -1151,9 +1255,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "Secuencia pública o interna de problemas que el equipo va a atacar. No es una lista de fechas prometidas a todo el mundo.",
-  "example": "Ahora: activación. Después: invitaciones. Más adelante: facturación anual.",
-  "question": "¿Por qué las fechas rígidas hacia clientes fallan?",
-  "answer": "Porque el descubrimiento cambia el orden cuando aparece un problema más urgente."
+  "example": "El orden publicado por dentro: ahora la activación, después las invitaciones, más adelante la facturación anual. Un cliente grande pidió la facturación 'en mayo' y el descubrimiento mostró que sin activación nadie llega a pagar anual. La fecha rígida se habría roto. El orden es de problemas, no de promesas de calendario.",
+  "scenario": "Por dentro el orden es: primero que la gente llegue al valor, después las invitaciones, después el cobro anual. Un cliente pide una fecha cerrada para el cobro anual. El equipo todavía no sabe si el primer problema está resuelto.",
+  "question": "¿Por qué una fecha cerrada hacia el cliente se cae?",
+  "answer": "Porque al investigar puede aparecer un problema más urgente y el orden cambia."
  },
  {
   "id": "est06",
@@ -1162,9 +1267,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "Ejercicio corto para ver si la solución funciona en el caso del cliente, con un criterio de éxito escrito antes de empezar.",
-  "example": "En dos semanas el modelo responde el 80% de las preguntas del centro de ayuda con las fuentes correctas.",
-  "question": "¿Qué la diferencia de un piloto eterno?",
-  "answer": "Tiene fecha, alcance y una decisión al final: seguir o parar."
+  "example": "En dos semanas el modelo tenía que responder el 80% de las preguntas del centro de ayuda con la fuente correcta. Llegó a 74% y pararon: no siguieron 'un mes más a ver'. El criterio y la fecha estaban escritos antes. Un piloto que lleva cuatro meses sin decisión ya no es este ejercicio.",
+  "scenario": "Acordaron dos semanas y un umbral: 80% de respuestas con la fuente correcta. Al terminar hay que decidir si se sigue o se para. No es un piloto que se estira sin fecha.",
+  "question": "¿Qué la separa de un piloto que no termina nunca?",
+  "answer": "La fecha, el alcance y una decisión al final."
  },
  {
   "id": "est07",
@@ -1173,9 +1279,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 1,
   "explanation": "Bloque corto, a menudo de una o dos semanas, en el que un equipo entrega un incremento usable. Sirve para limitar el trabajo en curso.",
-  "example": "En 10 días se publica la invitación por enlace y se mide cuántos la usan.",
-  "question": "¿Qué no debería entrar a mitad de sprint?",
-  "answer": "Trabajo nuevo que no sea un incidente, porque rompe el compromiso."
+  "example": "En 10 días publicaron la invitación por enlace y midieron cuántos la usan. A mitad de camino entró un pedido de rediseñar los ajustes. Lo dejaron fuera: no era un incidente, y meterlo rompía lo que el equipo se había comprometido a terminar.",
+  "scenario": "El equipo se comprometió a entregar en diez días una invitación que ya se pueda usar. A mitad de camino quieren meter otra pantalla. No es una caída de producción.",
+  "question": "¿Qué no debería entrar a mitad de ese bloque?",
+  "answer": "Trabajo nuevo que no sea un incidente, porque rompe lo comprometido."
  },
  {
   "id": "est08",
@@ -1184,9 +1291,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Software que, dado un objetivo, decide pasos, usa herramientas y revisa el resultado, en lugar de solo completar un texto.",
-  "example": "Un agente lee el ticket, busca en la base y propone la respuesta; una persona la aprueba.",
-  "question": "¿En qué se diferencia de un chatbot de preguntas frecuentes?",
-  "answer": "El agente elige acciones y herramientas; el chatbot solo responde con un texto."
+  "example": "El sistema lee el ticket, busca en la base y propone la respuesta; una persona la aprueba. No es el bot que solo devuelve el párrafo de las preguntas frecuentes: este elige qué herramienta llamar y qué hacer si la búsqueda viene vacía.",
+  "scenario": "El sistema decide si busca en la base, si abre un ticket o si pide un dato, y después revisa lo que armó. Un bot de preguntas frecuentes solo devuelve un texto fijo.",
+  "question": "¿En qué se diferencia de un bot que solo contesta con un párrafo guardado?",
+  "answer": "Este elige acciones y herramientas. El otro solo devuelve un texto."
  },
  {
   "id": "est09",
@@ -1195,8 +1303,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Diseñar las instrucciones, ejemplos y límites con los que un modelo hace una tarea de forma repetible. Es parte del producto, no un truco suelto.",
-  "example": "Un prompt de soporte incluye la política de reembolsos y prohíbe inventar plazos.",
-  "question": "¿Por qué se versiona como código?",
+  "example": "La instrucción de soporte incluye la política de reembolsos y prohíbe inventar plazos. La guardan en el repositorio con versión. Un cambio de una frase subió las respuestas fuera de política de 2% a 11%. Se trata como código porque cambia lo que pasa en producción.",
+  "scenario": "La instrucción que usa el modelo en producción vive en el repositorio, con ejemplos y límites. Cambiar una frase cambió cuántas respuestas se salen de la política. No es un truco suelto en un chat.",
+  "question": "¿Por qué esa instrucción se versiona como el código?",
   "answer": "Porque un cambio de redacción cambia el comportamiento en producción."
  },
  {
@@ -1206,9 +1315,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Cuando un modelo afirma algo falso con seguridad. En un producto se mitiga con fuentes, validación y no dejar que ejecute acciones críticas solo.",
-  "example": "El asistente inventa un número de RUC. La interfaz solo muestra datos que vinieron de la base.",
-  "question": "¿Por qué 'pídele que no invente' no alcanza?",
-  "answer": "Porque el modelo puede incumplir la instrucción; hace falta un control fuera del texto."
+  "example": "El asistente inventó un número de RUC con tono seguro. La interfaz ahora solo muestra identificadores que vinieron de la base. Pedirle en la instrucción 'no inventes' no alcanzó: en la prueba igual inventó 4 de 30. El control tiene que estar fuera del texto.",
+  "scenario": "El asistente afirmó un número de registro que no existe, con seguridad. Le habían escrito que no inventara. En la prueba igual falló varias veces. Hace falta un control que no dependa de que obedezca la frase.",
+  "question": "¿Por qué la frase 'no inventes' no alcanza?",
+  "answer": "Porque puede incumplirla. Hace falta un control fuera del texto, como mostrar solo datos que vinieron de la base."
  },
  {
   "id": "est11",
@@ -1217,9 +1327,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Cantidad de texto que el modelo puede tener en cuenta en una sola llamada. Si el documento no entra, hay que resumir o recuperar fragmentos.",
-  "example": "Un contrato de 200 páginas no cabe; se recuperan solo las cláusulas relevantes.",
-  "question": "¿Más contexto siempre es mejor?",
-  "answer": "No. Contexto de más sube el costo y puede distraer al modelo."
+  "example": "Un contrato de 200 páginas no entra en una sola llamada. Recuperan solo las cláusulas de plazo y penalidad. Meter las 200 'por si acaso', cuando un modelo más caro sí las acepta, subió el costo y el modelo se distrajo con anexos viejos. Más texto no fue mejor.",
+  "scenario": "El documento completo no entra en una sola llamada. Traen solo las cláusulas que hacen falta. Meter todo el archivo subió la factura y empeoró la respuesta.",
+  "question": "¿Más texto en la llamada siempre mejora la respuesta?",
+  "answer": "No. De más sube el costo y puede distraer al modelo."
  },
  {
   "id": "est12",
@@ -1228,8 +1339,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Capacidad del modelo de llamar funciones: buscar en la base, crear un ticket, consultar un API. Es lo que vuelve útil a un agente dentro de un producto.",
-  "example": "El modelo llama a 'buscar_cliente' y solo entonces responde con el plan que esa cuenta tiene.",
-  "question": "¿Por qué no se le pega el acceso total a la base?",
+  "example": "El modelo llama a buscar_cliente y solo entonces responde con el plan que esa cuenta tiene. No le pegaron la base entera: una llamada mal formada podría listar otras cuentas. Las funciones permitidas son tres, con parámetros validados.",
+  "scenario": "El modelo puede llamar una función para leer el plan de una cuenta, y solo con ese resultado contesta. No tiene la base abierta. Una llamada mal hecha podría mostrar datos de otra empresa.",
+  "question": "¿Por qué no se le da acceso total a la base?",
   "answer": "Porque una llamada mal formada puede filtrar o borrar datos."
  },
  {
@@ -1239,9 +1351,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Una persona revisa o aprueba antes de que la acción salga: un correo al cliente, un reembolso, un cambio en producción.",
-  "example": "El agente redacta la respuesta y el líder de soporte la envía.",
+  "example": "El sistema redacta la respuesta y la jefa de soporte la envía. En reembolsos de menos de US$ 15, midieron 0,5% de error durante un mes, por debajo del umbral que finanzas aceptó, y esa cola ya sale sola. Los reembolsos grandes siguen con una persona.",
+  "scenario": "El borrador sale solo y una persona lo envía. En un tipo de caso ya midieron un error por debajo del umbral que el negocio acepta. En los demás, la persona sigue.",
   "question": "¿Cuándo se puede quitar esa revisión?",
-  "answer": "Cuando la tasa de error medida está por debajo del umbral que el negocio acepta."
+  "answer": "Cuando el error medido está por debajo del umbral que el negocio acepta, no porque 'se sienta' bien."
  },
  {
   "id": "est14",
@@ -1250,9 +1363,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Entrenar más un modelo ya existente con ejemplos propios para un estilo o una tarea. Cuesta datos y mantenimiento; a menudo un buen prompt o RAG alcanza antes.",
-  "example": "Se ajusta un modelo con 2.000 pares de pregunta y respuesta del centro de ayuda, ya revisados.",
+  "example": "Entrenaron con 2.000 pares de pregunta y respuesta del centro de ayuda, ya revisados, porque el tono se salía de la política. Antes habían intentado lo mismo cuando el problema era que la wiki estaba desactualizada: el modelo aprendió respuestas viejas con más seguridad. Ahí no era el primer paso.",
+  "scenario": "Quieren entrenar un modelo con miles de ejemplos propios para que suene a la empresa. El problema real es que los documentos de la política están viejos. Entrenar ahora fijaría esas respuestas viejas.",
   "question": "¿Cuándo no es el primer paso?",
-  "answer": "Cuando el problema es que faltan documentos actualizados, no que el modelo 'no suene' a la marca."
+  "answer": "Cuando faltan documentos actualizados. Ahí entrenar graba el error. Primero se arregla la fuente."
  },
  {
   "id": "est15",
@@ -1261,9 +1375,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Trabajo continuo para saber qué problema vale la pena construir, con entrevistas y pruebas, antes de comprometer un trimestre.",
-  "example": "Cinco llamadas muestran que el dolor es la conciliación, no 'más reportes'.",
-  "question": "¿Qué se entrega al final?",
-  "answer": "Una decisión informada, no necesariamente una función."
+  "example": "Cinco llamadas mostraron que el dolor es conciliar los pagos, no 'más reportes', que era lo que el roadmap tenía primero. El entregable de esas dos semanas fue la decisión de cambiar el orden, no una función. Sin esas llamadas habrían construido un reporte que nadie abre.",
+  "scenario": "Antes de comprometer el trimestre hicieron llamadas y una prueba chica. El dolor no era el que el roadmap decía. El resultado de esas dos semanas fue cambiar de problema, no una pantalla nueva.",
+  "question": "¿Qué se entrega al final de ese trabajo?",
+  "answer": "Una decisión informada. No necesariamente una función."
  },
  {
   "id": "est16",
@@ -1272,9 +1387,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Atajos en el código o la arquitectura que hoy aceleran y mañana cobran intereses en bugs y lentitud. Se gestiona, no se niega.",
-  "example": "Se duplicó la lógica de facturación para salir en la semana; queda un ticket para unificarla.",
-  "question": "¿Por qué un equipo de producto debería verla?",
-  "answer": "Porque compite con funciones por el mismo tiempo y se nota en incidentes."
+  "example": "Duplicaron la lógica de facturación para salir en la semana y dejaron un ticket para unificarla. Dos meses después un bug de impuestos tocó los dos caminos y se fue un viernes. Producto tiene que ver ese ticket: compite con funciones por el mismo tiempo y se nota cuando hay incidentes.",
+  "scenario": "Para salir en la semana se duplicó una lógica, con un ticket para unificarla después. El bug de impuestos tocó los dos caminos. Ese atajo compite con las funciones por el tiempo del equipo.",
+  "question": "¿Por qué quien prioriza producto debería ver esos atajos?",
+  "answer": "Porque ocupan el mismo tiempo que las funciones y aparecen como incidentes."
  },
  {
   "id": "est17",
@@ -1283,9 +1399,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Diseñar la interfaz de programación como el producto principal y las pantallas como un cliente más. Permite integraciones y otros agentes encima.",
-  "example": "El alta de un cliente se puede hacer desde la app o desde el API con las mismas reglas.",
+  "example": "El alta de un cliente usa las mismas reglas si viene de la pantalla o de una integración. Un partner la automatizó sin pedir una excepción. A ingeniería le importa, y también al cliente grande y a cualquier sistema que tenga que operar el alta sin hacer clic.",
+  "scenario": "La pantalla y la integración crean una cuenta con las mismas reglas. Un socio automatizó el alta sin pedir una pantalla especial. La interfaz de programación no fue un accesorio.",
   "question": "¿A quién le importa además de a ingeniería?",
-  "answer": "A partners, a clientes grandes y a cualquier agente que deba operar el sistema."
+  "answer": "A socios, a clientes grandes y a cualquier sistema que deba operar el producto sin la pantalla."
  },
  {
   "id": "est18",
@@ -1294,7 +1411,8 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Plan de cómo una oferta encuentra a sus primeros y siguientes clientes: canal, mensaje, precio y quién vende. No es solo la fecha de lanzamiento.",
-  "example": "PLG para equipos chicos y un ejecutivo a partir de 30 asientos.",
+  "example": "Para equipos de menos de 15 personas el canal es probar solos. A partir de 30 asientos entra un ejecutivo. El mensaje y el precio cambian en ese corte. Fijaron eso antes de pautar. 'Lanzamos el martes' no decía quién compra ni qué oferta justifica el clic.",
+  "scenario": "Definieron quién es el cliente, por qué canal llega y a partir de qué tamaño entra un ejecutivo, antes de prender anuncios. La fecha de publicar no respondía ninguna de esas tres.",
   "question": "¿Qué se decide antes de pautar?",
   "answer": "Quién es el cliente, qué canal lo alcanza y qué oferta justifica el clic."
  },
@@ -1305,9 +1423,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Entrar con un contrato chico o un equipo y crecer dentro de la cuenta cuando hay uso real. Típico en SaaS B2B.",
-  "example": "Entra el equipo de soporte con 5 asientos y a los seis meses se suman ventas y finanzas.",
-  "question": "¿Qué tiene que existir en el producto?",
-  "answer": "Una razón para invitar a otro equipo y una forma de cobrar esa expansión."
+  "example": "Entró el equipo de soporte con 5 asientos. A los seis meses se sumaron ventas y finanzas, y la cuenta pasó de US$ 100 a US$ 700 al mes. El producto tenía una razón para invitar a otro equipo y una forma de cobrarla. Sin eso, el aterrizaje se queda en 5 asientos para siempre.",
+  "scenario": "Entran con un equipo chico y, cuando hay uso, se suman otros equipos de la misma empresa y la factura crece. Hace falta una razón para invitar y una forma de cobrar ese crecimiento.",
+  "question": "¿Qué tiene que existir en el producto para que el segundo equipo entre?",
+  "answer": "Una razón para invitarlo y una forma de cobrar esa expansión."
  },
  {
   "id": "est20",
@@ -1316,9 +1435,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "El usuario individual empieza a usar la herramienta y la empresa formaliza después. Opuesto a vender solo al gerente general.",
-  "example": "Una diseñadora crea el archivo y a las dos semanas el jefe pide el plan de equipo.",
-  "question": "¿Qué riesgo tiene?",
-  "answer": "Que se quede en uso sombra, sin presupuesto ni seguridad."
+  "example": "Una diseñadora creó el archivo. A las dos semanas el jefe pidió el plan de equipo. Nadie le vendió primero al gerente. El riesgo: en otra cuenta el uso se quedó en la sombra, sin presupuesto ni revisión de seguridad, y TI lo bloqueó.",
+  "scenario": "Una persona empieza a usarlo por su cuenta y recién después la empresa pide un plan. Nadie le vendió primero a la gerencia. En otra cuenta TI lo bloqueó porque nunca hubo presupuesto ni revisión.",
+  "question": "¿Qué riesgo tiene si la empresa nunca formaliza?",
+  "answer": "Que se quede en uso sombra, sin presupuesto ni seguridad, y lo bloqueen."
  },
  {
   "id": "est21",
@@ -1327,8 +1447,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Cuánto tarda un cliente nuevo en obtener el resultado por el que pagó. Mientras más corto, mejor activación y menos reembolsos.",
-  "example": "De crear la cuenta a ver el primer reporte conciliado: 15 minutos, no 3 semanas de implementación.",
-  "question": "¿Cómo se acorta?",
+  "example": "Pasaron de 3 semanas de implementación a 15 minutos entre crear la cuenta y ver el primer reporte conciliado, con datos de ejemplo y un paso menos. Los reembolsos de los primeros 14 días bajaron. La gente se iba antes de ver el resultado por el que había pagado.",
+  "scenario": "Hoy pasan 3 semanas entre el alta y el primer reporte que la persona quería. Muchos piden la devolución antes. Quieren acortar ese plazo a la primera sesión, con datos de ejemplo y menos pasos.",
+  "question": "¿Cómo se acorta sin bajar el precio?",
   "answer": "Quitando pasos, trayendo datos de ejemplo y guiando la primera victoria."
  },
  {
@@ -1338,9 +1459,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Cliente temprano que prueba el producto a cambio de influencia en el roadmap y atención cercana. No es un logo para la landing.",
-  "example": "Dos fintechs usan el borrador cada semana y marcan qué flujo no entienden.",
-  "question": "¿Qué se les pide a cambio?",
-  "answer": "Tiempo de feedback honesto y permiso de contar el caso cuando haya resultado."
+  "example": "Dos fintechs usan el borrador cada semana y marcan qué flujo no entienden. A cambio influyen en el orden del trimestre y reciben atención directa. No están ahí para poner el logo en la home antes de tener un resultado. Cuando haya un número, se podrá contar el caso.",
+  "scenario": "Dos clientes usan el borrador cada semana, dicen qué flujo no se entiende y a cambio influyen en qué se construye. No es un logo para la página. Se les pide tiempo y franqueza.",
+  "question": "¿Qué se les pide a cambio de esa atención?",
+  "answer": "Tiempo de feedback honesto y, cuando haya un resultado, permiso para contar el caso."
  },
  {
   "id": "est23",
@@ -1349,9 +1471,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Quien tiene presupuesto y firma. Puede no ser quien usa el producto todos los días.",
-  "example": "La gerencia de operaciones usa el tablero; finanzas aprueba los US$ 12.000 al año.",
-  "question": "¿Por qué hay que hablarle distinto que al usuario?",
-  "answer": "Porque compra riesgo, retorno y seguridad, no la comodidad del botón."
+  "example": "Operaciones usa el tablero todos los días. Finanzas aprueba los US$ 12.000 al año y pregunta por el retorno y por qué pasa una auditoría. El demo de 'el botón es cómodo' no le sirve a quien firma. Le sirve el riesgo que baja y el número.",
+  "scenario": "Quien usa el tablero todos los días no es quien firma los US$ 12.000. Quien firma pregunta por retorno y por auditoría, no por si el botón es cómodo.",
+  "question": "¿Por qué hay que hablarle distinto que a quien lo usa a diario?",
+  "answer": "Porque compra riesgo, retorno y seguridad, no la comodidad de la pantalla."
  },
  {
   "id": "est24",
@@ -1360,9 +1483,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Persona dentro de la cuenta que quiere que el proyecto avance y convence al resto. Sin campeón, el deal se enfría.",
-  "example": "La jefa de revenue defiende la herramienta en el comité porque ya armó su pronóstico ahí.",
-  "question": "¿Qué le tienes que dar?",
-  "answer": "Argumentos, un caso interno y una implementación que no la deje mal."
+  "example": "La jefa de revenue defiende la herramienta en el comité porque ya armó su pronóstico ahí. Le pasaron un caso interno con los números de su equipo y una implantación que no la deja mal si alguien pregunta. En la cuenta donde nadie hacía eso, el comité enfrió el tema en tres semanas.",
+  "scenario": "Alguien dentro de la empresa defiende el proyecto en el comité porque ya trabaja en la herramienta. Si esa persona no tiene un caso interno y una implantación que la deje bien, el tema se enfría.",
+  "question": "¿Qué hay que darle para que pueda defenderlo?",
+  "answer": "Argumentos, un caso de su propia operación y una implantación que no la deje mal."
  },
  {
   "id": "est25",
@@ -1371,9 +1495,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Decisión de hacer una capacidad en casa o pagar un producto. Incluye mantenimiento, no solo el costo del primer mes.",
-  "example": "El equipo evalúa escribir su propio enrutador de leads o integrar uno que ya existe.",
-  "question": "¿Qué costo se olvida al construir?",
-  "answer": "El de mantenerlo, operarlo y la oportunidad de no construir otra cosa."
+  "example": "Evaluaron escribir su propio enrutador de leads (6 semanas) o integrar uno que ya existe (US$ 400 al mes). El build se veía barato hasta sumar el mantenimiento y lo que dejan de construir mientras lo operan. Comprar ganó cuando el costo de los siguientes 18 meses superó la suscripción.",
+  "scenario": "Pueden escribir ellos el enrutador o pagar uno que ya existe. El desarrollo inicial se ve más barato hasta que suman mantenerlo y lo que dejan de construir.",
+  "question": "¿Qué costo se olvida al decidir hacerlo en casa?",
+  "answer": "Mantenerlo, operarlo y la oportunidad de no construir otra cosa."
  },
  {
   "id": "est26",
@@ -1382,9 +1507,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Hecho medible que marca que el usuario llegó al primer valor. Se elige con datos de quién se queda a los 30 días.",
-  "example": "'Invitó a un compañero y completó un flujo' predice mejor la retención que 'inició sesión'.",
-  "question": "¿Cómo se elige?",
-  "answer": "Comparando qué hicieron en la primera semana quienes siguen activos."
+  "example": "Compararon la primera semana de quienes siguen al mes y de quienes no. 'Invitó a un compañero y completó un flujo' separaba a los dos grupos. 'Inició sesión' no separaba a nadie. Eligieron el hecho que predice, no el que es fácil de contar.",
+  "scenario": "Miraron qué hicieron en la primera semana quienes siguen activos al mes. Iniciar sesión no los separa. Invitar a alguien y completar un flujo, sí. Ese es el hecho que van a contar.",
+  "question": "¿Cómo se elige ese hecho?",
+  "answer": "Comparando qué hicieron al principio quienes siguen, frente a quienes se van."
  },
  {
   "id": "est27",
@@ -1393,9 +1519,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Ritmo fijo de reuniones y revisiones: semanal de métricas, quincenal de producto, trimestral de OKR. Evita decidir solo en crisis.",
-  "example": "Cada lunes 20 minutos: activación, churn y los tres bugs que más se repiten.",
+  "example": "Cada lunes, 20 minutos: activación, bajas y los tres bugs que más se repiten. Sin ese ritmo, el founder se acordaba de las bajas solo cuando un cliente grande se iba. El equipo es de seis y aun así el ritmo evita depender de su memoria.",
+  "scenario": "Cada lunes miran tres números y los bugs que más se repiten, aunque nadie esté en crisis. Sin esa hora, solo hablan de la operación cuando un cliente grande se queja.",
   "question": "¿Para qué sirve si el equipo es chico?",
-  "answer": "Para no depender de la memoria del founder."
+  "answer": "Para no depender de la memoria de quien fundó la empresa."
  },
  {
   "id": "est28",
@@ -1404,9 +1531,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Marco para ordenar ideas: alcance, impacto, confianza y esfuerzo. No reemplaza el juicio; hace visible el supuesto.",
-  "example": "Una mejora de onboarding gana a un rediseño grande porque llega a todos los nuevos con poco esfuerzo.",
-  "question": "¿Qué pasa si la confianza es baja?",
-  "answer": "Se baja el puntaje o se hace una prueba chica antes de construir."
+  "example": "La mejora del alta le llega a todas las cuentas nuevas, con esfuerzo chico y confianza alta porque ya vieron el abandono. El rediseño grande tiene impacto alto y confianza baja. El puntaje puso primero la mejora del alta. Donde la confianza era baja, no construyeron: hicieron una prueba chica.",
+  "scenario": "Ordenan ideas con alcance, impacto, qué tan seguros están y cuánto cuesta. Una mejora chica que le llega a todo el mundo gana a un rediseño grande del que no están seguros. El puntaje no reemplaza el juicio: muestra el supuesto.",
+  "question": "Si están poco seguros, ¿qué se hace con el puntaje?",
+  "answer": "Se baja, o se hace una prueba chica antes de construir."
  },
  {
   "id": "est29",
@@ -1415,9 +1543,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Lo que le cuesta a un cliente irse: datos, hábitos, integraciones y contratos. Un costo sano viene del valor acumulado, no de un candado abusivo.",
-  "example": "Exportar dos años de historial y rehacer las integraciones con el ERP toma un mes.",
-  "question": "¿Qué costo de cambio es legítimo?",
-  "answer": "El que existe porque el producto guarda trabajo real del cliente."
+  "example": "Exportar dos años de historial y rehacer las integraciones con el ERP les toma un mes. Se quedan porque ahí está el trabajo acumulado. Un candado que impide exportar no es lo mismo: el día que puedan irse, se van enojados. El costo legítimo es el trabajo real guardado en el producto.",
+  "scenario": "Irse implica exportar dos años de historial y rehacer integraciones: un mes de trabajo. Eso existe porque el producto guarda trabajo real. Un botón que impide exportar sería otra cosa.",
+  "question": "¿Qué costo de irse es legítimo?",
+  "answer": "El que existe porque ahí está el trabajo real del cliente, no un candado para que no pueda salir."
  },
  {
   "id": "est30",
@@ -1426,9 +1555,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "La venta la lleva un equipo comercial: descubrimiento, demo y contrato. Encaja cuando el ticket es alto y hay varios firmantes.",
-  "example": "Un ejecutivo acompaña una evaluación de 60 días en un banco.",
-  "question": "¿Cuándo estorba en un producto chico?",
-  "answer": "Cuando el usuario podría activarse solo y el vendedor solo alarga el ciclo."
+  "example": "Un ejecutivo acompaña una evaluación de 60 días en un banco. Hay riesgo, varios firmantes y un contrato grande. En el plan de US$ 30 al mes, el mismo ejecutivo alargaba un ciclo que la persona podía terminar sola. Ahí estorba.",
+  "scenario": "Un ejecutivo acompaña una evaluación larga, con varios firmantes y un contrato grande. En un plan barato, esa misma persona solo alarga un alta que el usuario podía hacer solo.",
+  "question": "¿Cuándo estorba en un producto de ticket chico?",
+  "answer": "Cuando la persona podría llegar al valor sola y el ejecutivo solo alarga el ciclo."
  },
  {
   "id": "est31",
@@ -1437,9 +1567,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Eventos que el producto emite para saber qué se usa de verdad. Es la base de activación, retención y priorización.",
-  "example": "Se registra 'invitación enviada', no solo 'página vista'.",
-  "question": "¿Qué cuidado de privacidad hay?",
-  "answer": "Recoger lo necesario, con aviso, y no mandar datos sensibles en el nombre del evento."
+  "example": "Registran 'invitación enviada', no solo 'página vista'. Con eso vieron que el 70% no invita. Una página vista no lo decía. El cuidado: el nombre del evento no lleva el correo ni el documento del cliente, y hay un aviso de qué se recoge.",
+  "scenario": "El producto emite un evento cuando alguien envía una invitación, no solo cuando abre una página. Así ven qué se usa. El nombre del evento no lleva datos sensibles, y hay un aviso.",
+  "question": "¿Qué cuidado hay al nombrar y mandar esos eventos?",
+  "answer": "Recoger lo necesario, con aviso, y no poner datos sensibles en el nombre del evento."
  },
  {
   "id": "est32",
@@ -1448,9 +1579,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Interruptor para prender una función a un porcentaje de usuarios o apagarla sin desplegar de nuevo. Permite probar y revertir.",
-  "example": "El nuevo editor llega primero al 10% de las cuentas.",
-  "question": "¿Por qué no se deja prendida para siempre?",
-  "answer": "Porque las banderas viejas complican el código."
+  "example": "El editor nuevo le llega primero al 10% de las cuentas. Un error se apagó en minutos, sin otro despliegue. La bandera del experimento del trimestre pasado sigue en el código y ya nadie sabe qué pasa si se quita. Por eso no se dejan prendidas para siempre.",
+  "scenario": "La función nueva está prendida solo para una parte de las cuentas y se puede apagar sin volver a desplegar. Un interruptor viejo sigue en el código y ya nadie se acuerda para qué era.",
+  "question": "¿Por qué no se deja ese interruptor para siempre?",
+  "answer": "Porque los viejos complican el código y nadie sabe qué pasa si se quitan."
  },
  {
   "id": "est33",
@@ -1459,9 +1591,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Después de una caída, el equipo escribe qué pasó, el impacto y qué cambia para que no se repita, sin buscar un culpable.",
-  "example": "La facturación falló 40 minutos; el postmortem agrega una alerta y una prueba.",
-  "question": "¿Qué lo vuelve útil?",
-  "answer": "Acciones con dueño y fecha, no solo una narración."
+  "example": "La facturación falló 40 minutos. El escrito dice la línea de tiempo, cuántas facturas no salieron y dos cambios: una alerta y una prueba, con dueño y fecha. No dice el nombre de quién 'tuvo la culpa'. Sin esas acciones, el escrito es solo una narración.",
+  "scenario": "Después de una caída escribieron qué pasó, a cuántos afectó y dos cambios con dueño y fecha. No buscaron un culpable. Sin las acciones, el documento no evita la repetición.",
+  "question": "¿Qué lo vuelve útil y no solo un relato?",
+  "answer": "Acciones con dueño y fecha."
  },
  {
   "id": "est34",
@@ -1470,9 +1603,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Documento breve del problema, de quién es, qué se va a medir y qué queda fuera. Alinea diseño e ingeniería antes de construir.",
-  "example": "La spec de 'invitar al equipo' excluye de esta versión los permisos avanzados.",
+  "example": "El documento de 'invitar al equipo' dice el problema, quién lo sufre, que se medirá la tasa de invitación, y que los permisos avanzados quedan fuera de esta versión. Esa última frase evitó tres semanas de un sistema de roles que nadie había pedido para ahora.",
+  "scenario": "Antes de construir, un documento corto dice el problema, cómo se medirá y qué no entra en esta versión. Sacar los permisos avanzados de esta entrega evitó semanas de más.",
   "question": "¿Qué pregunta evita trabajo de más?",
-  "answer": "'¿Qué no vamos a hacer ahora?'."
+  "answer": "Qué no vamos a hacer ahora."
  },
  {
   "id": "est35",
@@ -1481,9 +1615,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Forma de roadmap en tres horizontes sin fechas falsas: lo que se está haciendo, lo que sigue y lo que tal vez venga.",
-  "example": "Ahora: activación. Siguiente: facturación anual. Después: app móvil.",
-  "question": "¿Por qué gusta a equipos chicos?",
-  "answer": "Porque se puede cambiar 'después' sin romper una promesa pública de mes."
+  "example": "Ahora: activación. Siguiente: facturación anual. Después: app móvil. 'Después' se movió dos veces sin romper una promesa de mes, porque nunca hubo fecha pública. A un equipo chico le sirve para poder cambiar lo lejano sin pedir perdón por un calendario inventado.",
+  "scenario": "Tres columnas: lo que se hace ahora, lo que sigue y lo que tal vez venga. Lo lejano cambió de orden sin una fecha prometida. No hay un mes público que romper.",
+  "question": "¿Por qué le sirve a un equipo chico?",
+  "answer": "Porque se puede cambiar lo lejano sin romper una fecha que se haya prometido."
  },
  {
   "id": "est36",
@@ -1492,9 +1627,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "El producto se vuelve más valioso cuantas más personas o empresas lo usan. Es un foso si de verdad existe, no un eslogan.",
-  "example": "Un marketplace de freelancers mejora cuando hay más oferta y más demanda.",
-  "question": "¿Una red social interna de 5 personas lo tiene?",
-  "answer": "Casi no: el valor todavía no depende de la cantidad."
+  "example": "El marketplace de freelancers mejora cuando hay más oferta y más demanda: un lado atrae al otro. Una red interna de 5 personas no tiene eso: el valor todavía no depende de la cantidad. Llamarlo así en el deck no lo crea.",
+  "scenario": "El producto mejora cuando entra más gente de los dos lados. Con cinco usuarios, el valor todavía no depende de cuántos son. Ponerlo en una lámina no lo vuelve real.",
+  "question": "¿Una red interna de cinco personas ya lo tiene?",
+  "answer": "Casi no. El valor todavía no depende de la cantidad."
  },
  {
   "id": "est37",
@@ -1503,9 +1639,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Ventaja difícil de copiar: datos, red, marca, costos o regulación. Sin foso, una función nueva se imita en un trimestre.",
-  "example": "El historial de pagos de millones de comercios no se reconstruye de un día para otro.",
-  "question": "¿Una interfaz bonita es un foso?",
-  "answer": "No. Se copia. El foso está en lo que el otro no puede reunir rápido."
+  "example": "El historial de pagos de millones de comercios no se reconstruye en un trimestre. Una interfaz más bonita se copia en el siguiente ciclo. El equipo casi presenta la interfaz como la ventaja defendible. El foso está en lo que el otro no puede reunir rápido.",
+  "scenario": "Una interfaz nueva se puede copiar en un trimestre. El historial de pagos acumulado, no. Están por presentar la interfaz como la ventaja que nadie puede alcanzar.",
+  "question": "¿Una interfaz bonita es una ventaja difícil de copiar?",
+  "answer": "No. Se copia. La ventaja está en lo que el otro no reúne rápido."
  },
  {
   "id": "est38",
@@ -1514,9 +1651,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Producto sobre el que otros construyen: APIs, apps de terceros, economía de extensiones. El valor crece con ese ecosistema.",
-  "example": "Shopify permite que socios vendan apps encima de las tiendas.",
-  "question": "¿Qué tiene que ofrecer además del API?",
-  "answer": "Documentación, un modelo para el socio y confianza de que no le vas a copiar el negocio mañana."
+  "example": "Shopify deja que socios vendan apps encima de las tiendas. Además del acceso técnico hay documentación, una forma de cobrar y la confianza de que la empresa no va a copiarles el negocio al mes siguiente. Sin eso, nadie construye encima.",
+  "scenario": "Otros negocios construyen aplicaciones encima y les cobran a los usuarios. Además del acceso técnico necesitan documentación, una forma de ganar plata y la confianza de que no les van a copiar el producto.",
+  "question": "¿Qué hay que ofrecer además del acceso técnico?",
+  "answer": "Documentación, un modelo para que el socio gane y confianza de que no le copias el negocio."
  },
  {
   "id": "est39",
@@ -1525,9 +1663,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 2,
   "explanation": "Negocio que junta dos lados, por ejemplo compradores y vendedores, y cobra por la transacción o la herramientas. El problema frío es llenar los dos lados.",
-  "example": "Un marketplace de repuestos tiene que tener talleres y vendedores a la vez.",
+  "example": "Un mercado de repuestos necesita talleres y vendedores a la vez. Al inicio subsidieron a los vendedores para que el taller encontrara stock y no se fuera. Sin un lado lleno, el otro no vuelve. Cobran un porcentaje cuando hay transacción.",
+  "scenario": "Juntan a quien necesita el repuesto y a quien lo vende, y cobran cuando hay transacción. Al inicio uno de los dos lados está vacío y el otro se va. Están subsidiando a un lado para que el otro encuentre oferta.",
   "question": "¿Por qué se subsidia un lado al inicio?",
-  "answer": "Para que el otro lado encuentre suficiente oferta o demanda y no se vaya."
+  "answer": "Para que el otro encuentre suficiente oferta o demanda y no se vaya."
  },
  {
   "id": "est40",
@@ -1536,9 +1675,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Primer segmento estrecho que se domina antes de ampliarse. Concentra mensaje, producto y referencias.",
-  "example": "Empezar solo con clínicas dentales de Lima, no con 'toda la salud'.",
-  "question": "¿Qué error evita?",
-  "answer": "Perseguir cinco industrias y no ser el mejor en ninguna."
+  "example": "Empezaron solo con clínicas dentales de Lima, no con 'toda la salud'. El mensaje, el formulario y las referencias son de ese grupo. El error que evitaron: un competidor persiguió cinco especialidades y no fue el mejor en ninguna, y no tuvo a quién citar.",
+  "scenario": "Eligen un grupo estrecho, lo dominan y recién después amplían. El mensaje y las referencias son de ese grupo. Perseguir cinco industrias a la vez les impidió ser los mejores en una.",
+  "question": "¿Qué error evita concentrarse así?",
+  "answer": "Perseguir varios segmentos y no ser el referente en ninguno."
  },
  {
   "id": "est41",
@@ -1547,9 +1687,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Señal de que un mercado necesita el producto y se queda: retención, uso repetido y demanda que cuesta contener. No es una sensación del founder.",
-  "example": "Las cuentas nuevas se activan solas y el churn mensual baja de 8% a 2%.",
-  "question": "¿Un pico de anuncios lo demuestra?",
-  "answer": "No. El encaje se ve cuando la gente se queda sin que la empujes cada semana."
+  "example": "Las cuentas nuevas se activan solas y las bajas mensuales pasaron de 8% a 2%. La demanda llega sin empujar cada semana. Un pico de anuncios del mes anterior había subido los registros y se fueron: eso no era la señal. La señal es que se quedan cuando dejas de empujar.",
+  "scenario": "Las cuentas nuevas llegan al valor solas y las bajas cayeron fuerte. Un mes de mucha pauta había subido los registros y después se vació. Quieren la señal de que el mercado se queda, no la sensación de un buen mes de anuncios.",
+  "question": "¿Un pico de anuncios demuestra esa señal?",
+  "answer": "No. Se ve cuando la gente se queda sin que la empujes cada semana."
  },
  {
   "id": "est42",
@@ -1558,9 +1699,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Proceso de negocio en el que uno o varios agentes ejecutan pasos con herramientas, y las personas intervienen solo en excepciones.",
-  "example": "Calificar el lead, crear la oportunidad y agendar ocurre solo; una persona entra si el monto pasa de US$ 5.000.",
+  "example": "Calificar, crear la oportunidad y agendar ocurre solo. Una persona entra si el monto pasa de US$ 5.000. Diseñaron primero el flujo, qué puede hacer cada paso y cómo se mide el error. El demo bonito vino después. Sin el umbral, el sistema cerraba solo casos que el negocio no quería automatizar.",
+  "scenario": "Varios pasos comerciales ocurren solos y una persona entra solo si el monto pasa de un umbral. Antes de la demo definieron el flujo, los permisos y cómo se mide el error.",
   "question": "¿Qué se diseña primero?",
-  "answer": "El flujo, los permisos y cómo se mide el error, no el demo bonito."
+  "answer": "El flujo, los permisos y cómo se mide el error. No el demo."
  },
  {
   "id": "est43",
@@ -1569,9 +1711,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Estándar abierto para conectar modelos y agentes con herramientas y datos de forma uniforme. Evita un conector distinto por cada asistente.",
-  "example": "El mismo servidor de tu CRM lo pueden usar varios asistentes para leer el pipeline.",
+  "example": "El mismo servidor del CRM lo pueden usar varios asistentes para leer el pipeline, sin reescribir la conexión cada vez que cambia el cliente de IA. Antes tenían un conector por cada asistente y uno se quedó viejo. El estándar evita esa repetición.",
+  "scenario": "Varios asistentes leen el pipeline del CRM por el mismo servidor, con un estándar común. Antes había un conector distinto por cada asistente y uno quedó desactualizado.",
   "question": "¿Qué problema de integración reduce?",
-  "answer": "Reescribir la conexión cada vez que cambia el cliente de IA."
+  "answer": "Reescribir la conexión cada vez que cambia el asistente."
  },
  {
   "id": "est44",
@@ -1580,8 +1723,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Manera de construir en la que se describe el resultado a un asistente de código y se itera, revisando lo generado. Acelera prototipos y exige tests.",
-  "example": "Un founder describe la pantalla de cohortes y el asistente propone el componente; ingeniería revisa la consulta.",
-  "question": "¿Cuál es el riesgo en producción?",
+  "example": "Describieron la pantalla de cohortes y el asistente propuso el componente. Ingeniería revisó la consulta y agregó una prueba antes de mergear. El prototipo salió en un día. El riesgo es aceptar en producción un código que nadie entiende y que no tiene pruebas.",
+  "scenario": "Describen la pantalla y un asistente propone el código. Alguien lo revisa y le pone pruebas antes de que llegue a producción. Sin esa revisión, queda código que nadie entiende.",
+  "question": "¿Cuál es el riesgo si eso llega a producción sin revisión?",
   "answer": "Aceptar código que nadie entiende y que no tiene pruebas."
  },
  {
@@ -1591,7 +1735,8 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "El modelo responde usando fragmentos buscados en tus documentos, en lugar de confiar solo en lo que memorizó. Baja alucinaciones si la búsqueda es buena.",
-  "example": "El asistente cita el párrafo de la política de vacaciones que recuperó de la wiki.",
+  "example": "El asistente cita el párrafo de la política de vacaciones que recuperó de la wiki. Cuando el índice tenía la versión vieja, citó un plazo derogado con la misma seguridad. La búsqueda es parte del sistema: si trae el documento viejo, la respuesta será segura y estará mal.",
+  "scenario": "El modelo contesta con un párrafo que buscó en la wiki interna, no solo con lo que trae de memoria. Si el buscador trae la política vieja, la respuesta cita un plazo que ya no rige.",
   "question": "¿Qué falla si la búsqueda trae el documento viejo?",
   "answer": "La respuesta será segura y estará desactualizada."
  },
@@ -1602,9 +1747,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Práctica de poner modelos en producción: versiones de prompts, evaluación, costo, latencia, datos y monitoreo. Es a los LLM lo que la operación es al software clásico.",
-  "example": "Cada cambio de prompt pasa una suite de 40 preguntas antes de llegar al 100% de usuarios.",
-  "question": "¿Por qué no basta con 'llamar al API'?",
-  "answer": "Porque calidad, costo y fallos cambian sin que el código tradicional lo note."
+  "example": "Cada cambio de instrucción pasa una suite de 40 preguntas antes de llegar al 100% de usuarios. También miran el costo por respuesta y la latencia. 'Nada más llamar al API' no avisa cuando la calidad cae o la factura se duplica. Eso es operación, no una llamada suelta.",
+  "scenario": "Cada cambio de instrucción pasa una batería de casos antes de llegar a todo el mundo, y se mira el costo y la latencia. Llamar al API y ya no avisa cuando la calidad cae.",
+  "question": "¿Por qué no basta con llamar al API?",
+  "answer": "Porque la calidad, el costo y los fallos cambian sin que el código tradicional lo note."
  },
  {
   "id": "est47",
@@ -1613,8 +1759,9 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Medir con un conjunto fijo de casos si un cambio de prompt o de modelo mejora la tarea. Sin eso, cada ajuste es una opinión.",
-  "example": "30 tickets reales etiquetados: el nuevo prompt acierta 25 y el anterior 18.",
-  "question": "¿Qué no se evalúa solo con 'se siente mejor'?",
+  "example": "30 tickets reales, etiquetados. La instrucción nueva acierta 25 y la anterior 18. Sin ese conjunto, el cambio 'se sentía mejor' en tres ejemplos elegidos a mano y empeoraba los casos de reembolso, que son los que le importan al cliente.",
+  "scenario": "Un conjunto fijo de casos reales dice que la instrucción nueva acierta más que la anterior. Sin ese conjunto, el cambio solo 'se sentía' mejor en los ejemplos que el equipo eligió.",
+  "question": "¿Qué no se decide solo con 'se siente mejor'?",
   "answer": "Si de verdad falla menos en los casos que le importan al cliente."
  },
  {
@@ -1624,9 +1771,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Una sola instalación sirve a muchas cuentas aislando sus datos. Es la base de casi todo SaaS y el lugar donde un error filtra información ajena.",
-  "example": "La consulta de pedidos siempre lleva el id de la cuenta; un olvido mostraría datos de otro cliente.",
-  "question": "¿Qué prueba es obligatoria?",
-  "answer": "Que un usuario de la cuenta A no pueda leer ni un registro de la cuenta B."
+  "example": "La consulta de pedidos siempre lleva el id de la cuenta. En una revisión, una consulta nueva se lo olvidó y en la prueba un usuario de la cuenta A vio un pedido de la B. La prueba que no puede faltar es esa: A no lee ni un registro de B. Una instalación por cliente lo evitaría y no es como está construido el producto.",
+  "scenario": "Una sola instalación sirve a muchas empresas y cada consulta tiene que llevar el id de la cuenta. Una consulta se lo olvidó y en la prueba se vieron datos de otra empresa. Esa prueba es obligatoria.",
+  "question": "¿Qué prueba no se puede saltar?",
+  "answer": "Que un usuario de una cuenta no pueda leer ni un registro de otra."
  },
  {
   "id": "est49",
@@ -1635,9 +1783,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Grupo que construye caminos internos —despliegue, datos, diseño— para que los equipos de producto no reescriban lo mismo.",
-  "example": "Un equipo mantiene el sistema de banderas y el resto solo lo consume.",
+  "example": "Un grupo mantiene el sistema de interruptores de funciones y el resto solo lo consume. Con dos ingenieros y un solo producto, armar ese grupo sería el producto mismo: es pronto. Cuando tres equipos reescribían el despliegue, ahí sí tenía sentido.",
+  "scenario": "Un grupo interno mantiene el sistema de despliegue para que los demás no lo reescriban. Con dos ingenieros y un solo producto, ese grupo sería el producto: es pronto.",
   "question": "¿Cuándo es pronto tenerlo?",
-  "answer": "Cuando todavía hay un solo producto y dos ingenieros: la plataforma sería el producto."
+  "answer": "Cuando todavía hay un solo producto y muy poca gente. Ahí ese grupo sería el producto."
  },
  {
   "id": "est50",
@@ -1646,9 +1795,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Categoría donde uno o dos jugadores se quedan con casi toda la demanda por red, marca o datos. Cambian las apuestas de inversión y de velocidad.",
-  "example": "En una red de pagos, el que tiene más comercios atrae más billeteras y al revés.",
+  "example": "En una red de pagos, quien tiene más comercios atrae más billeteras y al revés. El segundo que entra de frente contra el líder llega tarde. Un nicho donde el líder no entra puede ser mejor apuesta que perseguir la categoría completa.",
+  "scenario": "En la categoría, uno o dos se quedan con casi toda la demanda porque cada lado atrae al otro. Entrar tarde a competir de frente contra el líder es una apuesta distinta que ocupar un nicho.",
   "question": "¿Qué implica para quien entra tarde?",
-  "answer": "Que diferenciarse en un nicho puede ser mejor que perseguir al líder de frente."
+  "answer": "Que un nicho puede ser mejor que perseguir al líder de frente."
  },
  {
   "id": "est51",
@@ -1657,9 +1807,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Estrategia de negocio",
   "level": 3,
   "explanation": "Lo que cuesta cada respuesta del modelo en producción. En un producto de IA entra al margen bruto y obliga a diseñar caché, modelos chicos y límites.",
-  "example": "Cada consulta al asistente cuesta US$ 0,02 y el plan de US$ 20 permite 200: hay que mirar el margen.",
-  "question": "¿Dónde se recorta sin romper la calidad?",
-  "answer": "En el ruteo: preguntas simples a un modelo barato y las difíciles al grande."
+  "example": "Cada consulta al asistente cuesta US$ 0,02 y el plan de US$ 20 permite 200: US$ 4 de costo si se usan todas, y el cliente intenso se pasa. Enrutan las preguntas simples a un modelo barato y las difíciles al grande. El costo de cada respuesta entra al margen, no es un detalle técnico.",
+  "scenario": "Cada respuesta tiene un costo que entra al margen del plan. El cliente que se pasa de un tope deja el plan en rojo. Las preguntas simples pueden ir a un modelo más barato.",
+  "question": "¿Dónde se recorta sin romper la calidad de los casos difíciles?",
+  "answer": "En el ruteo: lo simple va a un modelo barato y lo difícil, al grande."
  },
  {
   "id": "fin01",
@@ -1668,9 +1819,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Valor anualizado de las suscripciones activas. Si el MRR es la foto del mes, el ARR es esa foto por doce. No incluye servicios de una sola vez.",
-  "example": "MRR de US$ 40.000 equivale a un ARR de US$ 480.000.",
-  "question": "¿Un proyecto de implementación de US$ 10.000 entra al ARR?",
-  "answer": "No. El ARR solo cuenta lo que se espera que se repita."
+  "example": "Una SaaS de cobranza en Lima cerró marzo con US$ 22.000 al mes en planes y un proyecto de implantación de US$ 9.000 cobrado de una vez. En el directorio alguien sumó los US$ 9.000 × 12 al número anual. Finanzas lo sacó: ese proyecto no se renueva, así que el anualizado de la base sigue siendo US$ 264.000.",
+  "scenario": "Una HR tech tiene US$ 15.000 al mes en suscripciones y acaba de facturar US$ 6.000 por migrar los datos de un cliente. El fondo pregunta cuánto ingreso repetible anualizan, sin el trabajo de una sola vez.",
+  "question": "Si el mes que viene el MRR sube a US$ 25.000 y no vendes nada puntual, ¿qué cifras cambian y cuál se queda fuera?",
+  "answer": "El anualizado pasa a US$ 300.000. Una implantación cobrada una vez sigue fuera, aunque haya entrado caja."
  },
  {
   "id": "fin02",
@@ -1679,9 +1831,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Suma normalizada a un mes de las suscripciones vigentes. Es el pulso de un SaaS.",
-  "example": "20 cuentas de US$ 100 al mes suman US$ 2.000 de MRR.",
-  "question": "¿Cómo se anualiza un plan que se cobra al año?",
-  "answer": "Se divide el contrato anual entre doce y eso entra al MRR."
+  "example": "Una herramienta de turnos cobra a 30 clínicas US$ 200 al mes y a 4 hospitales US$ 2.400 al año por adelantado. El pulso del mes no es el efectivo del banco: los anuales aportan US$ 200 cada uno (2.400/12) y el total normalizado es US$ 6.800, no los US$ 9.600 que entraron de caja.",
+  "scenario": "Un CRM cobra 50 cuentas a US$ 90 al mes y 10 contratos de US$ 1.080 pagados en enero por todo el año. En marzo quieren el pulso mensual, no lo que cayó al banco en enero.",
+  "question": "Una cuenta pasa de plan mensual de US$ 80 a uno anual de US$ 864 pagado hoy. ¿Cómo se ve eso en el pulso de este mes?",
+  "answer": "Entran US$ 72 al mes (864/12), no US$ 864. La caja sube hoy; el pulso mensual solo reconoce la doceava parte."
  },
  {
   "id": "fin03",
@@ -1690,9 +1843,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Porcentaje de clientes o de ingreso que se pierde en un periodo. En suscripción, un churn alto borra el crecimiento.",
-  "example": "De 100 cuentas, 3 se van en el mes: churn de logos del 3%.",
-  "question": "¿Por qué un 3% mensual asusta?",
-  "answer": "Porque en un año, si no se repone, se pierde cerca de un tercio de la base."
+  "example": "Una SaaS de inventario empezó abril con 200 cuentas de pago y cerró 18 altas. También se fueron 11. El equipo celebró el +18 neto de logos hasta que alguien calculó las bajas: 11/200 = 5,5% en un mes. A ese ritmo, sin las altas, la base se vacía en menos de dos años.",
+  "scenario": "Una app de gastos para pymes tenía US$ 80.000 al mes en suscripciones. En mayo se dieron de baja cuentas que sumaban US$ 6.400. Quieren el porcentaje que se fue, antes de contar a los nuevos.",
+  "question": "Si cada mes se va el 4% de las cuentas y no entra nadie, ¿qué fracción aproximada sigue a los doce meses?",
+  "answer": "Cerca de 61%: cada mes conservas el 96%, y 0,96 elevado a 12 es alrededor de 0,61."
  },
  {
   "id": "fin04",
@@ -1701,9 +1855,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Todo lo que cuesta conseguir un cliente nuevo de pago: anuncios, sueldos comerciales y herramientas, dividido por los clientes nuevos.",
-  "example": "US$ 6.000 de ventas y marketing y 20 clientes nuevos: CAC de US$ 300.",
-  "question": "¿Se incluye el sueldo del vendedor?",
-  "answer": "Sí, si su trabajo es conseguir esos clientes."
+  "example": "En un trimestre la fintech gastó US$ 14.000 en pauta, US$ 9.000 en el sueldo del ejecutivo que cierra y US$ 1.000 en la herramienta de secuencias. Entraron 40 pruebas y 20 cuentas de pago. El costo de conseguir cada cuenta de pago es 24.000/20 = US$ 1.200, no 14.000/40.",
+  "scenario": "Una SaaS de soporte sumó en junio la pauta, media nómina comercial y el software de llamadas: US$ 18.000. Hubo 90 registros y 15 cuentas que pagaron. El director quiere el costo por cuenta que paga, no por registro.",
+  "question": "Si el próximo mes gastas lo mismo y cierras 10 cuentas en vez de 20, ¿qué pasa con ese costo?",
+  "answer": "Se duplica. El numerador no bajó y el denominador sí: cada cliente nuevo salió el doble de caro."
  },
  {
   "id": "fin05",
@@ -1712,9 +1867,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Cuántos meses puede operar la empresa con el efectivo que tiene, al ritmo de quema actual. Es la pregunta de supervivencia.",
-  "example": "US$ 180.000 en banco y quema neta de US$ 30.000 al mes: 6 meses de pista.",
-  "question": "¿Qué la alarga sin levantar capital?",
-  "answer": "Subir ingreso o bajar gasto, para que la quema neta caiga."
+  "example": "La SaaS tiene US$ 240.000 en el banco. El mes pasado gastó US$ 70.000 y cobró US$ 30.000. Alguien dijo que había pista para 240/70 ≈ 3,4 meses. Finanzas usó la pérdida neta: 40.000 al mes, o sea 6 meses. La diferencia decide si hay que levantar ya o en el siguiente trimestre.",
+  "scenario": "Una startup de logística tiene US$ 120.000 en caja. Sale US$ 45.000 al mes y entra US$ 15.000 de clientes. El directorio pregunta cuántos meses quedan si nada cambia.",
+  "question": "Si cierras una contratación que baja el gasto en US$ 8.000 y el ingreso no se mueve, ¿cuántos meses ganas en el ejemplo de US$ 240.000 y pérdida de US$ 40.000?",
+  "answer": "La pérdida baja a US$ 32.000 y la pista pasa de 6 meses a 7,5."
  },
  {
   "id": "fin06",
@@ -1723,9 +1879,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Dinero neto que la empresa pierde cada mes. La quema bruta es el gasto; la neta descuenta el ingreso cobrado.",
-  "example": "Gastas US$ 50.000 y cobras US$ 20.000: quema neta de US$ 30.000.",
-  "question": "¿Por qué se mira la neta y no solo el gasto?",
-  "answer": "Porque el ingreso ya financia parte de la operación."
+  "example": "En mayo una SaaS de citas gastó US$ 62.000 (nómina, nube y pauta) y cobró US$ 27.000 de suscripciones. La pérdida del mes es US$ 35.000. Reportar solo los US$ 62.000 asusta de más: parte del gasto ya lo pagan los clientes.",
+  "scenario": "Una devtools gasta US$ 40.000 al mes y cobra US$ 18.000. Quieren el número que de verdad sale de la cuenta bancaria neta, y también el gasto completo por si el ingreso se frena.",
+  "question": "Si el ingreso cobrado cae a cero un mes y el gasto sigue en US$ 62.000, ¿cuál de las dos lecturas cambia?",
+  "answer": "La neta se iguala a la bruta: pierdes los US$ 62.000. La bruta no se entera de que dejaste de cobrar."
  },
  {
   "id": "fin07",
@@ -1734,9 +1891,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Lo que queda de los ingresos después del costo directo de servirlos. En SaaS suele ser alto; en productos con IA puede caer por la inferencia.",
-  "example": "Ingreso 100, costo de servidores y soporte directo 20: margen bruto del 80%.",
-  "question": "¿El sueldo de marketing entra aquí?",
-  "answer": "No. Marketing es gasto operativo, no costo de servir al cliente actual."
+  "example": "Una SaaS de soporte factura US$ 50.000. Hosting, pasarela y el turno de soporte atado a esas cuentas suman US$ 12.000. Queda 76%. El sueldo de los dos marketers (US$ 8.000) no entra en esa resta: no es lo que cuesta atender a quien ya paga.",
+  "scenario": "Un asistente para abogados factura US$ 20.000. La nube clásica son US$ 1.000 y las llamadas al modelo, US$ 7.000. Quieren lo que queda después de servir al cliente, sin meter la pauta.",
+  "question": "Si duplicas clientes y el costo directo también se duplica, ¿el porcentaje se mantiene?",
+  "answer": "Sí, si el costo por cuenta no cambia. El margen en porcentaje no mejora solo por vender más."
  },
  {
   "id": "fin08",
@@ -1745,9 +1903,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Momento en que los ingresos cubren los costos y la empresa deja de quemar efectivo. Puede ser de un producto o de toda la compañía.",
-  "example": "Con margen del 80% y costos fijos de US$ 40.000, el equilibrio está en US$ 50.000 de ingreso mensual.",
-  "question": "¿Un mes en equilibrio significa que ya no hace falta inversión?",
-  "answer": "No necesariamente: crecer puede volver a exigir gasto por delante del ingreso."
+  "example": "Con 70% de margen después de servir al cliente y US$ 42.000 fijos al mes (equipo y oficina), una SaaS necesita 42.000/0,70 = US$ 60.000 de ingreso para no perder caja. Están en US$ 48.000. No 'casi' llegaron: les faltan US$ 12.000 de ingreso, unos US$ 8.400 de contribución.",
+  "scenario": "Una app B2B deja 80 centavos de contribución por dólar y tiene US$ 24.000 de gastos que no bajan si vende cero. Buscan el ingreso mensual en el que dejan de perder plata.",
+  "question": "Si el margen baja de 70% a 50% y los fijos siguen en US$ 42.000, ¿el ingreso de equilibrio sube o baja, y a cuánto?",
+  "answer": "Sube a US$ 84.000. Cada dólar aporta menos a cubrir los fijos."
  },
  {
   "id": "fin09",
@@ -1756,9 +1915,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Se cobra por cada persona que usa el producto. Es simple de explicar y se desalinea si el valor no depende de cuánta gente entra.",
-  "example": "US$ 12 por usuario al mes en una herramienta de tareas.",
-  "question": "¿Cuándo incomoda al cliente?",
-  "answer": "Cuando quiere invitar a toda la empresa y el precio se dispara sin más valor."
+  "example": "Una herramienta de wikis cobra US$ 8 por persona. Un cliente de 40 personas paga US$ 320 y quiere invitar a 200 lectores que solo miran. A US$ 8, la cuenta saltaría a US$ 1.920 sin que el wiki entregue más valor. Están por ofrecer un asiento de solo lectura a US$ 2 para no frenar la adopción.",
+  "scenario": "Un tablero de tareas cobra US$ 10 por persona activa. Una empresa de 15 users quiere sumar 80 personas que entran una vez al mes. El champion dice que a ese precio no los invita.",
+  "question": "¿En qué caso este esquema acompaña al valor, en vez de castigar la invitación?",
+  "answer": "Cuando cada persona extra usa el producto de verdad y obtiene algo (como un vendedor con su propio pipeline), no cuando solo mira."
  },
  {
   "id": "fin10",
@@ -1767,9 +1927,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Hay un plan gratis útil y uno de pago con límites o funciones extra. El gratis adquiere; el de pago tiene que doler lo bastante como para actualizar.",
-  "example": "El historial de 30 días es gratis; el anual y los permisos son de pago.",
-  "question": "¿Qué lo vuelve insostenible?",
-  "answer": "Un gratis tan completo que nadie paga, o tan pobre que nadie lo prueba."
+  "example": "La app de notas deja proyectos ilimitados en gratis y cobra US$ 12 por usuario cuando hay permisos e historial de un año. De 8.000 equipos gratis, 140 pagan (1,75%). El gratis trae distribución; el dolor de 'no puedo auditar quién borró esto' es lo que empuja al plan de pago, no un banner.",
+  "scenario": "Un editor colaborativo permite 3 invitados sin pagar y, al cuarto, pide un plan de US$ 15. El equipo discute si subir el gratis a 10 invitados para que se comparta más.",
+  "question": "Si subes el gratis hasta cubrir el caso de un equipo de 10, ¿qué le pasa a la conversión y por qué?",
+  "answer": "Suele caer: el caso más común ya no choca con un límite, y el de pago deja de doler."
  },
  {
   "id": "fin11",
@@ -1778,9 +1939,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Costos de hacer funcionar la empresa que no son el costo directo del servicio: sueldos de producto, ventas, marketing y administración.",
-  "example": "Nómina de ingeniería y la pauta del mes entran al gasto operativo.",
-  "question": "¿En qué se diferencia del costo de lo vendido?",
-  "answer": "El costo de lo vendido es servir a quien ya es cliente; el operativo es construir y vender."
+  "example": "En el estado de resultados de una SaaS, la nube de los clientes (US$ 4.000) va arriba, junto al ingreso. Abajo quedan US$ 18.000 de ingeniería, US$ 7.000 de sueldos comerciales y US$ 3.000 de pauta. Esos US$ 28.000 son el costo de construir y vender, no de servir a quien ya paga.",
+  "scenario": "Una startup separa la pasarela y el soporte atado a cada cuenta (US$ 6.000) del resto: producto, marketing y administración suman US$ 31.000. Quieren el nombre de ese segundo bloque.",
+  "question": "¿El sueldo de quien construye funciones nuevas entra en el costo de servir al cliente actual?",
+  "answer": "No. Construir el producto es gasto de operar la empresa, no el costo directo de la suscripción ya vendida."
  },
  {
   "id": "fin12",
@@ -1789,9 +1951,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Porcentaje de cuentas, no de dólares, que se van. Una cuenta chica y una grande pesan igual. Complementa al churn de ingresos.",
-  "example": "Se fueron 5 de 200 cuentas: 2,5% de logos, aunque fueran las más pequeñas.",
-  "question": "¿Por qué puede verse bien y aun así doler?",
-  "answer": "Porque si se van las cuentas grandes, el ingreso cae más que el conteo."
+  "example": "De 400 cuentas se fueron 10. Nueve pagaban US$ 20 y una pagaba US$ 2.000. El conteo de logos dice 2,5%. El ingreso perdido es otro cuento: la cuenta grande se llevó casi todo el dinero. Si solo miras logos, el mes parece sano.",
+  "scenario": "Una SaaS tenía 120 cuentas y se fueron 6, todas del plan de US$ 30. El MRR casi no se movió porque las cuentas enterprise siguieron. El COO pregunta por el porcentaje de cuentas, no de dólares.",
+  "question": "¿Por qué un 1% de logos puede doler más que un 4%?",
+  "answer": "Porque si ese 1% son las cuentas grandes, el ingreso cae mucho más que el conteo de logos."
  },
  {
   "id": "fin13",
@@ -1800,9 +1963,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Porcentaje del MRR que se pierde por bajas y por bajas de plan, antes de contar la expansión. Muestra el agujero que el crecimiento tiene que tapar.",
-  "example": "De US$ 100.000 de MRR se pierden US$ 4.000 por cancelaciones: 4%.",
-  "question": "¿La expansión lo compensa en esta métrica?",
-  "answer": "No. La expansión vive en la retención neta, no en el churn de ingresos."
+  "example": "El MRR inicial era US$ 90.000. Se cancelaron US$ 3.000 y dos cuentas bajaron de plan por US$ 1.500. Las expansiones del mes sumaron US$ 4.000. El agujero, antes de celebrar la expansión, es 4.500/90.000 = 5%. La expansión no tapa ese porcentaje: vive en otra métrica.",
+  "scenario": "Una fintech empieza el mes con US$ 200.000 de suscripciones. Pierde US$ 8.000 por bajas y US$ 2.000 porque tres cuentas pasaron a un plan menor. Además vendió US$ 12.000 a cuentas nuevas. Quieren el agujero sobre la base, sin los nuevos ni los upgrades.",
+  "question": "Si la expansión del mes supera a las bajas, ¿este porcentaje puede dar negativo?",
+  "answer": "No. Aquí no se resta la expansión. El porcentaje de lo perdido sigue siendo positivo; el neto se mira en la retención neta."
  },
  {
   "id": "fin14",
@@ -1811,9 +1975,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Meses que tarda el margen bruto de un cliente en devolver lo que costó conseguirlo. Mientras más corto, menos caja se adelanta.",
-  "example": "CAC de US$ 600 y margen bruto mensual de US$ 100: se recupera en 6 meses.",
-  "question": "¿Por qué un payback de 24 meses tensiona la caja?",
-  "answer": "Porque financias dos años de clientes nuevos antes de recuperar el gasto."
+  "example": "Conseguir una cuenta cuesta US$ 900. Esa cuenta paga US$ 100 al mes y el margen después de servirla es 80%, o sea US$ 80. Se necesitan 900/80 = 11,25 meses para recuperar el costo. Si el equipo usa los US$ 100 enteros, cree que son 9 meses y adelanta caja que no vuelve tan rápido.",
+  "scenario": "Cada pyme nueva cuesta US$ 1.200 entre pauta y ventas. Deja US$ 150 al mes y el costo directo de servirla es US$ 30. Quieren en cuántos meses el margen devuelve lo gastado en conseguirla.",
+  "question": "Si el margen mensual baja a US$ 40 y el costo de conseguirla sigue en US$ 900, ¿qué le pasa a la caja?",
+  "answer": "Recuperas en unos 22 meses. Durante casi dos años financias a ese cliente antes de empatar."
  },
  {
   "id": "fin15",
@@ -1822,9 +1987,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Margen que se espera recibir de un cliente mientras se quede. Una versión simple: margen mensual / churn mensual.",
-  "example": "Margen de US$ 40 al mes y churn de 2%: vida económica de unos US$ 2.000.",
-  "question": "¿Por qué es una estimación?",
-  "answer": "Porque el churn futuro y la expansión pueden cambiar."
+  "example": "El margen de una cuenta es US$ 50 al mes y el churn mensual de ingreso de ese segmento es 2,5%. La vida económica simple es 50/0,025 = US$ 2.000. Es una estimación: si dentro de un año el churn de ese segmento sube a 5%, la misma cuenta vale US$ 1.000 y el presupuesto de adquisición ya no cierra.",
+  "scenario": "Un plan deja US$ 30 de margen al mes. En ese segmento se va el 3% del ingreso cada mes. Quieren una cifra de cuánto margen se puede esperar de una cuenta así, sin inventar que se queda diez años.",
+  "question": "¿Por qué no se multiplica el precio de lista por 36 meses y se llama vida del cliente?",
+  "answer": "Porque ignora el margen (no todo el precio es ganancia) y supone una permanencia que el churn real puede no sostener."
  },
  {
   "id": "fin16",
@@ -1833,9 +1999,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Compara el valor de vida con el costo de adquirir. Como regla de mano, menos de 3 a 1 suele ser frágil en SaaS, si el cálculo es honesto.",
-  "example": "LTV de US$ 1.200 y CAC de US$ 300: relación de 4.",
-  "question": "¿Qué truco infla el número?",
-  "answer": "Usar ingreso en vez de margen, o un churn más bajo que el real."
+  "example": "La vida económica, con margen, sale US$ 1.800 y conseguir la cuenta cuesta US$ 600: relación de 3. Un deck usó el ingreso de por vida (US$ 3.000) y un churn a la mitad del real, y mostró 8. Con los números honestos el equipo no debería duplicar la pauta.",
+  "scenario": "Margen esperado de una cuenta: US$ 900. Costo de conseguirla: US$ 450. En la lámina del lunes alguien puso ingreso en vez de margen y la relación se veía en 6.",
+  "question": "Si la relación honesta es 2 a 1, ¿qué palanca la sube sin maquillar el churn?",
+  "answer": "Bajar lo que cuesta conseguir la cuenta o subir el margen que deja mientras se queda (precio, costo de servir o permanencia real)."
  },
  {
   "id": "fin17",
@@ -1844,9 +2011,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "De un grupo de clientes que ya tenías hace un año, cuánto ingreso dejan hoy, incluyendo expansiones, bajas de plan y cancelaciones. Más de 100% significa que creces sin clientes nuevos.",
-  "example": "Esas cuentas pasaron de US$ 100.000 a US$ 112.000: NRR de 112%.",
-  "question": "¿Por qué importa más que el crecimiento bruto en una empresa madura?",
-  "answer": "Porque dice si la base se expande sola."
+  "example": "Las cuentas que ya pagaban en marzo del año pasado sumaban US$ 80.000 de MRR. Hoy esas mismas, sin contar altas nuevas, suman US$ 92.000: hubo upgrades y también algunas bajas. 92/80 = 115%. La empresa puede crecer un tramo aunque la máquina de clientes nuevos se frene.",
+  "scenario": "Hace doce meses un grupo de cuentas sumaba US$ 50.000 al mes. Esas mismas hoy suman US$ 47.000: algunas crecieron de asientos y otras se fueron. ¿Ese grupo, solo, creció o se encogió?",
+  "question": "¿Una cohorte en 130% te autoriza a dejar de venderles a cuentas nuevas?",
+  "answer": "No. Dice que la base actual se expande. El crecimiento total sigue necesitando altas si quieres acelerar, pero ya no dependes solo de ellas."
  },
  {
   "id": "fin18",
@@ -1855,9 +2023,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Lo mismo que la neta, pero sin contar la expansión: solo lo que no se perdió. Nunca pasa de 100% y muestra el techo si dejaras de vender upgrades.",
-  "example": "Sin las expansiones, esas cuentas quedarían en US$ 94.000: GRR de 94%.",
-  "question": "¿Qué revela que la neta esconde?",
-  "answer": "Que estás tapando las fugas con upgrades de quienes se quedan."
+  "example": "El mismo grupo pasó de US$ 80.000 a US$ 92.000, pero US$ 18.000 fueron asientos nuevos dentro de esas cuentas. Sin esa expansión, el grupo habría quedado en US$ 74.000: 92,5% si se mide lo que no se perdió sobre el inicio... espera, 74/80 = 92,5%. La foto neta de 115% escondía una fuga de 7,5 puntos.",
+  "scenario": "Un grupo que hace un año facturaba US$ 100.000 hoy factura US$ 110.000. Si se quitan los upgrades, esas cuentas solo conservan US$ 86.000. Quieren el porcentaje de lo que no se fugó, con techo en 100%.",
+  "question": "Si este porcentaje es 80% y el neto es 105%, ¿qué está pasando?",
+  "answer": "Se pierde bastante base y los upgrades de quienes se quedan alcanzan a tapar el hueco, con poco margen."
  },
  {
   "id": "fin19",
@@ -1866,9 +2035,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Si una unidad —un cliente, un pedido, una consulta de IA— deja margen después de sus costos directos y de adquirirla. Si la unidad pierde, escalar pierde más.",
-  "example": "Cada cliente deja US$ 80 de margen al mes y costó US$ 240: la unidad cierra en tres meses.",
-  "question": "¿Por qué se mira antes de 'crecer a cualquier precio'?",
-  "answer": "Porque más volumen de una unidad que pierde solo agranda el hueco."
+  "example": "Cada taller que entra a un marketplace deja US$ 25 de contribución al mes y costó US$ 200 traerlo (pauta más onboarding humano). La unidad se paga en 8 meses si se queda. Si el churn de talleres es del 20% mensual, la mayoría se va antes del mes 8 y cada taller nuevo agranda el hueco. Escalar la pauta empeora el resultado.",
+  "scenario": "Una consulta al asistente de una SaaS legal se cobra dentro de un plan de US$ 40. El cliente intenso hace 300 consultas que a la empresa le cuestan US$ 18, más US$ 6 de soporte. Antes de adquirir más clientes iguales, quieren saber si esa unidad deja margen.",
+  "question": "Si la unidad pierde US$ 4 al mes, ¿qué pasa al pasar de 100 a 1.000 clientes iguales?",
+  "answer": "La pérdida de esa cohorte se multiplica por diez. El volumen no la arregla."
  },
  {
   "id": "fin20",
@@ -1877,9 +2047,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Ingreso de la unidad menos todos sus costos variables. Lo que queda ayuda a pagar los costos fijos.",
-  "example": "Una suscripción de US$ 20 menos US$ 5 de soporte y pasarela: contribución de US$ 15.",
-  "question": "¿En qué se diferencia del margen bruto?",
-  "answer": "El de contribución suele restar más costos variables, como la comisión de la pasarela o el éxito del partner."
+  "example": "Una suscripción cuesta US$ 40. La pasarela se lleva US$ 1,40, el soporte variable US$ 3 y la inferencia media US$ 6. Quedan US$ 29,60 por cuenta para pagar nómina y oficina. Esos US$ 29,60 no son utilidad: los fijos del mes son US$ 20.000, así que hacen falta unas 676 cuentas para cubrirlos.",
+  "scenario": "Un envío de notificaciones se cobra US$ 0,02. La pasarela y el proveedor del canal se llevan US$ 0,011. Quieren lo que queda de cada envío para ayudar a pagar al equipo, que no cambia con un envío más.",
+  "question": "¿Por qué este margen puede ser menor que el bruto?",
+  "answer": "Porque resta más costos que sí se mueven con cada unidad, como comisiones o tokens, que a veces el bruto dejó abajo."
  },
  {
   "id": "fin21",
@@ -1888,9 +2059,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Heurística de SaaS: tasa de crecimiento del ingreso más margen de flujo de caja, en porcentaje, debería acercarse a 40. Equilibra crecer y no desangrarse.",
-  "example": "Crecer 30% y tener margen de 15% suma 45, por encima de la regla.",
-  "question": "¿Es una ley?",
-  "answer": "No. Es una guía para conversar con el directorio o con inversionistas."
+  "example": "La SaaS creció 25% interanual y el margen de caja del último trimestre fue −5%: suma 20, por debajo de la guía. Un competidor crece 15% con margen de caja de 28%: suma 43. El primero no 'gana' solo por crecer más; está comprando crecimiento con caja.",
+  "scenario": "Una compañía crece el ingreso 35% y el flujo de caja del periodo es −10% sobre ingreso. Otra crece 10% y deja 30% de margen de caja. Comparan las dos sumas para la conversación con el directorio.",
+  "question": "Si quieres subir la suma sin frenar el crecimiento, ¿qué tiene que mejorar?",
+  "answer": "El margen de caja: menos quema por cada sol de ingreso, no solo una tasa de crecimiento más alta."
  },
  {
   "id": "fin22",
@@ -1899,9 +2071,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Dinero nuevo que viene de clientes actuales: más asientos, un plan mayor o uso adicional. Es la palanca del NRR.",
-  "example": "Una cuenta pasa de 10 a 25 asientos y suma US$ 180 al MRR.",
-  "question": "¿Por qué es más barato que un cliente nuevo?",
-  "answer": "Porque no pagas otro CAC completo."
+  "example": "Una cuenta de soporte tenía 8 asientos a US$ 20 (US$ 160). Sumó el equipo de ventas, 22 asientos, y pasó a US$ 600. Los US$ 440 nuevos no costaron otro ciclo comercial completo: el champion ya estaba adentro. En el trimestre, expansión así aportó US$ 7.000 de MRR frente a US$ 4.000 de cuentas recién llegadas.",
+  "scenario": "Un cliente del plan de US$ 200 pasa al de US$ 450 porque activó SSO y más usuarios. No es una cuenta nueva. Quieren cómo llamar a esos US$ 250 recurrentes que aparecieron dentro de una cuenta que ya pagaba.",
+  "question": "¿Por qué US$ 440 de expansión suelen ser más rentables que US$ 440 de una cuenta nueva?",
+  "answer": "Porque la cuenta nueva trae otro costo de adquisición; la expansión reutiliza una relación que ya existe."
  },
  {
   "id": "fin23",
@@ -1910,9 +2083,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Baja de plan o menos uso que reduce el MRR sin que la cuenta se vaya. Duele en silencio porque el logo sigue.",
-  "example": "El cliente baja de anual business a starter y pierdes US$ 70 de MRR.",
-  "question": "¿Dónde se ve además del churn?",
-  "answer": "En la retención bruta y en las cohortes."
+  "example": "El logo de una retail tech sigue activo, así que no entra en las cancelaciones. Bajó de 40 asientos a 15 y el MRR de esa cuenta pasó de US$ 800 a US$ 300. Son US$ 500 que desaparecen cada mes con el cliente todavía 'vivo' en el CRM. En la cohorte se ve; en el conteo de logos, no.",
+  "scenario": "Una cuenta sigue pagando, pero el consumo cayó y la factura recurrente pasó de US$ 1.200 a US$ 700. No hubo baja. Quieren el nombre de esos US$ 500 que se evaporan con el logo todavía en la base.",
+  "question": "Si solo mides logos dados de baja, ¿cómo se te escapa este caso?",
+  "answer": "El logo no se fue. El ingreso sí bajó, y esa fuga no aparece en el porcentaje de cuentas canceladas."
  },
  {
   "id": "fin24",
@@ -1921,9 +2095,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "La reserva es el compromiso firmado; el ingreso es lo que se reconoce cuando se entrega el servicio. Un contrato anual no es ingreso del mes uno.",
-  "example": "Se firma US$ 12.000 al año y cada mes se reconocen US$ 1.000.",
-  "question": "¿Por qué un founder confunde la caja con el ingreso?",
-  "answer": "Porque el cliente pagó por adelantado, pero el servicio todavía no se entregó."
+  "example": "En enero se firmó un contrato de US$ 36.000 por doce meses y el cliente pagó todo. Ventas reportó US$ 36.000 'de ingreso'. Contabilidad reconoció US$ 3.000 en enero y dejó US$ 33.000 para los meses en que el servicio se entrega. El banco muestra el efectivo; el estado de resultados, no.",
+  "scenario": "Se cierra un anual de US$ 18.000 en marzo, cobrado por adelantado. El tablero comercial suma 18.000 al mes. Finanzas pregunta cuánto de eso es servicio ya dado versus compromiso firmado.",
+  "question": "¿Por qué el efectivo de enero puede ser alto y el ingreso del mes, bajo?",
+  "answer": "Porque cobraste por adelantado un servicio que todavía vas a prestar. La reserva y la caja se adelantan al ingreso."
  },
  {
   "id": "fin25",
@@ -1932,9 +2107,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Plata ya cobrada por un servicio que aún no se presta. Es un pasivo: le debes al cliente meses de producto.",
-  "example": "Cobras el año por adelantado y once meses siguen diferidos.",
-  "question": "¿Mejora la caja y no el ingreso del mes?",
-  "answer": "Sí. Entra efectivo hoy y el ingreso se reparte."
+  "example": "Tras cobrar US$ 36.000 de un anual, el balance muestra US$ 33.000 que no son utilidad ni 'plata libre': es servicio que todavía debes. Si el cliente cancela con derecho a reembolso prorrateado en el mes 4, devuelves una parte de esa bolsa. Creer que ya es ganancia infla el resultado.",
+  "scenario": "Una SaaS cobra US$ 12.000 en julio por el año. En julio presta un mes. Los otros US$ 11.000 están en el banco, pero el balance no los trata como ganancia ganada.",
+  "question": "Si reconoces todo el anual como ingreso el día del cobro, ¿qué distorsionas?",
+  "answer": "El ingreso de este mes queda inflado y los meses siguientes, vacíos. Además escondes que todavía le debes el servicio al cliente."
  },
  {
   "id": "fin26",
@@ -1943,9 +2119,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Valor anual promedio de un contrato de suscripción. Sirve para saber si vendes tickets chicos o grandes.",
-  "example": "10 contratos que suman US$ 120.000 al año: ACV de US$ 12.000.",
-  "question": "¿Incluye servicios de implementación?",
-  "answer": "Por lo general no; el ACV es la parte recurrente."
+  "example": "En el trimestre se firmaron 8 contratos recurrentes que suman US$ 96.000 al año. El ticket medio es US$ 12.000. Una implantación de US$ 5.000 no entra en esa cuenta. Si el promedio baja a US$ 4.000 el trimestre siguiente, estás cerrando cuentas más chicas aunque el conteo de logos suba.",
+  "scenario": "Seis contratos nuevos de suscripción suman US$ 42.000 al año, más US$ 9.000 de setup que no se repite. Quieren el ticket anual típico de la parte que se renueva.",
+  "question": "¿Un ACV más bajo con los mismos logos qué le hace al esfuerzo comercial?",
+  "answer": "Cada vendedor cierra menos dólares recurrentes por deal. Hacen falta más cuentas para el mismo ARR."
  },
  {
   "id": "fin27",
@@ -1954,9 +2131,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "MRR o ARR dividido por el número de cuentas de pago. Si baja, estás cerrando cuentas más chicas o con descuento.",
-  "example": "US$ 50.000 de MRR y 200 cuentas: ARPA de US$ 250.",
-  "question": "¿Qué lo mueve además del precio de lista?",
-  "answer": "El mix de planes y los descuentos."
+  "example": "US$ 60.000 de MRR y 300 cuentas: US$ 200 por cuenta. Entraron 40 cuentas del plan de US$ 50 con un descuento de lanzamiento y el promedio cayó a US$ 182. No cambió el precio de lista; cambió la mezcla. Subir el precio del plan enterprise no se nota si el volumen nuevo es todo starter.",
+  "scenario": "MRR de US$ 25.000 entre 100 cuentas de pago. El mes siguiente el MRR sube a US$ 27.000 y las cuentas a 130. El promedio por cuenta baja. Quieren ese promedio, no el total.",
+  "question": "Si el promedio baja y el MRR sube, ¿qué está pasando con las cuentas nuevas?",
+  "answer": "Están entrando más chicas, o con más descuento, que la base que ya tenías."
  },
  {
   "id": "fin28",
@@ -1965,9 +2143,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Seguir a un grupo que empezó junto —el mismo mes de alta— para ver cuánto ingreso o uso conserva. Destapa problemas que el promedio esconde.",
-  "example": "La cohorte de marzo retiene 70% del ingreso a los seis meses; la de junio, 45%.",
-  "question": "¿Por qué no basta el churn del mes?",
-  "answer": "Porque mezcla cuentas viejas y nuevas y no muestra si el producto empeoró."
+  "example": "El churn del mes, mezclando a todos, es 3%. La cohorte de enero conserva 85% de su MRR a los seis meses; la de mayo, activada con un onboarding nuevo, conserva 55%. El promedio escondía que las cuentas recientes se van. Arreglar 'el churn' sin mirar la cohorte apunta al lugar equivocado.",
+  "scenario": "Las cuentas que empezaron en febrero todavía dejan 78% de su ingreso inicial al mes 4. Las que empezaron en junio dejan 41% al mismo mes de vida. El churn global del último mes se ve parejo. Quieren comparar grupos por fecha de alta.",
+  "question": "¿Por qué la cohorte de mayo puede ir mal aunque las cuentas viejas estén estables?",
+  "answer": "Porque un cambio de producto, precio o cliente ideal afecta a los nuevos y todavía no mueve el promedio de toda la base."
  },
  {
   "id": "fin29",
@@ -1976,9 +2155,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Reducción del porcentaje de la empresa que le queda a quienes ya eran socios, cuando entran inversionistas o se emiten opciones.",
-  "example": "Una ronda del 20% deja a los fundadores con el 80% de lo que tenían.",
-  "question": "¿Dilución alta puede coincidir con una tajada que vale más?",
-  "answer": "Sí, si el valor total de la empresa crece más de lo que cedes."
+  "example": "Los dos founders tenían 100%. Entra un fondo con 20% y se amplía un pool de 10% creado antes de la ronda. Los founders no se quedan con el 80%: el pool también sale de la torta previa. Su tajada baja, aunque el valor de esa tajada puede subir si el post-money crece más de lo que cedieron.",
+  "scenario": "Antes de una ronda los founders tienen el 70%. Después de emitir acciones para un inversor y para un pool nuevo, ese 70% representa menos de la empresa. La empresa vale más en el papel.",
+  "question": "¿Cuándo una tajada más chica puede valer más plata?",
+  "answer": "Cuando el valor total de la compañía crece más, en porcentaje, que lo que se cedió."
  },
  {
   "id": "fin30",
@@ -1987,9 +2167,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Lo que vale la empresa justo antes de recibir la inversión. El post-money suma el dinero que entra.",
-  "example": "Pre-money de US$ 4 millones y entran US$ 1 millón: post-money de US$ 5 millones, 20% para el nuevo socio.",
-  "question": "¿El pre-money es lo que hay en el banco?",
-  "answer": "No. Es un precio pactado, no el efectivo."
+  "example": "Pactan US$ 6 millones antes de que entre el dinero y el fondo invierte US$ 1,5 millones. El valor con el dinero adentro es US$ 7,5 millones y el fondo queda con 1,5/7,5 = 20%. Esos US$ 6 millones no están en el banco: son el precio de la torta previa. Confundirlo con la caja hace que el founder crea que 'ya vale' lo que todavía es una negociación.",
+  "scenario": "Van a entrar US$ 2 millones. Acuerdan que, con esa plata adentro, la empresa queda en US$ 10 millones. Quieren el precio de la empresa justo antes del cheque, que es el que fija cuánto porcentaje se cede.",
+  "question": "Si el pre es US$ 6 millones y entran US$ 1,5 millones, ¿qué porcentaje se lleva el fondo?",
+  "answer": "20%, porque 1,5 es la quinta parte de 7,5."
  },
  {
   "id": "fin31",
@@ -1998,9 +2179,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Lista de quién es dueño de qué: fundadores, inversionistas, opciones. Es el mapa antes de prometer porcentaje a alguien.",
-  "example": "Después de la ronda, el fondo tiene 15%, el pool 10% y los fundadores el resto.",
-  "question": "¿Por qué se actualiza en cada promesa de equity?",
-  "answer": "Porque un porcentaje dicho de palabra puede no caber."
+  "example": "Después de la ronda el fondo tiene 18%, el pool de empleados 12% y los founders el resto, con una nota de un SAFE que todavía no convierte. Prometer '5% a la primera contratación' sin actualizar el mapa puede no caber: el pool ya está asignado en 9 de sus 12 puntos.",
+  "scenario": "Hay dos founders, un ángel y un pool. Alguien ofrece de palabra 8% a un ejecutivo. Antes de firmar tienen que ver si ese 8% cabe sin pisar lo ya prometido.",
+  "question": "¿Por qué un porcentaje dicho en una llamada no basta?",
+  "answer": "Porque opciones, SAFEs sin convertir y el pool ya ocupan parte de la torta. Sin el mapa no sabes si cabe."
  },
  {
   "id": "fin32",
@@ -2009,9 +2191,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Se cobra según el consumo: mensajes, asientos activos, tokens o pedidos. Alinea el pago con el valor y vuelve el ingreso menos predecible.",
-  "example": "US$ 0,01 por mensaje procesado, con un mínimo mensual.",
-  "question": "¿Qué tiene que mirar finanzas cada mes?",
-  "answer": "El consumo real, porque el MRR ya no es un número fijo."
+  "example": "Se cobra US$ 0,008 por mensaje procesado, con un mínimo de US$ 50. En un mes tranquilo una cuenta paga el mínimo; en campaña paga US$ 640. Finanzas no puede tratar el MRR como un número fijo: el pronóstico tiene que modelar consumo, no solo logos.",
+  "scenario": "Una API cobra por cada mil llamadas, con un piso mensual. El ingreso de una cuenta pasó de US$ 90 a US$ 700 sin cambiar de plan, porque su tráfico creció. El forecast del trimestre ya no puede ser 'cuentas × precio de lista'.",
+  "question": "¿Qué mira finanzas cada mes que antes no miraba con un precio fijo por cuenta?",
+  "answer": "El consumo real. El ingreso recurrente deja de ser un contrato plano."
  },
  {
   "id": "fin33",
@@ -2020,9 +2203,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Cuánto ingreso nuevo recurrente genera cada sol gastado en ventas y marketing. Una versión es el número mágico.",
-  "example": "US$ 20.000 de gasto comercial producen US$ 15.000 de ARR nuevo en el trimestre.",
-  "question": "¿Una eficiencia baja qué sugiere?",
-  "answer": "Que estás pagando de más por cada peso de ingreso, o que el ciclo todavía no madura."
+  "example": "En el trimestre se gastaron US$ 30.000 en el equipo comercial y la pauta. El ARR nuevo del trimestre siguiente, ligado a ese esfuerzo, fue US$ 18.000. Cada sol comercial trajo 0,6 soles de ingreso anual nuevo. Antes de contratar otro ejecutivo, ese rendimiento tiene que subir o el ticket tiene que ser mayor.",
+  "scenario": "Gastaron S/ 40.000 en comerciales y anuncios. El ingreso anual nuevo que apareció después fue S/ 20.000. Quieren cuánto ingreso recurrente nuevo devolvió cada sol de ese gasto.",
+  "question": "Si el resultado es 0,4, ¿qué sugiere antes de meter más presupuesto comercial?",
+  "answer": "Que todavía pagas caro por cada sol de ingreso nuevo, o que el ciclo no está maduro para escalar el equipo."
  },
  {
   "id": "fin34",
@@ -2031,9 +2215,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Costo directo de entregar el servicio: hosting, soporte atado a la cuenta, pasarela y, en IA, la inferencia. Define el margen bruto.",
-  "example": "Servidores, el 30% del soporte y la pasarela del mes.",
-  "question": "¿El sueldo del CEO entra?",
-  "answer": "No, salvo la parte que sea entrega directa, que casi nunca lo es."
+  "example": "En el mes: servidores US$ 3.000, 40% del equipo de soporte que atiende cuentas de pago US$ 4.000, pasarela US$ 900 e inferencia US$ 5.000. Total US$ 12.900 para servir lo vendido. El sueldo del CEO y la pauta no entran. Con ingreso de US$ 40.000, el margen bruto es 68%, no 90%.",
+  "scenario": "Para entregar el servicio del mes se usaron nube, comisiones de la pasarela y el soporte que habla con quien ya paga. La campaña de ads y el sueldo de producto quedaron en otro rubro. Quieren el costo de lo que ya se vendió.",
+  "question": "¿Por qué la inferencia de un asistente entra aquí y el sueldo de marketing no?",
+  "answer": "La inferencia crece al servir a cada cliente. Marketing no es el costo de entregar la suscripción ya vendida."
  },
  {
   "id": "fin35",
@@ -2042,9 +2227,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Qué tan rápido el resultado contable se vuelve efectivo. Cobrar el año por adelantado ayuda; pagar todo al contado, no.",
-  "example": "Cobras anual por adelantado y pagas la nube mensualmente: la caja va delante del ingreso.",
-  "question": "¿Por qué una empresa 'rentable' puede quedarse sin caja?",
-  "answer": "Porque el ingreso se reconoce y el efectivo todavía no entra, o sale antes."
+  "example": "La SaaS reconoce US$ 20.000 de ingreso en el mes y cobra US$ 48.000 porque varios anuales se pagaron por adelantado, mientras la nube se paga mes a mes. La caja va delante del resultado. Al revés, una implementación reconocida este mes y cobrada a 60 días deja utilidad contable y el banco vacío.",
+  "scenario": "Este mes el estado de resultados muestra utilidad chica, pero entraron tres anuales por adelantado y la nube se pagó a 30 días. La cuenta bancaria subió más que la utilidad. Quieren el nombre de ese desfase.",
+  "question": "¿Cómo una empresa con utilidad contable puede quedarse sin plata para la nómina?",
+  "answer": "Porque el ingreso se anotó y el efectivo todavía no entra, o salió antes para pagar proveedores."
  },
  {
   "id": "fin36",
@@ -2053,9 +2239,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Lo que necesitas para operar el día a día: lo que te deben menos lo que debes de corto plazo. En SaaS que cobra adelantado suele ser una ventaja.",
-  "example": "Clientes anuales por adelantado te financian los próximos meses de servicio.",
-  "question": "¿Un marketplace que paga al vendedor antes de cobrar qué problema tiene?",
-  "answer": "Necesita capital de trabajo extra para cubrir ese hueco."
+  "example": "Una SaaS cobra anuales por adelantado y debe meses de servicio: el pasivo de ese cobro financia la operación. Un marketplace que le paga al vendedor el lunes y cobra al comprador el viernes necesita plata extra para cubrir esos cuatro días. Crecer en pedidos, en ese segundo caso, exige más caja, no menos.",
+  "scenario": "Una plataforma le transfiere al proveedor el mismo día y el cliente final paga a 14 días. Cada pedido nuevo abre un hueco de dos semanas. Quieren el nombre de esa necesidad de plata del día a día.",
+  "question": "¿Por qué en una SaaS que cobra el año por adelantado crecer puede aportar caja?",
+  "answer": "Porque el cliente paga antes de que termines de prestar el servicio. Ese efectivo financia los meses que vienen."
  },
  {
   "id": "fin37",
@@ -2064,9 +2251,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 1,
   "explanation": "Proyección simple de ingresos, gastos y caja a 12 o 18 meses, con supuestos explícitos. Se compara cada mes con lo real.",
-  "example": "El plan dice 15 clientes nuevos al mes; en abril fueron 6 y se revisa la pista.",
-  "question": "¿Para qué sirve si 'todo cambia'?",
-  "answer": "Para ver qué supuesto se rompió, no para acertar el futuro."
+  "example": "En enero una SaaS de soporte proyectó 12 altas al mes a US$ 80, bajas del 3% y una nómina fija de US$ 22.000, con US$ 90.000 en el banco. En abril cerraron 5 altas y las bajas fueron 6%. Sin tocar el gasto, la caja no llega a diciembre. El documento sirvió para ver qué supuesto se rompió —las altas— y frenar una contratación ahora, no para 'haber adivinado el año'.",
+  "scenario": "Una fintech dejó escrito que octubre traería US$ 40.000 de ingreso y US$ 55.000 de gasto, con US$ 70.000 en el banco. A mitad de mes van US$ 28.000 cobrados y US$ 51.000 gastados. Tienen que decidir esta semana si pausan la pauta o si el desvío todavía cabe en el año.",
+  "question": "Si en abril las altas fueron 5 y no las 12 del supuesto, y el producto no cambió, ¿qué decisión de gasto cambia?",
+  "answer": "Se revisa lo comprometido hacia adelante, por ejemplo una contratación. El supuesto comercial se rompió y la caja ya no alcanza lo que el papel original prometía."
  },
  {
   "id": "fin38",
@@ -2075,9 +2263,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Cifra que pones al lado para que la opción que te conviene se sienta razonable. El plan del medio suele existir para empujar al que quieres vender.",
-  "example": "Un plan de US$ 199 hace que el de US$ 79 parezca el sensato.",
-  "question": "¿Cuándo es manipulación y cuándo diseño?",
-  "answer": "Cuando el plan caro es falso y nadie lo puede usar; si es real, es empaque."
+  "example": "En la página hay un plan de US$ 199 con SSO y auditoría, uno de US$ 79 y uno de US$ 29. Casi nadie compra el de 199; existe para que 79 se sienta el paso sensato de un equipo de 15 personas. Si el de 199 es un plan falso que ni siquiera se puede contratar, deja de ser diseño de la grilla y pasa a ser un adorno para empujar.",
+  "scenario": "La grilla muestra US$ 240, US$ 90 y US$ 35. El equipo quiere que la mayoría elija el del medio. El de US$ 240 casi no se vende y aun así cambia cómo se lee el de US$ 90.",
+  "question": "¿Cuándo la cifra alta deja de ser una referencia legítima?",
+  "answer": "Cuando ese plan no se puede usar de verdad y solo está para hacer ver barato al otro."
  },
  {
   "id": "fin39",
@@ -2086,9 +2275,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Valor de contratos firmados con clientes que antes no pagaban, en el periodo. No incluye renovaciones ni expansión.",
-  "example": "En el mes se firmaron US$ 18.000 de ACV con cuentas nuevas.",
+  "example": "En mayo se firmaron US$ 22.000 de valor anual con cuentas que nunca habían pagado, US$ 8.000 de asientos extra en cuentas viejas y US$ 30.000 de renovaciones. El número que mide la máquina de conseguir cuentas nuevas es 22.000. Mezclar los tres hace parecer que ventas trajo US$ 60.000 de logos nuevos.",
+  "scenario": "Este mes hay contratos firmados con cinco empresas que no estaban en la base, por US$ 15.000 al año, y una cuenta vieja que sumó US$ 4.000. Quieren aislar lo firmado con quienes antes no pagaban.",
   "question": "¿Por qué se separa de la expansión?",
-  "answer": "Porque mide la máquina de adquisición, no el crecimiento de la base."
+  "answer": "Porque mide si la adquisición funciona. La expansión mide crecimiento dentro de cuentas que ya eran clientes."
  },
  {
   "id": "fin40",
@@ -2097,9 +2287,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 2,
   "explanation": "Lo que los contratos vigentes obligan a pagar si nadie cancela. Da visibilidad, sobre todo con planes anuales.",
-  "example": "Contratos que aseguran US$ 300.000 en los próximos doce meses, si se cumplen.",
-  "question": "¿Es lo mismo que caja en el banco?",
-  "answer": "No. Es una obligación del cliente, sujeta a cancelación según el contrato."
+  "example": "Hay contratos anuales vigentes que, si nadie cancela según la cláusula, obligan a pagar US$ 280.000 en los próximos doce meses. No es el saldo del banco ni una proyección de altas futuras. Si la cláusula deja salir a 30 días, esa visibilidad es más blanda de lo que el número sugiere.",
+  "scenario": "Los anuales firmados, si se cumplen, representan US$ 150.000 todavía por cobrar en el año. El forecast de altas nuevas es otro papel. Quieren la parte que los contratos ya obligan.",
+  "question": "¿Esa cifra está ya en la cuenta bancaria?",
+  "answer": "No. Es lo que el contrato dice que el cliente pagará, sujeto a las cláusulas de salida."
  },
  {
   "id": "fin41",
@@ -2108,9 +2299,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Cuánta caja quemas para generar cada dólar de ARR nuevo. Fórmula aproximada: quema neta del periodo / ARR neto nuevo. Menos de 1 es muy eficiente; más de 2, caro.",
-  "example": "Quemaste US$ 200.000 netos y sumaste US$ 100.000 de ARR: múltiplo 2.",
-  "question": "¿Por qué se popularizó al encarecerse el capital?",
-  "answer": "Porque muestra si el crecimiento se compra a un precio razonable."
+  "example": "En el trimestre la caja bajó US$ 180.000 netos y el ARR neto nuevo fue US$ 60.000. El múltiplo es 3: se quemaron tres dólares para sumar uno de ingreso anual. Con capital barato eso se toleraba; con capital caro, el directorio pide bajar el múltiplo antes de abrir otra ronda, aunque el crecimiento en porcentaje se vea lindo.",
+  "scenario": "En seis meses la cuenta bancaria bajó US$ 400.000 y el ingreso anual recurrente neto nuevo fue US$ 100.000. Un inversor pregunta cuánta caja se fue por cada dólar nuevo de ingreso anual.",
+  "question": "¿Por qué un múltiplo de 3 importa más cuando la siguiente ronda está cara?",
+  "answer": "Porque cada punto de crecimiento se está comprando con mucha caja, y reponer esa caja ahora diluye o sale caro."
  },
  {
   "id": "fin42",
@@ -2119,9 +2311,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "ARR nuevo de un trimestre dividido por el gasto de ventas y marketing del trimestre anterior. Cerca de 0,75 o más sugiere que se puede invertir más en crecer.",
-  "example": "Gasto comercial de US$ 100.000 y ARR nuevo siguiente de US$ 80.000: número mágico 0,8.",
-  "question": "¿Qué distorsiona el cálculo?",
-  "answer": "Un gasto puntual o un cierre enorme que no se repite."
+  "example": "Ventas y marketing del primer trimestre costaron US$ 100.000. El ARR nuevo del segundo fue US$ 90.000. El cociente es 0,9, por encima de la guía de 0,75, así que tiene sentido probar más presupuesto. Si los US$ 90.000 vinieron de un solo cierre enterprise que no se repite, el cociente miente y contratar tres ejecutivos es prematuro.",
+  "scenario": "El gasto comercial de un trimestre fue US$ 80.000. El ingreso anual nuevo del trimestre siguiente fue US$ 40.000. Quieren ese cociente antes de decidir si amplían el equipo de ventas.",
+  "question": "¿Qué lo distorsiona aunque la fórmula esté bien aplicada?",
+  "answer": "Un gasto puntual que no se repite, o un cierre enorme que no vas a volver a tener."
  },
  {
   "id": "fin43",
@@ -2130,9 +2323,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Compara el MRR que entra (nuevo + expansión) con el que se va (churn + contracción). Por encima de 4 se considera un crecimiento sano.",
-  "example": "Entran US$ 20.000 y se van US$ 4.000: quick ratio de 5.",
-  "question": "¿En qué se diferencia del quick ratio contable?",
-  "answer": "El contable mira activos líquidos; este mira la dinámica del ingreso recurrente."
+  "example": "En el mes entraron US$ 12.000 de cuentas nuevas y US$ 4.000 de expansión. Se fueron US$ 3.000 por bajas y US$ 1.000 por bajadas de plan. Entra 16.000 y sale 4.000: relación de 4. El quick ratio del balance (activos líquidos sobre pasivo corriente) es otra cosa y no sirve para esta conversación.",
+  "scenario": "MRR nuevo US$ 9.000, expansión US$ 3.000, bajas US$ 2.000 y bajadas de plan US$ 1.000. Quieren comparar lo que entró a la base recurrente con lo que se fugó.",
+  "question": "Si la relación es 1,5, ¿la base está ganando terreno rápido?",
+  "answer": "No. Entra poco más de lo que se va. La guía de un crecimiento sano en esta métrica está cerca de 4."
  },
  {
   "id": "fin44",
@@ -2141,9 +2335,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Acuerdo simple para invertir ahora y convertir en acciones en una ronda futura, muy usado en startups. No es deuda clásica ni acciones todavía.",
-  "example": "Un ángel entra con un SAFE de US$ 50.000 y un tope de valoración.",
-  "question": "¿El fundador cede porcentaje el día de la firma?",
-  "answer": "No de forma definitiva: se calcula cuando el SAFE se convierte."
+  "example": "Un ángel aporta US$ 50.000 hoy con un tope de valoración de US$ 4 millones. No se lleva un porcentaje cerrado el día de la firma: cuando haya una ronda con precio, ese monto se convierte en acciones con el tope como límite. Tratarlo como 'ya vendimos el 10%' antes de la conversión es una cuenta que el mapa todavía no puede cerrar.",
+  "scenario": "Entra plata de un inversor ahora, sin fijar el porcentaje definitivo, y se convierte en acciones cuando haya una ronda con precio, usando un tope. No es un préstamo con cuotas ni acciones emitidas hoy.",
+  "question": "¿El founder cede un porcentaje cerrado el día en que llega el cheque?",
+  "answer": "No de forma definitiva. El porcentaje se calcula cuando el acuerdo se convierte en la ronda futura."
  },
  {
   "id": "fin45",
@@ -2152,9 +2347,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Porcentaje de la empresa reservado para dar participación a quienes se suman. Se crea o se amplía y diluye a los socios actuales.",
-  "example": "Se reserva 10% para las primeras contrataciones clave.",
-  "question": "¿Por qué un inversionista pide ampliarlo antes de entrar?",
-  "answer": "Para que las contrataciones futuras diluyan también a los fundadores, no solo al fondo."
+  "example": "Se reservó 10% para contrataciones. Ya hay ofertas que ocupan 7 puntos. El fondo de la siguiente ronda pide llegar a la firma con un 15% libre, creado antes de que entre su plata, para que las contrataciones futuras diluyan a los founders y no al fondo. Ampliarlo en ese momento les baja la tajada a quienes ya estaban.",
+  "scenario": "Queda reservado un 10% de la empresa para las personas que se sumen. Un inversor pide que ese reservorio suba antes de que entre su cheque. Los founders preguntan a quién diluye esa ampliación.",
+  "question": "¿Por qué al inversor le conviene que el reservorio se amplíe antes de entrar?",
+  "answer": "Porque las contrataciones futuras salen de la torta de los socios actuales, no de la tajada que él acaba de comprar."
  },
  {
   "id": "fin46",
@@ -2163,9 +2359,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Con el plan actual de ingreso y gasto, la caja alcanza hasta que el negocio se sostiene solo. Lo contrario es default dead: sin una ronda, se acaba el dinero.",
-  "example": "Si no levantas más capital y cumples el plan, llegas a equilibrio en el mes 11 con caja de sobra.",
-  "question": "¿Qué decisión cambia el estado?",
-  "answer": "Contratar o pautar por encima de lo que la pista permite."
+  "example": "Con US$ 200.000 en banco, pérdida neta que baja US$ 5.000 cada mes y equilibrio proyectado en el mes 10, la empresa llega sin otra ronda. Si se aprueba una contratación de US$ 8.000 al mes, el equilibrio se corre y la caja se acaba en el mes 8: pasan al estado en el que, sin capital nuevo, no llegan. La decisión de contratar es la que cambia el estado, no el discurso.",
+  "scenario": "Si no entra más capital y se cumple el gasto actual, la caja alcanza hasta el mes en que el ingreso tapa los costos. Sumar dos sueldos y la pauta que está en discusión haría que el banco llegue a cero antes.",
+  "question": "¿Qué decisión operativa te saca de ese estado sin hablar con un fondo?",
+  "answer": "Contratar o pautar por encima de lo que la pista permite. Volver al plan de gasto que sí llega al equilibrio te regresa."
  },
  {
   "id": "fin47",
@@ -2174,9 +2371,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Meses que tarda un grupo real de clientes, no el promedio teórico, en devolver su CAC con el margen que de verdad dejó.",
-  "example": "La cohorte de enero devolvió el CAC en el mes 8; la de mayo todavía no, al mes 6.",
-  "question": "¿Por qué es mejor que el payback de una diapositiva?",
-  "answer": "Porque usa margen cobrado, no un churn supuesto."
+  "example": "La lámina decía que el CAC se recupera en 6 meses con un churn supuesto de 2%. La cohorte de enero, con el margen que de verdad dejó, devolvió el costo en el mes 9. La de mayo lleva 6 meses y apenas va en 40% del costo, porque se activó peor. El promedio de la diapositiva no describe a ninguno de los dos grupos.",
+  "scenario": "El grupo que empezó en marzo ya devolvió, con su margen real, lo que costó conseguirlo, al octavo mes. El grupo de julio, al sexto mes de vida, va en la mitad. No quieren el promedio teórico de una lámina.",
+  "question": "¿Por qué este plazo puede ser peor que el de la diapositiva?",
+  "answer": "Porque usa el margen cobrado y las bajas reales de ese grupo, no un churn optimista aplicado a un cliente promedio."
  },
  {
   "id": "fin48",
@@ -2185,9 +2383,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Precio de procesar cada unidad de texto en un modelo. En un producto de IA se multiplica por el uso y puede comerse el plan barato.",
-  "example": "El plan de US$ 15 incluye uso que a ti te cuesta US$ 9 en tokens en el cliente intenso.",
-  "question": "¿Qué decisión de producto dispara?",
-  "answer": "Límites, caché, modelos más chicos o un precio que acompañe el uso."
+  "example": "El plan de US$ 15 incluye un asistente. El cliente intenso consume el equivalente a US$ 9 de procesamiento en el mes; el mediano, US$ 0,80. El precio plano es rentable en el promedio y pierde en el intenso. La decisión es poner un tope, pasar el exceso a consumo o enrutar las preguntas fáciles a un modelo más barato.",
+  "scenario": "Cada respuesta del asistente tiene un precio de proveedor según cuánto texto entra y sale. En el plan de US$ 19, tres cuentas ya cuestan más de US$ 12 solo en ese procesamiento. El resto de las cuentas casi no lo usa.",
+  "question": "¿Qué decisión de producto dispara un cliente intenso que se come el plan?",
+  "answer": "Topes, caché, un modelo más barato para lo simple, o un precio que acompañe el uso en vez de un plano ciego."
  },
  {
   "id": "fin49",
@@ -2196,9 +2395,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Margen bruto cuando ya restaste el costo de los modelos, no solo el hosting clásico. Es el número honesto de un producto con IA.",
-  "example": "Ingreso US$ 100, nube US$ 8 e inferencia US$ 27: margen del 65%, no del 92%.",
-  "question": "¿Por qué el margen 'de SaaS tradicional' engaña aquí?",
-  "answer": "Porque ignora el costo variable que crece con cada respuesta."
+  "example": "Ingreso US$ 100.000. La nube clásica son US$ 6.000 y alguien reporta margen de 94%, 'como un SaaS normal'. Las llamadas a modelos del mes fueron US$ 28.000. El margen honesto es 66%. Con 94% el equipo casi duplica la pauta; con 66% el unitario del cliente intenso no da.",
+  "scenario": "El ingreso del mes es US$ 80.000. Servidores, US$ 5.000. El proveedor de modelos, US$ 22.000. Un tablero muestra 94% porque no restó los modelos. Quieren el porcentaje que sí los resta.",
+  "question": "¿Por qué el margen de un SaaS sin IA no sirve de referencia aquí?",
+  "answer": "Porque ignora un costo variable que crece con cada respuesta y que puede ser más grande que el hosting."
  },
  {
   "id": "fin50",
@@ -2207,9 +2407,10 @@ var TERMS = (typeof window !== 'undefined' ? window : globalThis).TERMS = [
   "category": "Finanzas",
   "level": 3,
   "explanation": "Cobras antes de entregar y por eso el crecimiento te aporta caja en vez de consumirla. Muchos SaaS anuales viven de esto.",
-  "example": "Cada cliente nuevo anual deja varios meses de efectivo antes de que prestes todo el servicio.",
-  "question": "¿Cuándo se vuelve un riesgo?",
-  "answer": "Si hay una ola de reembolsos: ese efectivo ya no era del todo tuyo."
+  "example": "Cada cliente anual nuevo deja en el banco varios meses de servicio todavía no prestado. Pasar de 20 a 40 anuales en un trimestre sube la caja aunque el resultado del mes sea justo. El riesgo aparece si una ola de reembolsos obliga a devolver efectivo que ya se usó para nómina: esa plata no era del todo de la empresa.",
+  "scenario": "Los clientes pagan el año el día uno y el servicio se presta durante doce meses. Sumar clientes así mete efectivo antes de incurrir el costo. Una ola de cancelaciones con reembolso daría vuelta esa ventaja.",
+  "question": "¿Cuándo esa ventaja se vuelve un riesgo de liquidez?",
+  "answer": "Cuando hay que devolver cobros por servicio que aún no diste y ese efectivo ya se gastó."
  }
 ];
 if (typeof module !== 'undefined') module.exports = TERMS;

@@ -1,5 +1,5 @@
 const assert=require('assert');const T=require('../terms.js');const S=require('../schedule.js');
-const F=['id','term','category','level','explanation','example','question','answer'];
+const F=['id','term','category','level','explanation','example','scenario','question','answer'];
 const ids=new Set(),names=new Set();
 T.forEach(t=>{F.forEach(f=>assert(t[f]!==undefined&&String(t[f]).trim(),`${t.id} falta ${f}`));assert([1,2,3].includes(t.level));
  assert(!ids.has(t.id),'id dup '+t.id);ids.add(t.id);const n=t.term.toLowerCase();assert(!names.has(n),'término dup '+t.term);names.add(n);});
@@ -13,5 +13,15 @@ assert.equal(at('2026-10-14T07:54:00-05:00'),0);assert.equal(at('2026-10-14T07:5
 assert.equal(at('2026-10-14T01:00:00Z'),0);// 8pm Lima del 13
 assert.equal(S.dateKeyForDay(0),'2026-10-13');assert.equal(S.dateKeyForDay(1),'2026-10-14');
 assert.equal(S.termIndexForDay(T,0),S.termIndexForDay(T,0));
+const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+T.forEach(t=>{
+  const exp=norm(t.explanation), first=norm(t.explanation.split('. ')[0].replace(/\.$/,''));
+  const asked=norm(t.scenario+' '+t.question);
+  assert(!asked.includes(exp), t.id+' la pregunta contiene la explicación');
+  assert(first.length<24 || !asked.includes(first), t.id+' la pregunta cita la definición');
+  assert(norm(t.example)!==norm(t.scenario), t.id+' el ejemplo y el caso son iguales');
+  const term=norm(t.term).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  assert(!new RegExp('(^|[^a-z0-9])'+term+'([^a-z0-9]|$)').test(norm(t.scenario)), t.id+' el caso nombra el término');
+});
 const c={};T.forEach(t=>c[t.category]=(c[t.category]||0)+1);console.log('OK',N,c);
 console.log('Hoy:',T[S.termIndexForDay(T,S.dayIndex(Date.now()))].term);

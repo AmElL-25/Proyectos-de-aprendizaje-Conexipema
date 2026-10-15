@@ -100,9 +100,10 @@
       '<span class="date">' + (isToday ? 'Hoy · ' : '') + fmtDate(dk) + '</span></div>' +
       '<h2>' + esc(t.term) + '</h2>' + (t.en ? '<p class="en">En inglés: <b>' + esc(t.en) + '</b></p>' : '') +
       '<p class="expl">' + esc(t.explanation) + '</p>' +
-      '<div class="ex"><b>Ejemplo práctico</b><p>' + esc(t.example) + '</p></div>' +
+      '<div class="ex"><b>Ejemplo para aplicar</b><p>' + esc(t.example) + '</p></div>' +
       '<section class="practice"><h3>Practica</h3>' +
-      '<p class="q"><b>1.</b> ¿Qué término corresponde a esta definición?<br><i>“' + esc(t.explanation.split('. ')[0].replace(/\.$/, '')) + '.”</i></p>' +
+      '<p class="q"><b>1.</b> ' + esc(t.scenario) + '</p>' +
+      '<p class="q">¿Qué concepto aplica en este caso?</p>' +
       (isToday ? '<p class="hint" id="scorehint">' + (P.scored_today ? '✅ Ya usaste tu intento con puntos de hoy. Puedes seguir practicando.' : '🎯 Tu primer intento de hoy suma puntos.') + '</p>' : '<p class="hint">Los días anteriores son solo de práctica.</p>') +
       '<div class="opts">' + opts.map(function (o) { return '<button class="opt" data-id="' + o.id + '">' + esc(o.term) + '</button>'; }).join('') + '</div>' +
       '<p class="fb" id="fb1"></p>' +
@@ -155,7 +156,7 @@
       li.onclick = function () {
         if (li.dataset.idx !== '') return render(+li.dataset.idx);
         var t = T.find(function (x) { return x.id === li.dataset.id; });
-        $('#detail').innerHTML = '<h3>' + esc(t.term) + '</h3>' + (t.en ? '<p class="en">' + esc(t.en) + '</p>' : '') + '<p>' + esc(t.explanation) + '</p><p><b>Ejemplo:</b> ' + esc(t.example) + '</p><p><b>Pregunta:</b> ' + esc(t.question) + '</p><details><summary>Respuesta</summary>' + esc(t.answer) + '</details><button class="btn" id="closeD">Cerrar</button>';
+        $('#detail').innerHTML = '<h3>' + esc(t.term) + '</h3>' + (t.en ? '<p class="en">' + esc(t.en) + '</p>' : '') + '<p>' + esc(t.explanation) + '</p><p><b>Ejemplo:</b> ' + esc(t.example) + '</p><p><b>Caso:</b> ' + esc(t.scenario) + '</p><p><b>Pregunta:</b> ' + esc(t.question) + '</p><details><summary>Respuesta</summary>' + esc(t.answer) + '</details><button class="btn" id="closeD">Cerrar</button>';
         $('#dlg').showModal ? $('#dlg').showModal() : $('#dlg').setAttribute('open', '');
         $('#closeD').onclick = function () { $('#dlg').close ? $('#dlg').close() : $('#dlg').removeAttribute('open'); };
       };
