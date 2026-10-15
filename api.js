@@ -1,0 +1,41 @@
+/* Cliente mínimo para las funciones RPC de Supabase (sin dependencias). */
+(function (root) {
+  var C = root.TDD_CONFIG || {};
+  function rpc(name, args) {
+    return fetch(C.SUPABASE_URL + '/rest/v1/rpc/' + name, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', apikey: C.SUPABASE_KEY },
+      body: JSON.stringify(args || {})
+    }).then(function (r) {
+      return r.text().then(function (txt) {
+        var data = txt ? JSON.parse(txt) : null;
+        if (!r.ok) { var e = new Error((data && data.message) || 'Error de conexión'); e.code = data && data.code; e.status = r.status; throw e; }
+        return data;
+      });
+    });
+  }
+  root.Api = {
+    register: function (u, p, avatar) {
+      var body = { p_username: u, p_password: p };
+      if (avatar) body.p_avatar = avatar;
+      return rpc('tdd_register', body).catch(function (e) {
+        var msg = (e && e.message) || '';
+        if (avatar && (e.status === 404 || /avatar|PGRST202|Could not find the function/i.test(msg))) {
+          return rpc('tdd_register', { p_username: u, p_password: p }).then(function (d) { d.avatar = avatar; d.avatar_local = true; return d; });
+        }
+        throw e;
+      });
+    },
+    login: function (u, p) { return rpc('tdd_login', { p_username: u, p_password: p }); },
+    logout: function (t) { return rpc('tdd_logout', { p_token: t }); },
+    progress: function (t) { return rpc('tdd_get_progress', { p_token: t }); },
+    record: function (t, termId, ev, ok) { return rpc('tdd_record', { p_token: t, p_term_id: termId, p_event: ev, p_correct: ok === undefined ? null : ok }); },
+    leaderboard: function (t) { return rpc('tdd_leaderboard', { p_token: t }); },
+    changePassword: function (t, o, n) { return rpc('tdd_change_password', { p_token: t, p_old: o, p_new: n }); },
+    team: function (t, scope) { return rpc('tdd_team', { p_token: t, p_scope: scope }); },
+    ackBadges: function (t) { return rpc('tdd_ack_badges', { p_token: t }); },
+    setPrize: function (t, period, title) { return rpc('tdd_admin_set_prize', { p_token: t, p_period: period, p_title: title }); },
+    setAvatar: function (t, avatar) { return rpc('tdd_set_avatar', { p_token: t, p_avatar: avatar }); },
+    adminReset: function (t, u, n) { return rpc('tdd_admin_reset_password', { p_token: t, p_username: u, p_new_password: n }); }
+  };
+})(window);

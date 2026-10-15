@@ -3,21 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4f46e5">
-<title>Término del Día · Marketing, Ads, Estrategia y Finanzas</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#0a0a0a">
+<title>Término del Día · Team Conexipema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261015">
 </head>
 <body>
+<section id="auth" class="auth" hidden>
+  <div class="card authcard">
+    <div class="brandrow">
+      <a class="logo" href="https://www.conexipema.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.conexipema.com/Logo-blanco-sin-fondo.png" alt="Conexipema" width="960" height="148" onerror="this.closest('.logo').classList.add('fallback')">
+        <span class="wordmark">Conexi<span>pema</span></span>
+      </a>
+      <span class="teamtag">Team Conexipema</span>
+    </div>
+    <h1>Término del Día</h1>
+    <p class="sub">Aprende un concepto cada día con tu equipo.</p>
+    <nav class="tabs"><button type="button" data-auth="login" class="active">Ingresar</button><button type="button" data-auth="register">Crear cuenta</button></nav>
+    <form id="auth-form">
+      <div id="au-avatar-row" hidden>
+        <span class="lbl">Elige tu avatar</span>
+        <div id="au-avatars" class="avatar-pick"></div>
+      </div>
+      <label>Usuario<input id="au-user" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="p. ej. maria.lopez"></label>
+      <label>Contraseña<input id="au-pass" type="password" required minlength="6" autocomplete="current-password"></label>
+      <label id="au-pass2-row" hidden>Repite la contraseña<input id="au-pass2" type="password" minlength="6" autocomplete="new-password"></label>
+      <button class="btn" id="au-submit">Ingresar</button>
+      <p id="au-msg" class="fb"></p>
+      <p class="hint">No necesitas correo: solo un usuario y una contraseña. Si la olvidas, pídele a Luis que la restablezca.</p>
+    </form>
+  </div>
+</section>
+<div id="app" hidden>
 <header>
   <div class="wrap top">
-    <h1>📚 Término del Día</h1>
-    <p class="sub">Un concepto nuevo cada día · <span id="count"></span> términos</p>
+    <div class="brandrow">
+      <a class="logo" href="https://www.conexipema.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.conexipema.com/Logo-blanco-sin-fondo.png" alt="Conexipema" width="960" height="148" onerror="this.closest('.logo').classList.add('fallback')">
+        <span class="wordmark">Conexi<span>pema</span></span>
+      </a>
+      <span class="teamtag">Team Conexipema</span>
+    </div>
+    <h1>Término del Día</h1>
+    <p class="sub who-line"><span id="who-av"></span><span id="who"></span> · Un concepto nuevo cada día · <span id="count"></span> términos</p>
     <div class="stats">
       <div><b id="st-seen">0</b><span>vistos</span></div>
       <div><b id="st-ok">0</b><span>correctos</span></div>
       <div><b id="st-streak">0</b><span>días de racha 🔥</span></div>
+      <div><b id="st-pts">0</b><span>puntos ⚡</span></div>
+      <div><b id="st-lvl">Novato</b><span>nivel</span></div>
     </div>
-    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="info">Ajustes</button></nav>
+    <nav class="tabs"><button data-tab="hoy" class="active">Hoy</button><button data-tab="hist">Historial</button><button data-tab="equipo">Equipo</button><button data-tab="perfil">Perfil</button><button data-tab="info">Ajustes</button></nav>
   </div>
 </header>
 <main class="wrap">
@@ -34,14 +73,42 @@
     <h3>Recordatorio</h3>
     <p>El término cambia cada día a las <b>7:55 a.m. (hora de Lima)</b>. Si activas las notificaciones, te avisaré a esa hora <i>mientras esta pestaña esté abierta</i>.</p>
     <button class="btn" id="notif">🔔 Activar recordatorio</button>
-    <h3>Progreso</h3>
-    <p>Tu progreso se guarda solo en este navegador (localStorage).</p>
-    <button class="btn ghost" id="reset">Reiniciar progreso</button>
+    <h3>Mi cuenta</h3>
+    <p>Sesión iniciada como <b id="me-name"></b>. Tu progreso y tu racha se guardan en la nube, así que puedes usar cualquier dispositivo.</p>
+    <form id="pw-form" class="stack">
+      <input id="pw-old" type="password" required placeholder="Contraseña actual" autocomplete="current-password">
+      <input id="pw-new" type="password" required minlength="6" placeholder="Nueva contraseña" autocomplete="new-password">
+      <input id="pw-new2" type="password" required minlength="6" placeholder="Repite la nueva contraseña" autocomplete="new-password">
+      <button class="btn">Cambiar contraseña</button><p id="pw-msg" class="fb"></p>
+    </form>
+    <button class="btn ghost" id="logout">Cerrar sesión</button>
+    <div id="admin" hidden>
+      <h3>Administración</h3>
+      <p>Restablece la contraseña de un compañero (cierra sus sesiones abiertas).</p>
+      <form id="adm-form" class="stack">
+        <input id="adm-user" required placeholder="Usuario" autocapitalize="none">
+        <input id="adm-pass" required minlength="6" placeholder="Nueva contraseña temporal">
+        <button class="btn">Restablecer contraseña</button><p id="adm-msg" class="fb"></p>
+      </form>
+      <h3>Premios del equipo</h3>
+      <p>Define un premio real por período (se muestra en Equipo). Deja el texto vacío para quitarlo.</p>
+      <form id="prize-form" class="stack">
+        <select id="prize-period"><option value="day">Ganador del día</option><option value="week">Ganador de la semana</option><option value="month">Ganador del mes</option></select>
+        <input id="prize-title" maxlength="120" placeholder="p. ej. Almuerzo pagado">
+        <button class="btn">Guardar premio</button><p id="prize-msg" class="fb"></p>
+      </form>
+    </div>
   </section>
+  <section id="v-equipo" class="view card" hidden><h3>Ranking del equipo</h3><nav class="scopes" id="scopes"></nav><div id="board"></div></section>
+  <section id="v-perfil" class="view card" hidden><div id="profile"></div></section>
 </main>
+</div>
 <dialog id="dlg"><div id="detail"></div></dialog>
-<script src="terms.js"></script>
-<script src="schedule.js"></script>
-<script src="app.js"></script>
+<script src="config.js?v=20261015"></script>
+<script src="avatars.js?v=20261015"></script>
+<script src="api.js?v=20261015"></script>
+<script src="terms.js?v=20261015"></script>
+<script src="schedule.js?v=20261015"></script>
+<script src="app.js?v=20261015"></script>
 </body>
 </html>
